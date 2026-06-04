@@ -33,9 +33,9 @@ LOOKBACK_DAYS     = 180          # 6 months of daily data for level detection
 LEVEL_BAND_PCT    = 0.015        # ±1.5% band to cluster price touches
 MIN_TOUCHES       = 2            # minimum touches to count as a valid level
 ATR_PERIOD        = 14           # days for ATR calculation
-ATR_STOP_MULT     = 0.5          # how many ATRs below support = stop-loss
-MOMENTUM_MIN_PCT  = 1.5          # min % move from open to flag Mode 1
-RVOL_MIN          = 1.5          # min relative volume for Mode 1
+ATR_STOP_MULT     = 1.0          # how many ATRs below support = stop-loss
+MOMENTUM_MIN_PCT  = 3.0          # min % move from open to flag Mode 1
+RVOL_MIN          = 2.0          # min relative volume for Mode 1
 NEAR_LEVEL_PCT    = 0.03         # within 3% of a level = "near" for Mode 2
 MAX_TICKERS       = 400          # cap to stay within yfinance rate limits
 
