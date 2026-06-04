@@ -1,0 +1,36 @@
+name: Intraday Scan
+
+on:
+  schedule:
+    # Every 30 mins, 13:30–20:30 UTC (= 14:30–21:30 BST)
+    # GitHub Actions can be up to 15 mins late, so we start
+    # 30 mins early and end 30 mins late as buffer
+    - cron: "0,30 13,14,15,16,17,18,19,20 * * 1-5"
+  workflow_dispatch:  # allows manual trigger from GitHub UI
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scanner
+        run: python scanner.py
+
+      - name: Commit results
+        run: |
+          git config user.name "GarAI Scanner"
+          git config user.email "scanner@garai"
+          git add output/intraday.csv
+          git diff --cached --quiet || git commit -m "Intraday scan update [$(date -u '+%H:%M UTC')]"
+          git push
