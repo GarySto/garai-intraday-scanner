@@ -31,12 +31,15 @@ TICKERS_FILE      = "tickers.txt"
 OUTPUT_FILE       = "output/intraday.csv"
 LOOKBACK_DAYS     = 180          # 6 months of daily data for level detection
 LEVEL_BAND_PCT    = 0.015        # ±1.5% band to cluster price touches
-MIN_TOUCHES       = 2            # minimum touches to count as a valid level
+MIN_TOUCHES       = 3            # minimum touches to count as a valid level
 ATR_PERIOD        = 14           # days for ATR calculation
 ATR_STOP_MULT     = 1.0          # how many ATRs below support = stop-loss
-MOMENTUM_MIN_PCT  = 3.0          # min % move from open to flag Mode 1
-RVOL_MIN          = 2.0          # min relative volume for Mode 1
+MOMENTUM_MIN_PCT  = 5.0          # min % move from open to flag Mode 1
+RVOL_MIN          = 5.0          # min relative volume for Mode 1
 NEAR_LEVEL_PCT    = 0.03         # within 3% of a level = "near" for Mode 2
+MODE1_START_BST   = 14             # earliest hour (BST) to flag Mode 1 entries
+MODE1_END_BST     = 19             # latest hour (BST) — after this momentum unreliable
+MODE2_TOUCH_EXACT = 4              # only flag support levels with exactly this many touches
 MAX_TICKERS       = 400          # cap to stay within yfinance rate limits
 
 BST = pytz.timezone("Europe/London")
@@ -98,7 +101,7 @@ def find_levels(hist):
         band_hi = p * (1 + LEVEL_BAND_PCT)
         mask = (prices >= band_lo) & (prices <= band_hi)
         touches = mask.sum()
-        if touches >= MIN_TOUCHES:
+        if touches >= MIN_TOUCHES and touches == MODE2_TOUCH_EXACT:
             cluster_prices = prices[mask]
             level_price = float(np.median(cluster_prices))
             lowest_at   = float(cluster_prices.min())
@@ -142,6 +145,11 @@ def score_momentum(ticker, hist_daily, intraday):
         if pct_from_open < MOMENTUM_MIN_PCT:
             return None
 
+        # Time window filter — Mode 1 win rate collapses after 19:00 BST
+        now_bst = datetime.now(BST)
+        if not (MODE1_START_BST <= now_bst.hour < MODE1_END_BST):
+            return None
+
         # RVOL: compare volume so far today vs average volume for same
         # number of candles at this point in prior sessions
         avg_daily_vol = hist_daily["Volume"].tail(20).mean()
@@ -155,21 +163,16 @@ def score_momentum(ticker, hist_daily, intraday):
         if rvol < RVOL_MIN:
             return None
 
-        # Slope: last 3 closes trending upward = acceleration confirmed
-        last3 = intraday["Close"].iloc[-3:].values
-        slope_ok = bool(last3[-1] > last3[-2] > last3[0]) if len(last3) == 3 else False
-
-        # Score: weighted combination, max 10
+        # Score: momentum + volume only
+        # Acceleration signal removed — backtest showed it actively hurts win rate
         momentum_score = min(pct_from_open / 10 * 5, 5)   # up to 5 pts
-        rvol_score     = min((rvol - 1) / 3 * 3, 3)        # up to 3 pts
-        slope_score    = 2 if slope_ok else 0               # 2 pts if accelerating
+        rvol_score     = min((rvol - 1) / 3 * 5, 5)        # up to 5 pts (increased from 3)
 
-        total = round(momentum_score + rvol_score + slope_score, 2)
+        total = round(momentum_score + rvol_score, 2)
 
         reason = (
             f"Up {round(pct_from_open,2)}% from open · "
-            f"RVOL {round(rvol,1)}x · "
-            f"{'Accelerating' if slope_ok else 'Not accelerating'}"
+            f"RVOL {round(rvol,1)}x"
         )
 
         return {
@@ -177,7 +180,6 @@ def score_momentum(ticker, hist_daily, intraday):
             "score":        total,
             "pct_from_open": round(pct_from_open, 2),
             "rvol":         round(rvol, 2),
-            "accelerating": slope_ok,
             "entry_note":   "Enter on continuation · exit before 21:00 BST",
             "stop_loss":    None,
             "stop_reason":  None,
