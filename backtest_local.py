@@ -4,14 +4,16 @@ GarAI Intraday Scanner — Local Backtest
 Reads from D:\\GarAI\\data\\ instead of calling yfinance.
 No rate limits. No internet dependency. Runs in minutes.
 
-Requires download_data.py to have been run first.
+Now includes market regime context via market_context.py.
+
+Requires download_eodhd.py to have been run first.
 
 Usage:
   py backtest_local.py
 
 Output:
-  backtest_results.csv
-  backtest_summary.txt
+  backtest_results.csv   — all signals with outcomes + market context
+  backtest_summary.txt   — summary by mode and market regime
 """
 
 import pandas as pd
@@ -27,12 +29,13 @@ warnings.filterwarnings("ignore")
 DATA_ROOT       = r"D:\GarAI\data"
 DAILY_DIR       = os.path.join(DATA_ROOT, "daily")
 INTRADAY_DIR    = os.path.join(DATA_ROOT, "intraday")
+TECH_DIR        = os.path.join(DATA_ROOT, "technicals")
 TICKERS_FILE    = "tickers.txt"
 OUTPUT_DIR      = "."
-LOOKBACK_DAYS   = 365       # how many days back to backtest (up to 2 years)
-MAX_TICKERS     = 9999      # no cap — use all available local data
+LOOKBACK_DAYS   = 365       # up to 2 years available
+MAX_TICKERS     = 9999      # no cap — use all local data
 
-# Scanner parameters (keep in sync with scanner.py)
+# Scanner parameters — keep in sync with scanner.py
 MOMENTUM_MIN_PCT  = 5.0
 RVOL_MIN          = 5.0
 LEVEL_BAND_PCT    = 0.015
@@ -57,7 +60,6 @@ def load_tickers():
         if os.path.exists(path):
             with open(path) as f:
                 tickers = [l.strip() for l in f if l.strip()]
-            # Only return tickers we actually have local data for
             available = [t for t in tickers
                         if os.path.exists(os.path.join(DAILY_DIR, f"{t}.csv"))]
             print(f"Tickers in list: {len(tickers)}")
@@ -67,7 +69,6 @@ def load_tickers():
 
 
 def load_daily(ticker):
-    """Load daily OHLCV from local CSV."""
     path = os.path.join(DAILY_DIR, f"{ticker}.csv")
     if not os.path.exists(path):
         return None
@@ -83,7 +84,6 @@ def load_daily(ticker):
 
 
 def load_intraday(ticker):
-    """Load 5-minute intraday data from local CSV."""
     path = os.path.join(INTRADAY_DIR, f"{ticker}_5m.csv")
     if not os.path.exists(path):
         return None
@@ -94,6 +94,38 @@ def load_intraday(ticker):
         else:
             df.index = df.index.tz_convert(UTC)
         return df.dropna(how="all")
+    except Exception:
+        return None
+
+
+def load_rsi(ticker):
+    """Load pre-calculated RSI from EODHD technicals folder."""
+    path = os.path.join(TECH_DIR, f"{ticker}_rsi.csv")
+    if not os.path.exists(path):
+        return None
+    try:
+        df = pd.read_csv(path, index_col=0, parse_dates=True)
+        return df
+    except Exception:
+        return None
+
+
+def get_rsi_at_date(ticker, signal_date):
+    """Get the RSI value for a ticker on a specific date."""
+    rsi_df = load_rsi(ticker)
+    if rsi_df is None or rsi_df.empty:
+        return None
+    try:
+        # Find the RSI value on or before the signal date
+        rsi_df.index = pd.to_datetime(rsi_df.index)
+        past = rsi_df[rsi_df.index.date <= signal_date]
+        if past.empty:
+            return None
+        # RSI column name varies — find it
+        rsi_col = [c for c in past.columns if "rsi" in c.lower()]
+        if not rsi_col:
+            rsi_col = past.columns.tolist()
+        return round(float(past[rsi_col[0]].iloc[-1]), 2)
     except Exception:
         return None
 
@@ -248,7 +280,7 @@ def process_ticker(ticker, trade_days):
             session_end   = datetime(trade_day.year, trade_day.month, trade_day.day,
                                      20,  0, tzinfo=UTC)
 
-            # Mode 1 — replay 30-min intervals
+            # Mode 1
             if intraday_full is not None:
                 day_intraday = intraday_full[
                     (intraday_full.index.date == trade_day) &
@@ -269,13 +301,17 @@ def process_ticker(ticker, trade_days):
                             m1 = score_momentum_at(sl, slice_daily, hour_bst)
                             if m1:
                                 outcomes = measure_outcome_m1(day_intraday, scan_time, m1["entry_price"])
+                                # Add RSI at signal time
+                                rsi = get_rsi_at_date(ticker, trade_day)
                                 signals.append({
                                     "date": trade_day.isoformat(),
                                     "scan_time": scan_time.astimezone(BST).strftime("%H:%M BST"),
-                                    "ticker": ticker, **m1, **outcomes,
+                                    "ticker": ticker,
+                                    "rsi_at_signal": rsi,
+                                    **m1, **outcomes,
                                 })
 
-            # Mode 2 — once per day
+            # Mode 2
             slice_daily_m2 = daily_full[daily_full.index.date < trade_day]
             if len(slice_daily_m2) >= 20:
                 m2 = score_levels_at(slice_daily_m2)
@@ -283,10 +319,13 @@ def process_ticker(ticker, trade_days):
                     outcomes = measure_outcome_m2(
                         daily_full, trade_day, m2["entry_price"], m2.get("stop_loss")
                     )
+                    rsi = get_rsi_at_date(ticker, trade_day)
                     signals.append({
                         "date": trade_day.isoformat(),
                         "scan_time": "14:30 BST",
-                        "ticker": ticker, **m2, **outcomes,
+                        "ticker": ticker,
+                        "rsi_at_signal": rsi,
+                        **m2, **outcomes,
                     })
 
     except Exception:
@@ -303,7 +342,7 @@ def run_backtest():
 
     if not os.path.exists(DATA_ROOT):
         print(f"\nERROR: {DATA_ROOT} not found.")
-        print("Run download_data.py first.")
+        print("Run download_eodhd.py first.")
         return
 
     tickers = load_tickers()
@@ -321,24 +360,35 @@ def run_backtest():
         sigs = process_ticker(ticker, trade_days)
         all_signals.extend(sigs)
         if (i+1) % 100 == 0:
-            print(f"  {i+1}/{len(tickers)} tickers — {len(all_signals)} signals so far")
+            print(f"  {i+1}/{len(tickers)} tickers — {len(all_signals)} signals")
 
     if not all_signals:
         print("\nNo signals found.")
         return
 
     df = pd.DataFrame(all_signals)
+
+    # Add market regime context
+    try:
+        from market_context import add_market_context, print_regime_summary
+        df = add_market_context(df)
+        has_context = True
+    except ImportError:
+        print("market_context.py not found — skipping regime analysis")
+        has_context = False
+
+    # Save results
     results_path = os.path.join(OUTPUT_DIR, "backtest_results.csv")
     try:
         df.to_csv(results_path, index=False, encoding="utf-8")
     except PermissionError:
         results_path = os.path.join(OUTPUT_DIR, "backtest_results_new.csv")
         df.to_csv(results_path, index=False, encoding="utf-8")
-        print(f"Note: main CSV was open — saved to backtest_results_new.csv")
+        print(f"Note: main CSV open — saved to backtest_results_new.csv")
 
     print(f"\nSaved {len(df)} signals to {results_path}")
 
-    # Summary
+    # Build summary
     lines = []
     lines.append("=" * 60)
     lines.append("GarAI Intraday Scanner - Local Backtest Summary")
@@ -370,22 +420,24 @@ def run_backtest():
                 mg = sub["max_gain_session_pct"].dropna()
                 if not mg.empty:
                     lines.append(
-                        f"  Max session gain: avg {mg.mean():+.2f}%  |  "
+                        f"  Max session: avg {mg.mean():+.2f}%  |  "
                         f">5% in {(mg>5).sum()} signals  |  "
                         f">10% in {(mg>10).sum()} signals"
                     )
-            lines.append(f"\n  Score band (1hr):")
-            for lo, hi in [(0,4),(4,6),(6,8),(8,10)]:
-                band = sub[(sub["score"]>=lo)&(sub["score"]<hi)]
-                col  = "return_1h_pct"
-                if not band.empty and col in band.columns:
-                    valid = band[col].dropna()
-                    if not valid.empty:
-                        lines.append(
-                            f"    Score {lo}-{hi}: {len(band)} signals  |  "
-                            f"avg {valid.mean():+.2f}%  |  "
-                            f"win {(valid>0).sum()/len(valid)*100:.0f}%"
-                        )
+            # RSI analysis
+            if "rsi_at_signal" in sub.columns:
+                lines.append(f"\n  RSI at signal time breakdown (1hr return):")
+                for lo, hi in [(0,30),(30,50),(50,70),(70,100)]:
+                    band = sub[(sub["rsi_at_signal"]>=lo)&(sub["rsi_at_signal"]<hi)]
+                    col = "return_1h_pct"
+                    if not band.empty and col in band.columns:
+                        valid = band[col].dropna()
+                        if not valid.empty:
+                            lines.append(
+                                f"    RSI {lo}-{hi}: {len(band)} signals  |  "
+                                f"avg {valid.mean():+.2f}%  |  "
+                                f"win {(valid>0).sum()/len(valid)*100:.0f}%"
+                            )
 
         elif mode == "SUPPORT_BOUNCE":
             for d in MODE2_DAYS:
@@ -400,29 +452,20 @@ def run_backtest():
                             f"win {(valid>0).sum()/len(valid)*100:.0f}%"
                             f"{stop_str}"
                         )
-            if "level_touches" in sub.columns:
-                lines.append(f"\n  Touch count (3d):")
-                for t in range(3, 8):
-                    band = sub[sub["level_touches"] == t]
-                    col  = "return_3d_pct"
-                    if len(band) >= 5 and col in band.columns:
-                        valid = band[col].dropna()
-                        if not valid.empty:
-                            lines.append(
-                                f"    {t} touches: {len(band)} signals  |  "
-                                f"avg {valid.mean():+.2f}%  |  "
-                                f"win {(valid>0).sum()/len(valid)*100:.0f}%"
-                            )
 
-        elif mode == "RESISTANCE_WARNING":
-            for d in MODE2_DAYS:
-                col = f"return_{d}d_pct"
-                if col in sub.columns:
-                    valid = sub[col].dropna()
+        # Market regime breakdown
+        if has_context and "market_regime" in sub.columns:
+            lines.append(f"\n  By market regime (3d return):")
+            outcome_col = "return_1h_pct" if mode == "MODE1_MOMENTUM" else "return_3d_pct"
+            if outcome_col in sub.columns:
+                for regime in sorted(sub["market_regime"].unique()):
+                    band = sub[sub["market_regime"]==regime]
+                    valid = band[outcome_col].dropna()
                     if not valid.empty:
                         lines.append(
-                            f"  {d}d: avg {valid.mean():+.2f}%  |  "
-                            f"correct (fell) {(valid<0).sum()/len(valid)*100:.0f}%"
+                            f"    {regime:12s}: {len(band):4d} signals  |  "
+                            f"avg {valid.mean():+.2f}%  |  "
+                            f"win {(valid>0).sum()/len(valid)*100:.0f}%"
                         )
 
     lines.append(f"\n{'='*60}\n")
@@ -433,6 +476,10 @@ def run_backtest():
     with open(summary_path, "w", encoding="utf-8") as f:
         f.write(summary)
     print(f"Summary saved to {summary_path}")
+
+    if has_context:
+        print("\nRegime analysis:")
+        print_regime_summary(df, "return_3d_pct", "SUPPORT_BOUNCE")
 
 
 if __name__ == "__main__":
