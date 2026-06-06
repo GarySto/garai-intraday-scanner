@@ -90,70 +90,42 @@ def score_style_red(v):
 with tab1:
     st.subheader("🚀 Mode 1 — Momentum continuation")
     st.caption("Stocks accelerating intraday with above-average volume. Same-day exit before 21:00 BST.")
-
-    if df_m1.empty:
-        st.info("No momentum candidates this scan.")
-    else:
-        cols_m1 = ["ticker", "price", "score", "pct_from_open", "rvol",
-                   "accelerating", "entry_note", "reason"]
-        cols_m1 = [c for c in cols_m1 if c in df_m1.columns]
-        display_m1 = df_m1[cols_m1].rename(columns={
-            "ticker": "Ticker", "price": "Price ($)", "score": "Score",
-            "pct_from_open": "% from open", "rvol": "RVOL",
-            "accelerating": "Accelerating", "entry_note": "Entry note",
-            "reason": "Signal detail",
-        })
-        st.dataframe(
-            display_m1.style.map(score_style_green, subset=["Score"]),
-            use_container_width=True, hide_index=True,
-        )
+    try:
+        import signal_cards
+        signal_cards.render_mode1(df_m1)
+    except Exception as e:
+        st.error(f"Signal card error: {e}")
+        if not df_m1.empty:
+            cols_m1 = [c for c in ["ticker","price","score","pct_from_open","rvol"] if c in df_m1.columns]
+            st.dataframe(df_m1[cols_m1], use_container_width=True, hide_index=True)
 
 # ── Tab 2: Support bounces ─────────────────────────────────────────────────────
 
 with tab2:
     st.subheader("🟢 Mode 2 — Support bounce candidates")
     st.caption("Near a horizontal support level tested 2+ times over 6 months. ATR stop-loss calculated.")
-
-    if df_support.empty:
-        st.info("No support bounce candidates this scan.")
-    else:
-        cols_s = ["ticker", "price", "score", "level_price", "level_touches",
-                  "dist_pct", "atr", "stop_loss", "entry_note", "stop_reason"]
-        cols_s = [c for c in cols_s if c in df_support.columns]
-        display_s = df_support[cols_s].rename(columns={
-            "ticker": "Ticker", "price": "Price ($)", "score": "Score",
-            "level_price": "Support level ($)", "level_touches": "Touches",
-            "dist_pct": "Distance (%)", "atr": "ATR ($)",
-            "stop_loss": "Stop-loss ($)", "entry_note": "Entry note",
-            "stop_reason": "Stop logic",
-        })
-        st.dataframe(
-            display_s.style.map(score_style_green, subset=["Score"]),
-            use_container_width=True, hide_index=True,
-        )
+    try:
+        import signal_cards
+        signal_cards.render_mode2(df_support)
+    except Exception as e:
+        st.error(f"Signal card error: {e}")
+        if not df_support.empty:
+            cols_s = [c for c in ["ticker","price","score","level_price","level_touches","stop_loss"] if c in df_support.columns]
+            st.dataframe(df_support[cols_s], use_container_width=True, hide_index=True)
 
 # ── Tab 3: Resistance warnings ─────────────────────────────────────────────────
 
 with tab3:
     st.subheader("🔴 Mode 2 — Resistance warnings")
     st.caption("Near a horizontal resistance level. Consider exiting existing positions or avoiding entry.")
-
-    if df_resist.empty:
-        st.info("No resistance warnings this scan.")
-    else:
-        cols_r = ["ticker", "price", "score", "level_price", "level_touches",
-                  "dist_pct", "entry_note", "reason"]
-        cols_r = [c for c in cols_r if c in df_resist.columns]
-        display_r = df_resist[cols_r].rename(columns={
-            "ticker": "Ticker", "price": "Price ($)", "score": "Score",
-            "level_price": "Resistance level ($)", "level_touches": "Touches",
-            "dist_pct": "Distance (%)", "entry_note": "Note",
-            "reason": "Signal detail",
-        })
-        st.dataframe(
-            display_r.style.map(score_style_red, subset=["Score"]),
-            use_container_width=True, hide_index=True,
-        )
+    try:
+        import signal_cards
+        signal_cards.render_resistance(df_resist)
+    except Exception as e:
+        st.error(f"Signal card error: {e}")
+        if not df_resist.empty:
+            cols_r = [c for c in ["ticker","price","score","level_price","level_touches","dist_pct"] if c in df_resist.columns]
+            st.dataframe(df_resist[cols_r], use_container_width=True, hide_index=True)
 
 # ── Tab 4: Backtest Explorer ───────────────────────────────────────────────────
 
