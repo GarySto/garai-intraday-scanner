@@ -4,3 +4,4 @@ numpy
 pytz
 streamlit
 altair
+plotly
