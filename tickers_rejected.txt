@@ -1,0 +1,4297 @@
+A	insufficient data
+AA	insufficient data
+AACG	insufficient data
+AACQ	no data / batch failed
+AACT	insufficient data
+AAGIY	insufficient data
+AAL	insufficient data
+AAMC	no data / batch failed
+AAME	insufficient data
+AAN	insufficient data
+AAOI	insufficient data
+AAP	insufficient data
+AAPL	no data / batch failed
+AAT	insufficient data
+AAXN	insufficient data
+ABB	insufficient data
+ABBRF	no data / batch failed
+ABBV	insufficient data
+ABC	insufficient data
+ABCL	insufficient data
+ABEO	no data / batch failed
+ABEPF	no data / batch failed
+ABEV	insufficient data
+ABG	no data / batch failed
+ABIO	insufficient data
+ABL	insufficient data
+ABLV	insufficient data
+ABM	insufficient data
+ABML	insufficient data
+ABNB	no data / batch failed
+ABOS	insufficient data
+ABSI	insufficient data
+ABT	insufficient data
+ABUS	insufficient data
+ABVC	insufficient data
+ABVX	no data / batch failed
+ACA	insufficient data
+ACAB	insufficient data
+ACAC	no data / batch failed
+ACAD	insufficient data
+ACCD	no data / batch failed
+ACET	insufficient data
+ACEV	insufficient data
+ACGL	insufficient data
+ACHC	insufficient data
+ACHL	insufficient data
+ACHV	insufficient data
+ACI	insufficient data
+ACIC	no data / batch failed
+ACIU	insufficient data
+ACLLY	insufficient data
+ACLS	insufficient data
+ACLX	insufficient data
+ACM	no data / batch failed
+ACMR	insufficient data
+ACN	insufficient data
+ACND	insufficient data
+ACON	insufficient data
+ACOPY	insufficient data
+ACOR	insufficient data
+ACRDF	no data / batch failed
+ACRE	insufficient data
+ACRS	insufficient data
+ACRV	insufficient data
+ACRX	insufficient data
+ACST	insufficient data
+ACTG	no data / batch failed
+ACTHF	insufficient data
+ACTU	insufficient data
+ACU	no data / batch failed
+ACUIF	insufficient data
+ACXP	insufficient data
+ACY	insufficient data
+ADAG	insufficient data
+ADAL	no data / batch failed
+ADAP	insufficient data
+ADC	insufficient data
+ADDYY	insufficient data
+ADEX	insufficient data
+ADF	insufficient data
+ADGI	no data / batch failed
+ADI	insufficient data
+ADIL	insufficient data
+ADM	insufficient data
+ADMA	insufficient data
+ADMP	no data / batch failed
+ADOM	insufficient data
+ADP	no data / batch failed
+ADPT	insufficient data
+ADRNY	insufficient data
+ADS	insufficient data
+ADSK	no data / batch failed
+ADT	insufficient data
+ADTN	insufficient data
+ADTX	insufficient data
+ADVM	no data / batch failed
+ADXN	no data / batch failed
+ADXS	insufficient data
+ADYEY	no data / batch failed
+AEG	no data / batch failed
+AEHA	insufficient data
+AEHR	insufficient data
+AEIS	insufficient data
+AEM	insufficient data
+AEMD	insufficient data
+AEO	insufficient data
+AEP	insufficient data
+AER	insufficient data
+AERC	no data / batch failed
+AES	no data / batch failed
+AESE	no data / batch failed
+AESI	no data / batch failed
+AETUF	insufficient data
+AEYE	insufficient data
+AEZS	insufficient data
+AFCG	insufficient data
+AFG	insufficient data
+AFIB	insufficient data
+AFL	insufficient data
+AFMD	insufficient data
+AFRM	insufficient data
+AG	no data / batch failed
+AGBA	insufficient data
+AGC	insufficient data
+AGCO	insufficient data
+AGE	insufficient data
+AGEN	no data / batch failed
+AGFY	insufficient data
+AGI	insufficient data
+AGLE	insufficient data
+AGLXY	insufficient data
+AGM	insufficient data
+AGMH	no data / batch failed
+AGNC	no data / batch failed
+AGOL	insufficient data
+AGR	insufficient data
+AGRI	insufficient data
+AGRO	insufficient data
+AGRX	insufficient data
+AGS	insufficient data
+AGX	insufficient data
+AHAC	insufficient data
+AHH	insufficient data
+AHI	insufficient data
+AHPA	insufficient data
+AHPI	insufficient data
+AHR	insufficient data
+AHT	no data / batch failed
+AI1	insufficient data
+AIEV	price too low: $0.15
+AIG	insufficient data
+AIHS	insufficient data
+AIKI	insufficient data
+AIM	insufficient data
+AINV	insufficient data
+AIR	insufficient data
+AIRE	insufficient data
+AIRG	insufficient data
+AIRI	no data / batch failed
+AIRS	no data / batch failed
+AITR	insufficient data
+AIV	insufficient data
+AIXI	insufficient data
+AJAX	insufficient data
+AJX	insufficient data
+AKAM	no data / batch failed
+AKAN	no data / batch failed
+AKBA	no data / batch failed
+AKER	insufficient data
+AKR	insufficient data
+AKRO	insufficient data
+AKTS	no data / batch failed
+AL	insufficient data
+ALAB	insufficient data
+ALB	insufficient data
+ALCC1	insufficient data
+ALCY	insufficient data
+ALDX	insufficient data
+ALE	insufficient data
+ALEC	insufficient data
+ALF	insufficient data
+ALF1	insufficient data
+ALGM	insufficient data
+ALIM	insufficient data
+ALK	no data / batch failed
+ALL	insufficient data
+ALLE	no data / batch failed
+ALLK	no data / batch failed
+ALLO	insufficient data
+ALLR	insufficient data
+ALLT	insufficient data
+ALLY	no data / batch failed
+ALMS	insufficient data
+ALNY	insufficient data
+ALOT	insufficient data
+ALPMY	insufficient data
+ALPP	insufficient data
+ALRM	insufficient data
+ALRN	no data / batch failed
+ALSN	insufficient data
+ALT	insufficient data
+ALTM	insufficient data
+ALTR	insufficient data
+ALUS	insufficient data
+ALVR	no data / batch failed
+ALXO	insufficient data
+ALYA	insufficient data
+ALZN	no data / batch failed
+AM	insufficient data
+AMAT	insufficient data
+AMBA	insufficient data
+AMBO	insufficient data
+AMC	no data / batch failed
+AMCI	no data / batch failed
+AMCII	insufficient data
+AMCR	no data / batch failed
+AMCX	insufficient data
+AMD	insufficient data
+AMED	no data / batch failed
+AMEH	no data / batch failed
+AMG	insufficient data
+AMGN	insufficient data
+AMH	insufficient data
+AMHC	no data / batch failed
+AMIX	insufficient data
+AMKBY	insufficient data
+AMKR	no data / batch failed
+AMLM	insufficient data
+AMLX	insufficient data
+AMN	no data / batch failed
+AMP	no data / batch failed
+AMPE	insufficient data
+AMPG	no data / batch failed
+AMPH	insufficient data
+AMPL	insufficient data
+AMPX	insufficient data
+AMPY	no data / batch failed
+AMRC	insufficient data
+AMRH	no data / batch failed
+AMRK	insufficient data
+AMRN	insufficient data
+AMRX	insufficient data
+AMS	insufficient data
+AMSC	insufficient data
+AMST	insufficient data
+AMSWA	insufficient data
+AMT	insufficient data
+AMTX	no data / batch failed
+AMWL	no data / batch failed
+AMZN	no data / batch failed
+AN	insufficient data
+ANCN	insufficient data
+ANDA	no data / batch failed
+ANEB	insufficient data
+ANET	insufficient data
+ANF	insufficient data
+ANFC	insufficient data
+ANGN	no data / batch failed
+ANGPY	insufficient data
+ANIX	no data / batch failed
+ANL	insufficient data
+ANPC	insufficient data
+ANPDY	no data / batch failed
+ANRO	insufficient data
+ANSC	insufficient data
+ANSS	insufficient data
+ANTE	insufficient data
+ANTM	insufficient data
+ANTX	insufficient data
+ANVS	insufficient data
+ANY	insufficient data
+AON	insufficient data
+AONE	no data / batch failed
+AOS	insufficient data
+AOSL	insufficient data
+APAM	no data / batch failed
+APCX	insufficient data
+APD	insufficient data
+APDN	insufficient data
+APGE	no data / batch failed
+APH	insufficient data
+API	insufficient data
+APLD	insufficient data
+APLE	insufficient data
+APLS	insufficient data
+APLT	insufficient data
+APM	insufficient data
+APO	no data / batch failed
+APOG	insufficient data
+APOP	insufficient data
+APP	insufficient data
+APPF	insufficient data
+APPN	insufficient data
+APPS	no data / batch failed
+APRE	insufficient data
+APT	insufficient data
+APTO	insufficient data
+APTV	no data / batch failed
+APTX	insufficient data
+APVO	no data / batch failed
+APWC	insufficient data
+APXT	insufficient data
+AQB	no data / batch failed
+AQMS	insufficient data
+AQN	insufficient data
+AQSP	no data / batch failed
+AQST	insufficient data
+AQU	no data / batch failed
+AR	insufficient data
+ARAV	no data / batch failed
+ARAY	insufficient data
+ARBB	insufficient data
+ARBK	insufficient data
+ARC	no data / batch failed
+ARCB	insufficient data
+ARCC	no data / batch failed
+ARCH	no data / batch failed
+ARCO	insufficient data
+ARCT	insufficient data
+ARDS	no data / batch failed
+ARDT	insufficient data
+ARDX	insufficient data
+ARE	insufficient data
+AREB	insufficient data
+AREC	insufficient data
+AREN	insufficient data
+ARES	no data / batch failed
+ARGX	insufficient data
+ARHS	insufficient data
+ARI	no data / batch failed
+ARIZ	insufficient data
+ARLO	insufficient data
+ARM	insufficient data
+ARMK	no data / batch failed
+ARMN	no data / batch failed
+ARMP	insufficient data
+ARNC	insufficient data
+ARPO	no data / batch failed
+ARQT	insufficient data
+ARR	insufficient data
+ARREF	no data / batch failed
+ARRY	insufficient data
+ARTL	no data / batch failed
+ARTV	insufficient data
+ARVN	insufficient data
+ARW	insufficient data
+ARWR	insufficient data
+ARYA	insufficient data
+ARYD	no data / batch failed
+ARZGY	insufficient data
+AS	insufficient data
+ASAN	insufficient data
+ASAZY	insufficient data
+ASB	insufficient data
+ASC	no data / batch failed
+ASCA	insufficient data
+ASGLY	insufficient data
+ASIX	insufficient data
+ASLN	insufficient data
+ASMB	no data / batch failed
+ASML	insufficient data
+ASND	no data / batch failed
+ASNS	insufficient data
+ASO	insufficient data
+ASOMY	insufficient data
+ASPA	insufficient data
+ASPC	insufficient data
+ASPI1	insufficient data
+ASPL	insufficient data
+ASPN	no data / batch failed
+ASST	no data / batch failed
+ASTC	insufficient data
+ASTI	insufficient data
+ASX	insufficient data
+ATAC	insufficient data
+ATAI	no data / batch failed
+ATAK	no data / batch failed
+ATAT	insufficient data
+ATGL	insufficient data
+ATHA	insufficient data
+ATHE	insufficient data
+ATHM	insufficient data
+ATHN	insufficient data
+ATHX	insufficient data
+ATIF	insufficient data
+ATKR	insufficient data
+ATLC	no data / batch failed
+ATLX	insufficient data
+ATMC	insufficient data
+ATMV	no data / batch failed
+ATNM	insufficient data
+ATO	insufficient data
+ATOM	insufficient data
+ATPC	no data / batch failed
+ATRA	no data / batch failed
+ATRO	no data / batch failed
+ATS	insufficient data
+ATU	insufficient data
+ATUS	insufficient data
+ATUSF	no data / batch failed
+ATXG	insufficient data
+ATXI	insufficient data
+AU	insufficient data
+AUCOY	insufficient data
+AUDC	insufficient data
+AUMN	insufficient data
+AUNA	insufficient data
+AUPH	no data / batch failed
+AURA	no data / batch failed
+AUST	no data / batch failed
+AUTL	insufficient data
+AUUD	no data / batch failed
+AUVI	insufficient data
+AVAC	insufficient data
+AVB	insufficient data
+AVBP	insufficient data
+AVDL	insufficient data
+AVGR	insufficient data
+AVIR	no data / batch failed
+AVNW	insufficient data
+AVRO	no data / batch failed
+AVT	insufficient data
+AVTBF	insufficient data
+AVTE	insufficient data
+AVTR	insufficient data
+AVXL	insufficient data
+AVY	insufficient data
+AWK	insufficient data
+AWR	insufficient data
+AWRE	insufficient data
+AWX	insufficient data
+AX	no data / batch failed
+AXDX	insufficient data
+AXL	insufficient data
+AXLA	insufficient data
+AXP	insufficient data
+AXSM	insufficient data
+AXTI	no data / batch failed
+AY	insufficient data
+AYI	insufficient data
+AYRO	no data / batch failed
+AYTU	insufficient data
+AZEK	insufficient data
+AZN	insufficient data
+AZO	no data / batch failed
+AZPN1	insufficient data
+AZRE	no data / batch failed
+AZRX	no data / batch failed
+AZTR	insufficient data
+AZYO	insufficient data
+AZZ	insufficient data
+BA	insufficient data
+BABA	insufficient data
+BAC	insufficient data
+BAH	insufficient data
+BAK	no data / batch failed
+BAM	insufficient data
+BAM1	insufficient data
+BANL	insufficient data
+BANT	insufficient data
+BAOS	insufficient data
+BAP	insufficient data
+BASE	no data / batch failed
+BASI	insufficient data
+BATRA	insufficient data
+BAX	insufficient data
+BAYA	insufficient data
+BB	insufficient data
+BBD	no data / batch failed
+BBDC	insufficient data
+BBDO	insufficient data
+BBI	no data / batch failed
+BBIO	insufficient data
+BBKCF	insufficient data
+BBLG	price too low: $1.26
+BBW	insufficient data
+BBY	insufficient data
+BC	insufficient data
+BCAB	insufficient data
+BCAN	insufficient data
+BCAT	insufficient data
+BCC	insufficient data
+BCDA	no data / batch failed
+BCE	insufficient data
+BCEI	no data / batch failed
+BCEL	insufficient data
+BCH	insufficient data
+BCLI	no data / batch failed
+BCOV	no data / batch failed
+BCRX	no data / batch failed
+BCS	insufficient data
+BCTX	insufficient data
+BCYC	insufficient data
+BCYP	no data / batch failed
+BDL	insufficient data
+BDN	insufficient data
+BDNNY	insufficient data
+BDORY	no data / batch failed
+BDR	no data / batch failed
+BDSX	insufficient data
+BDTX	no data / batch failed
+BDX	insufficient data
+BE	insufficient data
+BEAM	insufficient data
+BEATT	insufficient data
+BEKE	insufficient data
+BELFB	insufficient data
+BEN	insufficient data
+BEP	insufficient data
+BEPC	insufficient data
+BEST	insufficient data
+BFA	no data / batch failed
+BFAC	no data / batch failed
+BFAM	insufficient data
+BFB	insufficient data
+BFRG	insufficient data
+BFRI	insufficient data
+BFT	insufficient data
+BG	insufficient data
+BGCP	no data / batch failed
+BGFV	insufficient data
+BGI	no data / batch failed
+BGLC	insufficient data
+BGNE	insufficient data
+BGS	insufficient data
+BGXX	no data / batch failed
+BHAT	insufficient data
+BHG	insufficient data
+BHI	insufficient data
+BHM	no data / batch failed
+BHP	insufficient data
+BHR	no data / batch failed
+BHTG	insufficient data
+BHVN1	insufficient data
+BIAF	insufficient data
+BIDU	insufficient data
+BIG	insufficient data
+BIGC	insufficient data
+BIIB	insufficient data
+BILI	insufficient data
+BILL	insufficient data
+BIMI	no data / batch failed
+BIO	insufficient data
+BIOC	insufficient data
+BIOL	insufficient data
+BIOX	no data / batch failed
+BIP	insufficient data
+BIPC	insufficient data
+BIRD	no data / batch failed
+BIRK	insufficient data
+BITF	insufficient data
+BIVI	no data / batch failed
+BJ	insufficient data
+BK	insufficient data
+BKCC	insufficient data
+BKD	insufficient data
+BKE	insufficient data
+BKH	insufficient data
+BKHA	insufficient data
+BL	insufficient data
+BLAC	insufficient data
+BLBD	no data / batch failed
+BLBX	no data / batch failed
+BLCM	insufficient data
+BLCO	insufficient data
+BLDP	insufficient data
+BLDR	insufficient data
+BLFS	insufficient data
+BLIN	insufficient data
+BLK	insufficient data
+BLKB	insufficient data
+BLL	insufficient data
+BLMZ	insufficient data
+BLND	insufficient data
+BLNK	no data / batch failed
+BLPH	no data / batch failed
+BLRX	insufficient data
+BLTE	no data / batch failed
+BLUE	no data / batch failed
+BLUW	no data / batch failed
+BLX	insufficient data
+BLZE	insufficient data
+BMA	no data / batch failed
+BMBL	insufficient data
+BMI	insufficient data
+BMMJ	insufficient data
+BMO	insufficient data
+BMR	insufficient data
+BMRA	insufficient data
+BMRC	insufficient data
+BMRG	no data / batch failed
+BMRN	insufficient data
+BNCDY	no data / batch failed
+BNED	insufficient data
+BNGO	insufficient data
+BNL	insufficient data
+BNRG	insufficient data
+BNS	insufficient data
+BNSO	insufficient data
+BNTC	no data / batch failed
+BNTX	insufficient data
+BOAS	insufficient data
+BOH	insufficient data
+BOLD1	insufficient data
+BOLT	insufficient data
+BOMN	insufficient data
+BON	insufficient data
+BOOT	insufficient data
+BORR	insufficient data
+BOW	insufficient data
+BOWN	insufficient data
+BOX	insufficient data
+BOXL	insufficient data
+BP	no data / batch failed
+BPMC	no data / batch failed
+BPT	insufficient data
+BPTH	insufficient data
+BQ	insufficient data
+BR	no data / batch failed
+BRAC	no data / batch failed
+BRBR	insufficient data
+BRC	insufficient data
+BRCN	insufficient data
+BREA	no data / batch failed
+BRFH	insufficient data
+BRKR	no data / batch failed
+BRKS	no data / batch failed
+BRLT	no data / batch failed
+BRN	no data / batch failed
+BRO	insufficient data
+BROS	insufficient data
+BRPA	insufficient data
+BRQS	insufficient data
+BRSH	insufficient data
+BRSP	insufficient data
+BRT	insufficient data
+BRTX	insufficient data
+BRX	insufficient data
+BRY	no data / batch failed
+BRZE	insufficient data
+BSAQ	no data / batch failed
+BSBR	insufficient data
+BSET	no data / batch failed
+BSFC	insufficient data
+BSGA	insufficient data
+BSN	insufficient data
+BSPE	no data / batch failed
+BSVN	insufficient data
+BSX	insufficient data
+BSY	insufficient data
+BTAI	insufficient data
+BTBD	insufficient data
+BTBT	insufficient data
+BTCS	insufficient data
+BTEGF	insufficient data
+BTG	insufficient data
+BTI	insufficient data
+BTM	no data / batch failed
+BTOC	insufficient data
+BTSG	insufficient data
+BTU	insufficient data
+BTWN	no data / batch failed
+BUD	no data / batch failed
+BUJA	no data / batch failed
+BURL	insufficient data
+BUSXF	insufficient data
+BVN	no data / batch failed
+BVNRY	insufficient data
+BVXV	insufficient data
+BW	no data / batch failed
+BWA	insufficient data
+BWAY	insufficient data
+BWEN	insufficient data
+BWLP	insufficient data
+BWMX	no data / batch failed
+BWV	no data / batch failed
+BWXT	no data / batch failed
+BX	insufficient data
+BXC	insufficient data
+BXMT	insufficient data
+BXP	insufficient data
+BXRX	insufficient data
+BXSL	insufficient data
+BYD	insufficient data
+BYDDY	no data / batch failed
+BYFC	insufficient data
+BYND1	insufficient data
+BYNO	no data / batch failed
+BYSI	insufficient data
+BYTS	no data / batch failed
+BZUN	no data / batch failed
+C	insufficient data
+CAAP	insufficient data
+CAAS	insufficient data
+CABA	insufficient data
+CABGY	insufficient data
+CABO	insufficient data
+CACI	insufficient data
+CADL	no data / batch failed
+CAG	insufficient data
+CAH	no data / batch failed
+CAHC	insufficient data
+CAJ	no data / batch failed
+CAKE	insufficient data
+CAL	no data / batch failed
+CALA	insufficient data
+CALM	insufficient data
+CALT	insufficient data
+CALX	insufficient data
+CAMT	insufficient data
+CAN	insufficient data
+CANF	insufficient data
+CANG	insufficient data
+CAP	insufficient data
+CAPA	insufficient data
+CAPC	no data / batch failed
+CAPR	insufficient data
+CAR	no data / batch failed
+CARA	no data / batch failed
+CARG	no data / batch failed
+CARR	no data / batch failed
+CART	insufficient data
+CARV	insufficient data
+CASI	insufficient data
+CASY	insufficient data
+CAT	insufficient data
+CATB	insufficient data
+CATS	insufficient data
+CAVA	insufficient data
+CB	insufficient data
+CBAH	no data / batch failed
+CBAT	insufficient data
+CBD	insufficient data
+CBG	insufficient data
+CBGPY	insufficient data
+CBIO	insufficient data
+CBL	insufficient data
+CBLI	insufficient data
+CBS	insufficient data
+CBSH	no data / batch failed
+CBWTF	no data / batch failed
+CC	no data / batch failed
+CCAP	insufficient data
+CCC	insufficient data
+CCCL	no data / batch failed
+CCE	no data / batch failed
+CCH	insufficient data
+CCHWF	insufficient data
+CCI	no data / batch failed
+CCIV	no data / batch failed
+CCIX	insufficient data
+CCJ	insufficient data
+CCL	insufficient data
+CCM	insufficient data
+CCNC	insufficient data
+CCO	insufficient data
+CCOEY	insufficient data
+CCOI	insufficient data
+CCRN	insufficient data
+CCS	insufficient data
+CCTG	no data / batch failed
+CCX	insufficient data
+CCXX	insufficient data
+CDAK	insufficient data
+CDE	no data / batch failed
+CDEV	insufficient data
+CDLX	no data / batch failed
+CDNA	no data / batch failed
+CDNS	no data / batch failed
+CDT	insufficient data
+CDTG	no data / batch failed
+CDTX	insufficient data
+CDW	insufficient data
+CDXS	insufficient data
+CE	no data / batch failed
+CECE	insufficient data
+CEG	insufficient data
+CEI	insufficient data
+CELC	insufficient data
+CELH	insufficient data
+CELZ	insufficient data
+CENH	insufficient data
+CENX	insufficient data
+CEP	insufficient data
+CERC	no data / batch failed
+CERS	insufficient data
+CERT	no data / batch failed
+CETX	insufficient data
+CETY	no data / batch failed
+CEVA	insufficient data
+CF	no data / batch failed
+CFAC	insufficient data
+CFB	insufficient data
+CFG	insufficient data
+CFLT	no data / batch failed
+CFRX	insufficient data
+CFVI	insufficient data
+CG	insufficient data
+CGA	insufficient data
+CGAU	insufficient data
+CGBS	insufficient data
+CGC	insufficient data
+CGEM	no data / batch failed
+CGEN	no data / batch failed
+CGIX	no data / batch failed
+CGNT	no data / batch failed
+CGNX	insufficient data
+CGON	no data / batch failed
+CGRO	no data / batch failed
+CGTX	no data / batch failed
+CHCI	insufficient data
+CHCT	insufficient data
+CHD	insufficient data
+CHE	insufficient data
+CHEK	insufficient data
+CHFS	no data / batch failed
+CHFW	insufficient data
+CHGG	insufficient data
+CHH	insufficient data
+CHKK	insufficient data
+CHKP	insufficient data
+CHMI	insufficient data
+CHNR	insufficient data
+CHRS	insufficient data
+CHRW	no data / batch failed
+CHSN	insufficient data
+CHTR	insufficient data
+CHUC	insufficient data
+CHWA	insufficient data
+CHWY	insufficient data
+CHX	insufficient data
+CI	insufficient data
+CIDM	insufficient data
+CIEN	insufficient data
+CIIC	insufficient data
+CIIG	insufficient data
+CIM	insufficient data
+CINF	insufficient data
+CING	insufficient data
+CIO	no data / batch failed
+CION	insufficient data
+CISO	insufficient data
+CISS	insufficient data
+CKHUY	insufficient data
+CKPT	insufficient data
+CL	insufficient data
+CLA	insufficient data
+CLAQ	no data / batch failed
+CLBS	insufficient data
+CLCO	insufficient data
+CLDT	no data / batch failed
+CLEU	insufficient data
+CLF	insufficient data
+CLFD	no data / batch failed
+CLI	insufficient data
+CLII	insufficient data
+CLIR	insufficient data
+CLIS	insufficient data
+CLLS	no data / batch failed
+CLNE	insufficient data
+CLNY	insufficient data
+CLOE	insufficient data
+CLPBY	insufficient data
+CLPR	no data / batch failed
+CLPS	insufficient data
+CLPT	no data / batch failed
+CLRO	insufficient data
+CLS	insufficient data
+CLSD	insufficient data
+CLSK	insufficient data
+CLSN	no data / batch failed
+CLWD	insufficient data
+CLWT	insufficient data
+CLX	insufficient data
+CLXT	insufficient data
+CM	insufficient data
+CMA	no data / batch failed
+CMBM	no data / batch failed
+CMC	insufficient data
+CMCL	insufficient data
+CMCSA	insufficient data
+CMCT	insufficient data
+CMG	insufficient data
+CMGR	insufficient data
+CMI	no data / batch failed
+CMLF	insufficient data
+CMND	insufficient data
+CMP	no data / batch failed
+CMPS	insufficient data
+CMRE	insufficient data
+CMRX	insufficient data
+CMTG	insufficient data
+CMTL	insufficient data
+CNA	no data / batch failed
+CNBX	insufficient data
+CNC	insufficient data
+CNCG	insufficient data
+CNDB	insufficient data
+CNDT	insufficient data
+CNET	no data / batch failed
+CNEY	insufficient data
+CNFR	insufficient data
+CNGL	no data / batch failed
+CNHI	insufficient data
+CNI	insufficient data
+CNK	insufficient data
+CNL	insufficient data
+CNP	insufficient data
+CNQ	no data / batch failed
+CNS	insufficient data
+CNSP	insufficient data
+CNTB	insufficient data
+CNTG	no data / batch failed
+CNTM	insufficient data
+CNTQ	insufficient data
+CNTX	insufficient data
+CNTY	insufficient data
+CNX	no data / batch failed
+CNX1	insufficient data
+CNXA	insufficient data
+CNXC	no data / batch failed
+COCO	insufficient data
+COCP	insufficient data
+CODI	no data / batch failed
+CODX	insufficient data
+COE	no data / batch failed
+COF	no data / batch failed
+COG	insufficient data
+COHN	insufficient data
+COHU	insufficient data
+COIN	insufficient data
+COLB	no data / batch failed
+COLD	insufficient data
+COMM	insufficient data
+COMP	no data / batch failed
+COMS	insufficient data
+CONN	insufficient data
+COO	no data / batch failed
+COP	no data / batch failed
+COSM	insufficient data
+COST	insufficient data
+COTY	insufficient data
+COUR	insufficient data
+COYA	insufficient data
+CP	insufficient data
+CPAA	no data / batch failed
+CPAC	insufficient data
+CPB	insufficient data
+CPBI	insufficient data
+CPG	insufficient data
+CPHI	price too low: $0.82
+CPIX	insufficient data
+CPNG	insufficient data
+CPOP	insufficient data
+CPPTL	insufficient data
+CPRX	insufficient data
+CPS	no data / batch failed
+CPSH	insufficient data
+CPSR	insufficient data
+CPST	no data / batch failed
+CPT	insufficient data
+CPUH	insufficient data
+CR1	insufficient data
+CRBG	insufficient data
+CRBP	no data / batch failed
+CRBU	insufficient data
+CRCT	no data / batch failed
+CRDO	insufficient data
+CREE	insufficient data
+CREG	insufficient data
+CREX	insufficient data
+CRGX	insufficient data
+CRH	insufficient data
+CRIS	insufficient data
+CRKN	insufficient data
+CRL	insufficient data
+CRLBF	no data / batch failed
+CRM	insufficient data
+CRMD	insufficient data
+CRMT	insufficient data
+CRNC	insufficient data
+CRNT	insufficient data
+CRON	insufficient data
+CROX	insufficient data
+CRSP	no data / batch failed
+CRT	insufficient data
+CRTD	no data / batch failed
+CRTPF	insufficient data
+CRTX	insufficient data
+CRUS	insufficient data
+CRVL	insufficient data
+CRVS	insufficient data
+CRWD	no data / batch failed
+CSCO	insufficient data
+CSGP	no data / batch failed
+CSIQ	no data / batch failed
+CSL	insufficient data
+CSR	no data / batch failed
+CSSE	no data / batch failed
+CSTL	insufficient data
+CSV	no data / batch failed
+CSX	no data / batch failed
+CTAC	insufficient data
+CTAS	insufficient data
+CTIB	no data / batch failed
+CTK	insufficient data
+CTL	insufficient data
+CTLT	no data / batch failed
+CTMX	insufficient data
+CTNM	insufficient data
+CTNT	insufficient data
+CTO	insufficient data
+CTRA	insufficient data
+CTRE	insufficient data
+CTRI	insufficient data
+CTRM	insufficient data
+CTRN	insufficient data
+CTSH	insufficient data
+CTSO	insufficient data
+CTST	insufficient data
+CTVA	insufficient data
+CTXR	no data / batch failed
+CUB1	insufficient data
+CUBE	insufficient data
+CUE	insufficient data
+CUEN	insufficient data
+CUK	insufficient data
+CURLF	insufficient data
+CURV	no data / batch failed
+CUTR	insufficient data
+CVAC	insufficient data
+CVE	insufficient data
+CVGW	no data / batch failed
+CVI	no data / batch failed
+CVII	no data / batch failed
+CVKD	insufficient data
+CVLBD	no data / batch failed
+CVLG	insufficient data
+CVLT	insufficient data
+CVM	insufficient data
+CVNA	no data / batch failed
+CVS	insufficient data
+CVV	insufficient data
+CW	insufficient data
+CWAN	insufficient data
+CWBHF	no data / batch failed
+CWBR	no data / batch failed
+CWCO	insufficient data
+CWD	insufficient data
+CWEGF	insufficient data
+CWEN	no data / batch failed
+CWH	insufficient data
+CWK	insufficient data
+CX	insufficient data
+CXAI	insufficient data
+CXDC	insufficient data
+CXDO	insufficient data
+CXM	insufficient data
+CXW	insufficient data
+CYAD	insufficient data
+CYBN	insufficient data
+CYBR	insufficient data
+CYCC	no data / batch failed
+CYDVF	insufficient data
+CYDY	no data / batch failed
+CYGIY	insufficient data
+CYN	insufficient data
+CYRN	insufficient data
+CYRX	insufficient data
+CYTH	no data / batch failed
+CYTK	insufficient data
+CYTR	insufficient data
+D	insufficient data
+DAC	insufficient data
+DADA	insufficient data
+DAL	insufficient data
+DAN	insufficient data
+DAO	insufficient data
+DAR	no data / batch failed
+DARE	insufficient data
+DASH	insufficient data
+DASTY	insufficient data
+DATS	no data / batch failed
+DAVA	insufficient data
+DAWN	insufficient data
+DB	insufficient data
+DBDD	insufficient data
+DBGI	insufficient data
+DBI	no data / batch failed
+DBVT	no data / batch failed
+DBX	insufficient data
+DC	insufficient data
+DCBO	insufficient data
+DCI	insufficient data
+DCO	insufficient data
+DCRB	insufficient data
+DCRC	insufficient data
+DCRN	insufficient data
+DD	insufficient data
+DDC	no data / batch failed
+DDD	no data / batch failed
+DDL	insufficient data
+DDOG	insufficient data
+DDS	insufficient data
+DE	insufficient data
+DEAC	no data / batch failed
+DECK	insufficient data
+DEFTF	insufficient data
+DEH	insufficient data
+DELL	insufficient data
+DEO	no data / batch failed
+DESP	insufficient data
+DFFN	no data / batch failed
+DFH	insufficient data
+DFHT	insufficient data
+DFPH	insufficient data
+DFS	no data / batch failed
+DG	insufficient data
+DGII	insufficient data
+DGLY	no data / batch failed
+DGRLY	insufficient data
+DGX	insufficient data
+DHAC	no data / batch failed
+DHER	insufficient data
+DHI	insufficient data
+DHT	insufficient data
+DIDI	insufficient data
+DIOD	insufficient data
+DIS	insufficient data
+DIST	insufficient data
+DJCO	no data / batch failed
+DKDCA	no data / batch failed
+DKILY	insufficient data
+DKS	insufficient data
+DLAKY	insufficient data
+DLO	insufficient data
+DLPN	insufficient data
+DLR	insufficient data
+DLTR	insufficient data
+DMAC	insufficient data
+DMEHF	insufficient data
+DMGGF	insufficient data
+DMS	no data / batch failed
+DMTK	insufficient data
+DMYD	insufficient data
+DMYI	insufficient data
+DMYQ	insufficient data
+DMYT	no data / batch failed
+DNAY	insufficient data
+DNLI	insufficient data
+DNN	insufficient data
+DNNGY	insufficient data
+DNOPY	insufficient data
+DNUT	insufficient data
+DO1	no data / batch failed
+DOCN	insufficient data
+DOCS	insufficient data
+DOCU	no data / batch failed
+DOGZ	insufficient data
+DOLE	insufficient data
+DOOO	insufficient data
+DOUG	insufficient data
+DOV	insufficient data
+DOW1	insufficient data
+DOX	insufficient data
+DOYU	insufficient data
+DPHC	insufficient data
+DPMLF	insufficient data
+DPRO	insufficient data
+DPS	insufficient data
+DPW	insufficient data
+DPZ	insufficient data
+DQ	insufficient data
+DRAD	insufficient data
+DRCT	insufficient data
+DRD	insufficient data
+DRH	no data / batch failed
+DRIO	no data / batch failed
+DRMA	no data / batch failed
+DRRX	insufficient data
+DRS	insufficient data
+DRUG	no data / batch failed
+DS	insufficient data
+DSAC	insufficient data
+DSBX	insufficient data
+DSGT	insufficient data
+DSGX	no data / batch failed
+DSP	insufficient data
+DSS	insufficient data
+DSVSF	insufficient data
+DSX	insufficient data
+DT	insufficient data
+DTC	insufficient data
+DTCK	no data / batch failed
+DTE	no data / batch failed
+DTEA	insufficient data
+DTIL	insufficient data
+DTSS	insufficient data
+DTST	no data / batch failed
+DUFRY	insufficient data
+DUK	insufficient data
+DUO	insufficient data
+DUOL	insufficient data
+DUOT	insufficient data
+DVA	insufficient data
+DVAX	no data / batch failed
+DVN	no data / batch failed
+DWAC	insufficient data
+DWIN	no data / batch failed
+DX	no data / batch failed
+DXC	insufficient data
+DXCM	insufficient data
+DXF	price too low: $0.83
+DXLG	insufficient data
+DXR	insufficient data
+DXYZ	insufficient data
+DYAI	no data / batch failed
+DYCQ	no data / batch failed
+DYNS	insufficient data
+DYNT	no data / batch failed
+E	no data / batch failed
+EA	no data / batch failed
+EAF	insufficient data
+EARN	insufficient data
+EARS	insufficient data
+EAT	no data / batch failed
+EB	insufficient data
+EBAY	insufficient data
+EBC	no data / batch failed
+EBET	insufficient data
+EBIX	insufficient data
+EBON	insufficient data
+EBR	insufficient data
+EBS	insufficient data
+EBTC	insufficient data
+EC	no data / batch failed
+ECBK	insufficient data
+ECIA	insufficient data
+ECL	no data / batch failed
+ECO	insufficient data
+ECOR	insufficient data
+ED	no data / batch failed
+EDIT	insufficient data
+EDN	insufficient data
+EDNC	insufficient data
+EDNT	no data / batch failed
+EDR	insufficient data
+EDRY	insufficient data
+EDSA	no data / batch failed
+EDTK	insufficient data
+EDU	insufficient data
+EE	insufficient data
+EEFT	insufficient data
+EEIQ	insufficient data
+EEMMF	insufficient data
+EFC	insufficient data
+EFHT	insufficient data
+EFLVF	insufficient data
+EFOI	insufficient data
+EFX	insufficient data
+EFXT	no data / batch failed
+EGHT	insufficient data
+EGIEY	insufficient data
+EGO	insufficient data
+EGOX	insufficient data
+EGP	no data / batch failed
+EGY	insufficient data
+EH	insufficient data
+EHAB	insufficient data
+EHGO	insufficient data
+EIGR	insufficient data
+EIX	no data / batch failed
+EJFA	insufficient data
+EJH	insufficient data
+EKSO	insufficient data
+EL	no data / batch failed
+ELA	insufficient data
+ELAB	insufficient data
+ELBM	no data / batch failed
+ELEV	insufficient data
+ELME	no data / batch failed
+ELOX	no data / batch failed
+ELPC	no data / batch failed
+ELS	insufficient data
+ELTK	insufficient data
+ELTP	insufficient data
+ELWS	insufficient data
+ELY	no data / batch failed
+ELYM	insufficient data
+EM	insufficient data
+EMBC	no data / batch failed
+EMCG	insufficient data
+EMLD	insufficient data
+EMN	insufficient data
+EMR	insufficient data
+EMX	no data / batch failed
+ENB	no data / batch failed
+ENCUF	no data / batch failed
+ENFA	insufficient data
+ENG	insufficient data
+ENGMF	insufficient data
+ENIC	insufficient data
+ENLAY	insufficient data
+ENLC	insufficient data
+ENLT	insufficient data
+ENLV	insufficient data
+ENOB	insufficient data
+ENPH	insufficient data
+ENS	insufficient data
+ENSV	insufficient data
+ENTG	insufficient data
+ENTX	no data / batch failed
+ENZ	insufficient data
+ENZN	insufficient data
+EOG	insufficient data
+EONGY	no data / batch failed
+EP	insufficient data
+EPIX	insufficient data
+EPM	insufficient data
+EPR	insufficient data
+EPRX	insufficient data
+EPSN	insufficient data
+EQ	insufficient data
+EQIX	insufficient data
+EQNR	insufficient data
+EQR	no data / batch failed
+EQT	insufficient data
+EQX	insufficient data
+ERAS	insufficient data
+ERI	insufficient data
+ERIC	insufficient data
+ERII	no data / batch failed
+ERJ	insufficient data
+ERO	insufficient data
+ERYP	no data / batch failed
+ES	insufficient data
+ESAB	no data / batch failed
+ESAIY	insufficient data
+ESEA	insufficient data
+ESGC	insufficient data
+ESHA	no data / batch failed
+ESLT	insufficient data
+ESPR	insufficient data
+ESRT	insufficient data
+ESS	insufficient data
+ESSC	no data / batch failed
+ESTC	insufficient data
+ESYJY	no data / batch failed
+ETCMY	no data / batch failed
+ETH	insufficient data
+ETN	no data / batch failed
+ETNB	insufficient data
+ETON	insufficient data
+EURN	insufficient data
+EUSG	no data / batch failed
+EUSP	insufficient data
+EVA	insufficient data
+EVAX	insufficient data
+EVC	no data / batch failed
+EVCM	no data / batch failed
+EVER	insufficient data
+EVFM	insufficient data
+EVGN	insufficient data
+EVH	insufficient data
+EVI	no data / batch failed
+EVK	no data / batch failed
+EVLO	insufficient data
+EVOK	insufficient data
+EVOL	no data / batch failed
+EVR	insufficient data
+EVRG	insufficient data
+EVRI	insufficient data
+EVSBY	insufficient data
+EVSI	no data / batch failed
+EVVTY	no data / batch failed
+EW	no data / batch failed
+EXAI	no data / batch failed
+EXAS	no data / batch failed
+EXC	insufficient data
+EXEL	insufficient data
+EXK	insufficient data
+EXLS	insufficient data
+EXPC	insufficient data
+EXPD	insufficient data
+EXPE	no data / batch failed
+EXPI	insufficient data
+EXPR	insufficient data
+EXR	insufficient data
+EXTO	insufficient data
+EXTR	insufficient data
+EYEG	insufficient data
+EYEN	insufficient data
+EYES	insufficient data
+EYPT	insufficient data
+EZFL	insufficient data
+EZGO	insufficient data
+F	insufficient data
+FACO	insufficient data
+FAII	insufficient data
+FAMI	insufficient data
+FANG	no data / batch failed
+FANUY	no data / batch failed
+FAST	no data / batch failed
+FAT	insufficient data
+FATE	insufficient data
+FB	insufficient data
+FBHS	insufficient data
+FBIO	insufficient data
+FBK	insufficient data
+FBRT	insufficient data
+FBRX	insufficient data
+FCAC	insufficient data
+FCAU	insufficient data
+FCEL	no data / batch failed
+FCNCA	insufficient data
+FCPT	insufficient data
+FCUUF	insufficient data
+FCUV	insufficient data
+FCX	insufficient data
+FDMT	insufficient data
+FDP	insufficient data
+FDS	insufficient data
+FDSB	no data / batch failed
+FDUS	insufficient data
+FDX	insufficient data
+FE	insufficient data
+FEAC	insufficient data
+FEAM	insufficient data
+FEBO	insufficient data
+FEDU	insufficient data
+FEMY	insufficient data
+FENC	insufficient data
+FER	insufficient data
+FF	insufficient data
+FFHL	insufficient data
+FFIV	insufficient data
+FG	insufficient data
+FGEN	insufficient data
+FGI	no data / batch failed
+FGNA	insufficient data
+FHLB	no data / batch failed
+FHN	insufficient data
+FHS	insufficient data
+FHTX	no data / batch failed
+FI	insufficient data
+FICO	no data / batch failed
+FIGS	insufficient data
+FIHL	no data / batch failed
+FIII	insufficient data
+FINMY	no data / batch failed
+FINV	insufficient data
+FIP	insufficient data
+FIS	insufficient data
+FISV	insufficient data
+FITB	insufficient data
+FIVE	insufficient data
+FIVN	insufficient data
+FIX	insufficient data
+FIZZ	insufficient data
+FKWL	no data / batch failed
+FL	no data / batch failed
+FLDM	insufficient data
+FLEX	insufficient data
+FLGC	no data / batch failed
+FLGT	no data / batch failed
+FLL	insufficient data
+FLMMF	insufficient data
+FLMN	insufficient data
+FLNC	insufficient data
+FLNG	insufficient data
+FLNT	insufficient data
+FLO	insufficient data
+FLR	insufficient data
+FLS	no data / batch failed
+FLT	insufficient data
+FLUT	insufficient data
+FLUX	insufficient data
+FLWS	insufficient data
+FLYE	no data / batch failed
+FMC	insufficient data
+FMCC	insufficient data
+FMCI	insufficient data
+FMST	insufficient data
+FMX	no data / batch failed
+FN	insufficient data
+FNB	no data / batch failed
+FND	no data / batch failed
+FNGR	price too low: $0.90
+FNKO	insufficient data
+FNMA	no data / batch failed
+FNV	insufficient data
+FOJCY	insufficient data
+FOLD	insufficient data
+FORD	insufficient data
+FORE	insufficient data
+FORL	insufficient data
+FORM	insufficient data
+FOSL	insufficient data
+FOUN	no data / batch failed
+FOUR	insufficient data
+FOX	insufficient data
+FOXA	insufficient data
+FPAY	insufficient data
+FQVLF	insufficient data
+FR	insufficient data
+FRBA	no data / batch failed
+FRC	no data / batch failed
+FREQ	insufficient data
+FRFHF	insufficient data
+FRHC	insufficient data
+FRO	insufficient data
+FROG	insufficient data
+FRPH	insufficient data
+FRPT	insufficient data
+FRSH	insufficient data
+FRSX	no data / batch failed
+FRT	no data / batch failed
+FRX	insufficient data
+FSDC	insufficient data
+FSHP	insufficient data
+FSLR	no data / batch failed
+FSLY	no data / batch failed
+FSM	insufficient data
+FSP	insufficient data
+FSRV	insufficient data
+FSUGY	insufficient data
+FSUN	insufficient data
+FTAI	insufficient data
+FTCH	insufficient data
+FTCI	no data / batch failed
+FTCO	insufficient data
+FTDR	insufficient data
+FTEK	insufficient data
+FTEL	insufficient data
+FTFT	no data / batch failed
+FTHWF	insufficient data
+FTI	no data / batch failed
+FTII	insufficient data
+FTK	no data / batch failed
+FTLF	no data / batch failed
+FTNT	insufficient data
+FTOC	insufficient data
+FTRE	insufficient data
+FTS	insufficient data
+FTV	no data / batch failed
+FUBO	no data / batch failed
+FUL	insufficient data
+FULC	insufficient data
+FUN1	insufficient data
+FUSE	no data / batch failed
+FUTU	insufficient data
+FUUFF	insufficient data
+FUV	insufficient data
+FVAC	no data / batch failed
+FVRR	insufficient data
+FWAA	insufficient data
+FWONK	insufficient data
+FXLV	insufficient data
+FYBR	insufficient data
+FZT	insufficient data
+G	insufficient data
+GAIN	insufficient data
+GALT	insufficient data
+GAMB	insufficient data
+GAME	insufficient data
+GAN	insufficient data
+GANX	no data / batch failed
+GAQ	insufficient data
+GARENA	insufficient data
+GASS	insufficient data
+GATO	no data / batch failed
+GAUZ	insufficient data
+GAXY	insufficient data
+GBCI	insufficient data
+GBDC	insufficient data
+GBIO	insufficient data
+GBNH	insufficient data
+GBOX	no data / batch failed
+GBR	insufficient data
+GBS	no data / batch failed
+GBX	no data / batch failed
+GCAC	no data / batch failed
+GCI	insufficient data
+GCO	insufficient data
+GCT	insufficient data
+GD	insufficient data
+GDDY	insufficient data
+GDEN	insufficient data
+GDHG	insufficient data
+GDRX	insufficient data
+GDS	insufficient data
+GDYN	insufficient data
+GE	no data / batch failed
+GECC	insufficient data
+GEHC	insufficient data
+GELYY	insufficient data
+GEN	insufficient data
+GENE	insufficient data
+GENK	insufficient data
+GEO	no data / batch failed
+GERN	insufficient data
+GES	insufficient data
+GEV	insufficient data
+GEVO	insufficient data
+GFAI	price too low: $0.56
+GFASY	price too low: $0.39
+GFF	insufficient data
+GFI	insufficient data
+GFL	no data / batch failed
+GFOR	no data / batch failed
+GFR	insufficient data
+GFS	insufficient data
+GGAA	insufficient data
+GGAL	no data / batch failed
+GGB	insufficient data
+GGG	insufficient data
+GGPI	insufficient data
+GH	no data / batch failed
+GHC	insufficient data
+GHIV	insufficient data
+GHM	insufficient data
+GHRS	insufficient data
+GHSI	insufficient data
+GHVI	no data / batch failed
+GIB	insufficient data
+GIGM	no data / batch failed
+GIK	no data / batch failed
+GIL	insufficient data
+GILD	no data / batch failed
+GILT	no data / batch failed
+GIPR	insufficient data
+GIS	insufficient data
+GKOS	no data / batch failed
+GLAC	insufficient data
+GLAD	insufficient data
+GLAQ	insufficient data
+GLASF	insufficient data
+GLATF	no data / batch failed
+GLBE	no data / batch failed
+GLBS	insufficient data
+GLDFF	price too low: $0.05
+GLDG	no data / batch failed
+GLEO	no data / batch failed
+GLG	insufficient data
+GLNG	no data / batch failed
+GLOB	insufficient data
+GLPI	insufficient data
+GLSI	insufficient data
+GLT	insufficient data
+GLTA	no data / batch failed
+GLTO	insufficient data
+GLUE	no data / batch failed
+GLW	no data / batch failed
+GLYC	insufficient data
+GM	insufficient data
+GMBL	insufficient data
+GMBT	insufficient data
+GME	insufficient data
+GMED	insufficient data
+GMGI	insufficient data
+GMHI	insufficient data
+GMII	no data / batch failed
+GMM	insufficient data
+GMRE	insufficient data
+GMVD	insufficient data
+GMVHY	insufficient data
+GNCA	insufficient data
+GNFT	no data / batch failed
+GNK	no data / batch failed
+GNL	insufficient data
+GNLN	insufficient data
+GNLX	insufficient data
+GNPK	insufficient data
+GNPX	insufficient data
+GNRC	insufficient data
+GNS	insufficient data
+GNTX	insufficient data
+GNUS	no data / batch failed
+GNW	insufficient data
+GO	insufficient data
+GOCO	insufficient data
+GODN	no data / batch failed
+GOED	insufficient data
+GOFPY	insufficient data
+GOGL	no data / batch failed
+GOGO	insufficient data
+GOL	insufficient data
+GOLD	insufficient data
+GOLF	insufficient data
+GOOD	insufficient data
+GOOG	insufficient data
+GOOGL	no data / batch failed
+GOOS	insufficient data
+GORO	insufficient data
+GOSS	insufficient data
+GOVX	insufficient data
+GP	insufficient data
+GPAK	insufficient data
+GPAT	insufficient data
+GPC	no data / batch failed
+GPCO	insufficient data
+GPCR	no data / batch failed
+GPI	no data / batch failed
+GPK	insufficient data
+GPN	no data / batch failed
+GPOR1	insufficient data
+GPRE	no data / batch failed
+GPRK	insufficient data
+GPRO	insufficient data
+GPS	insufficient data
+GPSE	insufficient data
+GRAF1	insufficient data
+GRAL	no data / batch failed
+GRAY	insufficient data
+GRBK	insufficient data
+GRC	insufficient data
+GREE	insufficient data
+GRIL	insufficient data
+GRIN	no data / batch failed
+GRMM	insufficient data
+GRMN	insufficient data
+GRNQ	insufficient data
+GRNV	insufficient data
+GROY	insufficient data
+GRPH	no data / batch failed
+GRPN	no data / batch failed
+GRRR	insufficient data
+GRSV	insufficient data
+GRTS	insufficient data
+GRTX	no data / batch failed
+GRVI	insufficient data
+GRVY	no data / batch failed
+GRWG	insufficient data
+GS	insufficient data
+GSAH	insufficient data
+GSAT	insufficient data
+GSBD	insufficient data
+GSIW	insufficient data
+GSK	insufficient data
+GSL	insufficient data
+GSM	insufficient data
+GSMG	insufficient data
+GSUN	insufficient data
+GSX	no data / batch failed
+GT	no data / batch failed
+GTBIF	insufficient data
+GTBP	insufficient data
+GTCH	no data / batch failed
+GTE	no data / batch failed
+GTEC	no data / batch failed
+GTHX	insufficient data
+GTII	insufficient data
+GTLB	insufficient data
+GTN	insufficient data
+GTX	insufficient data
+GTY	insufficient data
+GULRY	insufficient data
+GUTS	no data / batch failed
+GVH	insufficient data
+GVP	insufficient data
+GWAC	insufficient data
+GWAV	insufficient data
+GWRE	insufficient data
+GWRS	insufficient data
+GWW	insufficient data
+GXGX	insufficient data
+GXO	insufficient data
+GZPFY	insufficient data
+H	insufficient data
+HAE	insufficient data
+HAL	insufficient data
+HAO	insufficient data
+HAPP	no data / batch failed
+HAS	insufficient data
+HASI	no data / batch failed
+HAYW	insufficient data
+HBAN	insufficient data
+HBI	insufficient data
+HBM	insufficient data
+HBT	no data / batch failed
+HCA	insufficient data
+HCAC	insufficient data
+HCANF	insufficient data
+HCAQ	insufficient data
+HCAT	no data / batch failed
+HCC	insufficient data
+HCCC	insufficient data
+HCCH	insufficient data
+HCMC	insufficient data
+HCN	no data / batch failed
+HCP	insufficient data
+HCP1	no data / batch failed
+HCTI	no data / batch failed
+HCWB	insufficient data
+HD	no data / batch failed
+HDB	insufficient data
+HDC	no data / batch failed
+HDL	insufficient data
+HDSN	insufficient data
+HE	insufficient data
+HEAR	no data / batch failed
+HEBT	no data / batch failed
+HEC	insufficient data
+HEICO	no data / batch failed
+HELE	no data / batch failed
+HEPA	insufficient data
+HES	insufficient data
+HESM	no data / batch failed
+HFC	insufficient data
+HFEN	insufficient data
+HG	insufficient data
+HGBL	insufficient data
+HGEN	insufficient data
+HGSH	insufficient data
+HHT	insufficient data
+HIG	no data / batch failed
+HIHO	insufficient data
+HII	insufficient data
+HILS	no data / batch failed
+HIMX	insufficient data
+HITIF	insufficient data
+HIW	no data / batch failed
+HJLI	insufficient data
+HKD	insufficient data
+HKIB	insufficient data
+HL	insufficient data
+HLF	insufficient data
+HLIO	insufficient data
+HLIT	no data / batch failed
+HLLY	no data / batch failed
+HLN	insufficient data
+HLP	insufficient data
+HLT	insufficient data
+HLTH	insufficient data
+HLVX	no data / batch failed
+HLXA	no data / batch failed
+HLXB	insufficient data
+HMC	insufficient data
+HMI	insufficient data
+HMY	insufficient data
+HNGKY	no data / batch failed
+HNNMY	no data / batch failed
+HNRA	insufficient data
+HNRG	insufficient data
+HNST	insufficient data
+HNVR	insufficient data
+HOFT	no data / batch failed
+HOFV	no data / batch failed
+HOG	insufficient data
+HOLX	insufficient data
+HON	insufficient data
+HOOD	no data / batch failed
+HOOK	insufficient data
+HOTH	insufficient data
+HOUR	insufficient data
+HOWL	insufficient data
+HP	insufficient data
+HPE	insufficient data
+HPGLY	insufficient data
+HPK	insufficient data
+HPQ	insufficient data
+HRB	no data / batch failed
+HRI	no data / batch failed
+HRL	insufficient data
+HRMY	no data / batch failed
+HROW	insufficient data
+HRYU	no data / batch failed
+HRZN	insufficient data
+HSAI	insufficient data
+HSAQ	insufficient data
+HSBC	insufficient data
+HSDT	insufficient data
+HSHP	insufficient data
+HSIC	insufficient data
+HSPO	insufficient data
+HST	insufficient data
+HSTO	insufficient data
+HSY	no data / batch failed
+HTA	insufficient data
+HTBX	insufficient data
+HTCR	insufficient data
+HTGC	insufficient data
+HTGM	insufficient data
+HTHT	insufficient data
+HTZ	insufficient data
+HUBB	insufficient data
+HUBS	insufficient data
+HUDA	insufficient data
+HUDI	insufficient data
+HUGE	insufficient data
+HUIZ	insufficient data
+HUM	insufficient data
+HUN	insufficient data
+HUSA	insufficient data
+HUSN	insufficient data
+HUTMF	no data / batch failed
+HUYA	insufficient data
+HVBTF	insufficient data
+HVT	insufficient data
+HWAL	no data / batch failed
+HWH	insufficient data
+HX	insufficient data
+HXGBY	insufficient data
+HXL	no data / batch failed
+HY	insufficient data
+HYAC3	insufficient data
+HYAC4	insufficient data
+HYFM	no data / batch failed
+HYMC	no data / batch failed
+HYRE	insufficient data
+HZAC	insufficient data
+HZO	insufficient data
+IAC	no data / batch failed
+IACA	no data / batch failed
+IAG	insufficient data
+IBAC	no data / batch failed
+IBIO	insufficient data
+IBKR	no data / batch failed
+IBM	insufficient data
+IBN	insufficient data
+IBP	insufficient data
+IBTA	insufficient data
+ICAD	no data / batch failed
+ICCM	no data / batch failed
+ICCT	insufficient data
+ICD	insufficient data
+ICE	insufficient data
+ICG	insufficient data
+ICL	insufficient data
+ICMB	insufficient data
+ICUI	insufficient data
+IDAI	insufficient data
+IDEX	insufficient data
+IDN	no data / batch failed
+IDRA	insufficient data
+IDXX	insufficient data
+IE	insufficient data
+IEX	insufficient data
+IFBD	insufficient data
+IFF	no data / batch failed
+IGC	insufficient data
+IGIC	no data / batch failed
+IGMS	insufficient data
+IGT	insufficient data
+IHRT	insufficient data
+IHT	insufficient data
+IIAC	insufficient data
+III	insufficient data
+IIIN	insufficient data
+IINN	no data / batch failed
+IIPR	insufficient data
+IIVI	insufficient data
+IKNA	insufficient data
+IKNX	insufficient data
+IKT	no data / batch failed
+ILAG	no data / batch failed
+ILMN	insufficient data
+IMAX	insufficient data
+IMBI	insufficient data
+IMCC	insufficient data
+IMHC	no data / batch failed
+IMMP	insufficient data
+IMMR	insufficient data
+IMMX	insufficient data
+IMNM	insufficient data
+IMO	insufficient data
+IMOS	insufficient data
+IMPP	insufficient data
+IMPUY	insufficient data
+IMPX	no data / batch failed
+IMRA	no data / batch failed
+IMRN	no data / batch failed
+IMRX	insufficient data
+IMTE	insufficient data
+IMUX	no data / batch failed
+IMV	insufficient data
+IMVT	insufficient data
+INAB	no data / batch failed
+INBX1	insufficient data
+INCY	insufficient data
+INDB	no data / batch failed
+INDO	no data / batch failed
+INDV	insufficient data
+INFA	no data / batch failed
+INFI	no data / batch failed
+INFN	insufficient data
+INFU	insufficient data
+INFY	insufficient data
+INGN	insufficient data
+INGR	insufficient data
+INHD	insufficient data
+INIS	insufficient data
+INKT	insufficient data
+INM	no data / batch failed
+INMB	no data / batch failed
+INN	insufficient data
+INO	no data / batch failed
+INOD	insufficient data
+INPX	insufficient data
+INSE	no data / batch failed
+INSG	insufficient data
+INSU	insufficient data
+INSW	no data / batch failed
+INT	insufficient data
+INTC	insufficient data
+INTG	insufficient data
+INTJ	insufficient data
+INTS1	insufficient data
+INTU	insufficient data
+INTZ	insufficient data
+INUV	insufficient data
+INVA	insufficient data
+INVH	insufficient data
+INVU	no data / batch failed
+INZY	insufficient data
+IO	no data / batch failed
+IOAC	insufficient data
+IOBT	price too low: $0.01
+IONM	insufficient data
+IONR	insufficient data
+IONS	no data / batch failed
+IOT	insufficient data
+IOVA	insufficient data
+IP	no data / batch failed
+IPA	insufficient data
+IPAR	insufficient data
+IPAX	no data / batch failed
+IPDN	insufficient data
+IPG	insufficient data
+IPHA	insufficient data
+IPI	insufficient data
+IPNFF	insufficient data
+IPOB	no data / batch failed
+IPOC	insufficient data
+IPOE	insufficient data
+IPSC	insufficient data
+IPV	insufficient data
+IPW	no data / batch failed
+IPWR	insufficient data
+IPXX	insufficient data
+IQ	no data / batch failed
+IQST	insufficient data
+IQV	no data / batch failed
+IR	no data / batch failed
+IRBT	insufficient data
+IRDM	insufficient data
+IREN	insufficient data
+IRIX	insufficient data
+IRM	insufficient data
+IRTC	insufficient data
+ISENF	insufficient data
+ISIG	insufficient data
+ISNS	insufficient data
+ISPC	insufficient data
+ISPR	insufficient data
+ISR	no data / batch failed
+ISRG	insufficient data
+ISRL	no data / batch failed
+IT	insufficient data
+ITAC	insufficient data
+ITCI	no data / batch failed
+ITHX	insufficient data
+ITOCY	no data / batch failed
+ITOS	no data / batch failed
+ITP	insufficient data
+ITRI	insufficient data
+ITRM	insufficient data
+ITRN	insufficient data
+ITT	insufficient data
+ITUB	insufficient data
+ITW	no data / batch failed
+IVAC	no data / batch failed
+IVAN	insufficient data
+IVCA	insufficient data
+IVDA	insufficient data
+IVFH	insufficient data
+IVR	no data / batch failed
+IVST	insufficient data
+IVT	no data / batch failed
+IVZ	insufficient data
+IXHL	insufficient data
+IZEA	insufficient data
+IZM	no data / batch failed
+JACK	insufficient data
+JAGX	insufficient data
+JAMF	no data / batch failed
+JAN	no data / batch failed
+JATT	insufficient data
+JAZZ	insufficient data
+JBGS	insufficient data
+JBHT	insufficient data
+JBL	insufficient data
+JBLU	insufficient data
+JCOM	insufficient data
+JCS	no data / batch failed
+JCSE	no data / batch failed
+JDZG	insufficient data
+JE	insufficient data
+JEC	insufficient data
+JEWL	insufficient data
+JFBR	insufficient data
+JFIN	insufficient data
+JFK	insufficient data
+JFU	no data / batch failed
+JG	insufficient data
+JHG	insufficient data
+JKHY	no data / batch failed
+JL	insufficient data
+JMAC	insufficient data
+JMHLY	insufficient data
+JMIA	insufficient data
+JNCE	no data / batch failed
+JNJ	no data / batch failed
+JNPR	insufficient data
+JNVR	insufficient data
+JOB	insufficient data
+JOE	insufficient data
+JOUT	insufficient data
+JP	insufficient data
+JPS	insufficient data
+JRJC	insufficient data
+JRNGF	insufficient data
+JRSS	insufficient data
+JSDA	insufficient data
+JUNE	insufficient data
+JUPW	insufficient data
+JUSHF	insufficient data
+JVA	insufficient data
+JVSA	no data / batch failed
+JWAC	insufficient data
+JWEL	insufficient data
+JWN	no data / batch failed
+JXN	insufficient data
+JYD	no data / batch failed
+JYNT	insufficient data
+JZ	no data / batch failed
+JZXN	insufficient data
+K	no data / batch failed
+KALA	insufficient data
+KARO	insufficient data
+KAVL	insufficient data
+KBDC	no data / batch failed
+KBLM	insufficient data
+KBNT	no data / batch failed
+KBR	insufficient data
+KBSF	insufficient data
+KC	insufficient data
+KCAC	no data / batch failed
+KCAC2	no data / batch failed
+KD	insufficient data
+KDLY	insufficient data
+KELYB	insufficient data
+KEN	no data / batch failed
+KEP	insufficient data
+KEQU	insufficient data
+KERN	insufficient data
+KEWL	insufficient data
+KEX	insufficient data
+KEY	insufficient data
+KEYS	insufficient data
+KFRC	insufficient data
+KFY	insufficient data
+KGC	insufficient data
+KGEI	insufficient data
+KGS	insufficient data
+KHC	no data / batch failed
+KIDS	insufficient data
+KIM	no data / batch failed
+KIRK	insufficient data
+KIROY	insufficient data
+KKOYY	insufficient data
+KKR	insufficient data
+KLAC	no data / batch failed
+KLG	insufficient data
+KLIC	insufficient data
+KLXE	no data / batch failed
+KMB	insufficient data
+KMI	insufficient data
+KMPH	insufficient data
+KMTUY	no data / batch failed
+KMX	insufficient data
+KN	no data / batch failed
+KNDI	insufficient data
+KNF	no data / batch failed
+KNOP	insufficient data
+KNSL	insufficient data
+KNW	insufficient data
+KO	insufficient data
+KOD	insufficient data
+KODK	insufficient data
+KOPN	no data / batch failed
+KORS	insufficient data
+KOS	insufficient data
+KOSS	insufficient data
+KPTI	insufficient data
+KR	insufficient data
+KRBP	insufficient data
+KRC	insufficient data
+KREF	insufficient data
+KRG	no data / batch failed
+KRKNF	no data / batch failed
+KRKR	insufficient data
+KRNT	insufficient data
+KROS	no data / batch failed
+KRT	insufficient data
+KRUS	insufficient data
+KRYS	insufficient data
+KSCP	insufficient data
+KSMT	insufficient data
+KSPI	no data / batch failed
+KSS	insufficient data
+KTOS	insufficient data
+KTOV	insufficient data
+KTRA	no data / batch failed
+KTTA	no data / batch failed
+KUKE	no data / batch failed
+KULR	insufficient data
+KURA	insufficient data
+KURI	insufficient data
+KVAC	insufficient data
+KVSB	no data / batch failed
+KVUE	no data / batch failed
+KVYO	insufficient data
+KWBT	insufficient data
+KXIN	insufficient data
+KYMR	no data / batch failed
+KYTX	insufficient data
+KZIA	insufficient data
+KZR	no data / batch failed
+LAC	insufficient data
+LACQ	insufficient data
+LACW	no data / batch failed
+LAD	no data / batch failed
+LADR	no data / batch failed
+LAES	insufficient data
+LAKE	no data / batch failed
+LAMR	insufficient data
+LANC	insufficient data
+LAND	insufficient data
+LASE	no data / batch failed
+LAUR	insufficient data
+LAW	no data / batch failed
+LAZY	no data / batch failed
+LB	no data / batch failed
+LB1	insufficient data
+LBPH	insufficient data
+LBRT	insufficient data
+LBTI	insufficient data
+LBTYA	insufficient data
+LBTYB	insufficient data
+LC	insufficient data
+LCAA	insufficient data
+LCAP	insufficient data
+LCTC	no data / batch failed
+LCTX	insufficient data
+LDI	insufficient data
+LDOS	insufficient data
+LECO	no data / batch failed
+LEDS	insufficient data
+LEG	no data / batch failed
+LEGN	no data / batch failed
+LEN	insufficient data
+LESL	insufficient data
+LEU	insufficient data
+LEVI	insufficient data
+LFST	insufficient data
+LFT	no data / batch failed
+LFVN	insufficient data
+LGCB	insufficient data
+LGCL	insufficient data
+LGDTF	insufficient data
+LGFRY	insufficient data
+LGHL	insufficient data
+LGIQ	insufficient data
+LGO	insufficient data
+LGVC	no data / batch failed
+LGVN	no data / batch failed
+LGVW	insufficient data
+LHX	insufficient data
+LI	insufficient data
+LIACF	insufficient data
+LIAN	no data / batch failed
+LICN	insufficient data
+LIF	no data / batch failed
+LIFE	insufficient data
+LIFZF	insufficient data
+LIII	no data / batch failed
+LILAK	insufficient data
+LIN	price too high: $507.45
+LINE	insufficient data
+LION	insufficient data
+LIPO	insufficient data
+LITB	no data / batch failed
+LITE	insufficient data
+LITOF	price too low: $0.40
+LIVE	insufficient data
+LIVK	insufficient data
+LIVX	insufficient data
+LIXT	insufficient data
+LIZI	insufficient data
+LJAQ	insufficient data
+LK	insufficient data
+LKCO	insufficient data
+LKQ	insufficient data
+LLESY	insufficient data
+LLIT	insufficient data
+LLKKF	insufficient data
+LLNW	no data / batch failed
+LLY	insufficient data
+LLYVA1	insufficient data
+LLYVK	no data / batch failed
+LMAO	insufficient data
+LMB	no data / batch failed
+LMFA	insufficient data
+LMND	no data / batch failed
+LMPX	insufficient data
+LMT	price too high: $519.05
+LNC	insufficient data
+LNG	insufficient data
+LNT	no data / batch failed
+LNTH	insufficient data
+LOAK	insufficient data
+LOAN	insufficient data
+LOAR	insufficient data
+LOB	no data / batch failed
+LOBO	insufficient data
+LOCO	no data / batch failed
+LODE	no data / batch failed
+LOGI	no data / batch failed
+LOKB	no data / batch failed
+LOMA	insufficient data
+LOOP	insufficient data
+LORL	insufficient data
+LOVE	insufficient data
+LPCN	no data / batch failed
+LPG	no data / batch failed
+LPI	insufficient data
+LPL	insufficient data
+LPTH	no data / batch failed
+LPTV	no data / batch failed
+LPTX	insufficient data
+LPX	insufficient data
+LQDA	insufficient data
+LQDT	no data / batch failed
+LQMT	insufficient data
+LQR	insufficient data
+LRCX	insufficient data
+LRE	insufficient data
+LRHC	no data / batch failed
+LRMR	insufficient data
+LRN	insufficient data
+LSAC	no data / batch failed
+LSCC	insufficient data
+LSDI	no data / batch failed
+LSF	insufficient data
+LSH	insufficient data
+LSPD	insufficient data
+LSTR	insufficient data
+LSXMA	insufficient data
+LSXMK	insufficient data
+LTBR	insufficient data
+LTHM	no data / batch failed
+LTM	insufficient data
+LTMCF	insufficient data
+LTRPA	insufficient data
+LTRPB	no data / batch failed
+LU	insufficient data
+LUCD	no data / batch failed
+LUCY1	insufficient data
+LUK	no data / batch failed
+LUKOY	insufficient data
+LULU	insufficient data
+LUNA	insufficient data
+LUNMF	insufficient data
+LUV	insufficient data
+LUVU	no data / batch failed
+LVMUY	insufficient data
+LVNTA	insufficient data
+LVS	no data / batch failed
+LVTX	insufficient data
+LW	insufficient data
+LWAC	insufficient data
+LWLG	insufficient data
+LX	insufficient data
+LXEO	insufficient data
+LXRP	insufficient data
+LXRX	insufficient data
+LXU	insufficient data
+LYB	insufficient data
+LYFT	no data / batch failed
+LYG	insufficient data
+LYL	insufficient data
+LYRA	no data / batch failed
+LYSDY	insufficient data
+LYT	insufficient data
+LYV	no data / batch failed
+LZ	insufficient data
+LZB	insufficient data
+LZM	insufficient data
+M	no data / batch failed
+MA	insufficient data
+MAA	no data / batch failed
+MAAC	no data / batch failed
+MAAQ	insufficient data
+MAC	no data / batch failed
+MACI	insufficient data
+MAG	insufficient data
+MAGS	insufficient data
+MAIA	no data / batch failed
+MAIN	no data / batch failed
+MAMO	insufficient data
+MAN	insufficient data
+MANH	insufficient data
+MANU	insufficient data
+MAQC	insufficient data
+MAR	no data / batch failed
+MARA	insufficient data
+MARK	insufficient data
+MARX	no data / batch failed
+MASI	no data / batch failed
+MASS	insufficient data
+MAT	no data / batch failed
+MATX	insufficient data
+MAXN	no data / batch failed
+MBC	insufficient data
+MBIO	insufficient data
+MBLY	no data / batch failed
+MBOT	insufficient data
+MBT	no data / batch failed
+MBUU	insufficient data
+MC	insufficient data
+MCAC	insufficient data
+MCAD	no data / batch failed
+MCAE	insufficient data
+MCD	insufficient data
+MCF	insufficient data
+MCFT	insufficient data
+MCG	insufficient data
+MCK	no data / batch failed
+MCMJ	insufficient data
+MCO	insufficient data
+MCRB	insufficient data
+MCY	insufficient data
+MDB	insufficient data
+MDBH	no data / batch failed
+MDGL	no data / batch failed
+MDGS	no data / batch failed
+MDIA	no data / batch failed
+MDJH	insufficient data
+MDLY	no data / batch failed
+MDLZ	insufficient data
+MDRR	no data / batch failed
+MDT	insufficient data
+MDV	insufficient data
+MDVL	insufficient data
+MDWD	no data / batch failed
+MDXG	insufficient data
+MED	no data / batch failed
+MEDIF	no data / batch failed
+MEDP	insufficient data
+MEDS	no data / batch failed
+MEEC	insufficient data
+MEGL	no data / batch failed
+MEI	insufficient data
+MEIP	insufficient data
+MELI	insufficient data
+MEOH	insufficient data
+MERC	insufficient data
+MESA	insufficient data
+MESO	insufficient data
+MET	insufficient data
+METCB	insufficient data
+METX	no data / batch failed
+MFA	insufficient data
+MFAC	insufficient data
+MFC	insufficient data
+MFH	insufficient data
+MGA	insufficient data
+MGAM	no data / batch failed
+MGEN	no data / batch failed
+MGIC	insufficient data
+MGIH	no data / batch failed
+MGM	insufficient data
+MGNX	no data / batch failed
+MGOL	insufficient data
+MGPI	insufficient data
+MGRM	no data / batch failed
+MGRX	no data / batch failed
+MGTI	no data / batch failed
+MGTX	no data / batch failed
+MGX	insufficient data
+MGY	insufficient data
+MHK	insufficient data
+MHO	no data / batch failed
+MHUA	insufficient data
+MHVYF	no data / batch failed
+MICT	insufficient data
+MIELY	insufficient data
+MIRA	price too low: $1.01
+MIRM	no data / batch failed
+MIST	insufficient data
+MITC	insufficient data
+MITK	insufficient data
+MITQ	insufficient data
+MITT	insufficient data
+MJARF	no data / batch failed
+MKC	insufficient data
+MKD	insufficient data
+MKDW	insufficient data
+MKGI	insufficient data
+MKKGY	insufficient data
+MKL	no data / batch failed
+MKSI	insufficient data
+MKTX	insufficient data
+MKTY	insufficient data
+MLCO	no data / batch failed
+MLHR	insufficient data
+MLI	insufficient data
+MLM	no data / batch failed
+MLND	no data / batch failed
+MLP	insufficient data
+MLSS	no data / batch failed
+MMC	insufficient data
+MMM	no data / batch failed
+MMMB	no data / batch failed
+MMSI	insufficient data
+MMYT	insufficient data
+MNCL	no data / batch failed
+MNDO	price too low: $0.98
+MNDR	no data / batch failed
+MNDY	insufficient data
+MNKD	insufficient data
+MNMD	insufficient data
+MNOV	insufficient data
+MNPR	insufficient data
+MNSO	insufficient data
+MNTK	insufficient data
+MO	no data / batch failed
+MOBQ	price too low: $0.55
+MOD	insufficient data
+MODD	no data / batch failed
+MOGO	insufficient data
+MOGU	no data / batch failed
+MOH	insufficient data
+MOHO	insufficient data
+MONRY	insufficient data
+MORN	no data / batch failed
+MOS	insufficient data
+MOSY	insufficient data
+MOTN	no data / batch failed
+MOTS	insufficient data
+MOTV	no data / batch failed
+MOXC	insufficient data
+MPC	no data / batch failed
+MPNGY	no data / batch failed
+MPTI	insufficient data
+MPW	insufficient data
+MPWR	price too high: $1652.60
+MQ	insufficient data
+MQBKY	insufficient data
+MRAAY	insufficient data
+MRAI	insufficient data
+MRAM	insufficient data
+MRCY	no data / batch failed
+MREO	insufficient data
+MRIN	insufficient data
+MRK	insufficient data
+MRKR	insufficient data
+MRM	insufficient data
+MRMD	insufficient data
+MRNA	insufficient data
+MRNS	insufficient data
+MRO	insufficient data
+MRSN	insufficient data
+MRTI	no data / batch failed
+MRUS	no data / batch failed
+MRVI	insufficient data
+MRVL	insufficient data
+MRX	insufficient data
+MS	insufficient data
+MSA	insufficient data
+MSAI	insufficient data
+MSB	insufficient data
+MSC	no data / batch failed
+MSCI	insufficient data
+MSDL	no data / batch failed
+MSEX	insufficient data
+MSFT	no data / batch failed
+MSGE	no data / batch failed
+MSGE1	insufficient data
+MSGM	insufficient data
+MSI	insufficient data
+MSM	no data / batch failed
+MSN	insufficient data
+MSS	insufficient data
+MSTR	insufficient data
+MSWV	no data / batch failed
+MTA	insufficient data
+MTB	insufficient data
+MTBC	insufficient data
+MTC	no data / batch failed
+MTCH	insufficient data
+MTCR	insufficient data
+MTD	insufficient data
+MTDR	insufficient data
+MTEK	insufficient data
+MTL	insufficient data
+MTLS	insufficient data
+MTN	insufficient data
+MTNB	price too low: $0.78
+MTP	insufficient data
+MTSI	insufficient data
+MTSL	insufficient data
+MTSUY	insufficient data
+MTZ	no data / batch failed
+MU	insufficient data
+MUFG	insufficient data
+MUR	insufficient data
+MURA	insufficient data
+MUSA	insufficient data
+MUX	insufficient data
+MVIS	no data / batch failed
+MWA	no data / batch failed
+MWK	no data / batch failed
+MX	insufficient data
+MXC	no data / batch failed
+MXCT	no data / batch failed
+MXL	insufficient data
+MYL	insufficient data
+MYNZ	insufficient data
+MYO	no data / batch failed
+MYRG	insufficient data
+MYSZ	no data / batch failed
+MYT	insufficient data
+MZDAY	insufficient data
+NA	insufficient data
+NABL	insufficient data
+NAK	insufficient data
+NAKD	insufficient data
+NANX	insufficient data
+NAOV	no data / batch failed
+NAT	insufficient data
+NATL	insufficient data
+NAVI	insufficient data
+NBA	insufficient data
+NBAC	insufficient data
+NBBK	insufficient data
+NBEV	no data / batch failed
+NBIX	insufficient data
+NBRV	no data / batch failed
+NBSE	insufficient data
+NBY	insufficient data
+NC	insufficient data
+NCI	insufficient data
+NCL	insufficient data
+NCLH	insufficient data
+NCMI	insufficient data
+NCNA	insufficient data
+NCNC	insufficient data
+NCNO	insufficient data
+NCR	insufficient data
+NCSM	no data / batch failed
+NDAQ	no data / batch failed
+NDRA	insufficient data
+NDSN	insufficient data
+NE	insufficient data
+NEE	insufficient data
+NEM	insufficient data
+NEO	no data / batch failed
+NEOG	insufficient data
+NEON	insufficient data
+NEP	no data / batch failed
+NEPT	insufficient data
+NERV	no data / batch failed
+NESR	insufficient data
+NET	no data / batch failed
+NETC	insufficient data
+NETE	insufficient data
+NEW	insufficient data
+NEWT	insufficient data
+NEXA	no data / batch failed
+NEXI	insufficient data
+NFE	price too low: $0.50
+NFG	insufficient data
+NFGC	insufficient data
+NFIN	insufficient data
+NFTG	insufficient data
+NFYS	insufficient data
+NG	insufficient data
+NGA	no data / batch failed
+NGAC	insufficient data
+NGG	insufficient data
+NGLOY	insufficient data
+NGS	no data / batch failed
+NHI	no data / batch failed
+NHIC	insufficient data
+NHTC	insufficient data
+NHYDY	no data / batch failed
+NILSY	insufficient data
+NINE	no data / batch failed
+NINOY	insufficient data
+NIO	no data / batch failed
+NIPG	insufficient data
+NIU	insufficient data
+NJDCY	no data / batch failed
+NK	insufficient data
+NKE	insufficient data
+NKRKY	no data / batch failed
+NKTX	insufficient data
+NL	insufficient data
+NLCP	insufficient data
+NLIT	no data / batch failed
+NLOP	insufficient data
+NLS	insufficient data
+NLSP	no data / batch failed
+NLST	insufficient data
+NLY	insufficient data
+NMGRF	insufficient data
+NMIH	insufficient data
+NMM	no data / batch failed
+NMR	no data / batch failed
+NMRA	insufficient data
+NMRD	no data / batch failed
+NMRK	insufficient data
+NMTC	no data / batch failed
+NMTR	insufficient data
+NNAG	insufficient data
+NNDM	insufficient data
+NNE	insufficient data
+NNN	insufficient data
+NNOMF	insufficient data
+NNOX	insufficient data
+NNVC	insufficient data
+NNXPF	insufficient data
+NOC	insufficient data
+NOG	insufficient data
+NOK	insufficient data
+NOV	insufficient data
+NOVA	insufficient data
+NOVS1	insufficient data
+NOVT	insufficient data
+NOW	no data / batch failed
+NPA	insufficient data
+NPK	no data / batch failed
+NPSNY	insufficient data
+NRBO	insufficient data
+NREF	no data / batch failed
+NRG	no data / batch failed
+NRIX	insufficient data
+NRSN	insufficient data
+NRT	insufficient data
+NRXS	insufficient data
+NRZ	insufficient data
+NSA	insufficient data
+NSC	insufficient data
+NSH	no data / batch failed
+NSPR	insufficient data
+NSSC	insufficient data
+NSYS	insufficient data
+NTAP	insufficient data
+NTB	no data / batch failed
+NTCO	insufficient data
+NTCT	no data / batch failed
+NTDOY	no data / batch failed
+NTEC	insufficient data
+NTES	insufficient data
+NTGR	insufficient data
+NTIC	no data / batch failed
+NTN	insufficient data
+NTNX	insufficient data
+NTOIY	no data / batch failed
+NTR	no data / batch failed
+NTRA	insufficient data
+NTRB	insufficient data
+NTST	insufficient data
+NTWK	no data / batch failed
+NTZ	insufficient data
+NU	insufficient data
+NUE	no data / batch failed
+NURO	insufficient data
+NUS	no data / batch failed
+NUVL	insufficient data
+NUZE	insufficient data
+NVA	insufficient data
+NVAX	no data / batch failed
+NVCR	insufficient data
+NVCT	insufficient data
+NVDA	insufficient data
+NVEC	insufficient data
+NVEI	insufficient data
+NVFY	no data / batch failed
+NVGI	no data / batch failed
+NVIV	insufficient data
+NVO	no data / batch failed
+NVOS	insufficient data
+NVR	insufficient data
+NVS	no data / batch failed
+NVT	insufficient data
+NVUS	insufficient data
+NVX	insufficient data
+NWBI	insufficient data
+NWBO	insufficient data
+NWG	no data / batch failed
+NWGI	no data / batch failed
+NWL	insufficient data
+NWN	no data / batch failed
+NWS	insufficient data
+NXDT	insufficient data
+NXE	insufficient data
+NXGL	insufficient data
+NXL	insufficient data
+NXPI	insufficient data
+NXRT	insufficient data
+NXST	insufficient data
+NXT	no data / batch failed
+NXTD	insufficient data
+NXU	no data / batch failed
+NYCB	no data / batch failed
+NYMT	insufficient data
+NYMX	insufficient data
+NYT	no data / batch failed
+O	insufficient data
+OAC	insufficient data
+OACB	insufficient data
+OAKU	insufficient data
+OAS	insufficient data
+OB	insufficient data
+OBE	insufficient data
+OBLG	insufficient data
+OBLN	insufficient data
+OC	insufficient data
+OCFT	insufficient data
+OCG	no data / batch failed
+OCGN	insufficient data
+OCSL	insufficient data
+OCUL	insufficient data
+OCX	insufficient data
+ODD	insufficient data
+ODFL	insufficient data
+ODT	no data / batch failed
+OEG	insufficient data
+OESX	insufficient data
+OFC	no data / batch failed
+OFG	no data / batch failed
+OG	insufficient data
+OGE	insufficient data
+OGEN	insufficient data
+OGI	no data / batch failed
+OGN	insufficient data
+OHI	no data / batch failed
+OIBRC	insufficient data
+OII	insufficient data
+OIS	insufficient data
+OKE	insufficient data
+OKYO	insufficient data
+OLB	insufficient data
+OLED	insufficient data
+OLIT	no data / batch failed
+OLK	insufficient data
+OLLI	insufficient data
+OLMA	insufficient data
+OLN	no data / batch failed
+OLO	insufficient data
+OLP	no data / batch failed
+OLPX	no data / batch failed
+OM	insufficient data
+OMC	no data / batch failed
+OMER	insufficient data
+OMF	no data / batch failed
+OMGA	insufficient data
+OMH	insufficient data
+OMI	no data / batch failed
+OMQS	insufficient data
+ON	insufficient data
+ONCS	no data / batch failed
+ONCT	insufficient data
+ONDR	insufficient data
+ONDS	insufficient data
+ONE	no data / batch failed
+ONEW	insufficient data
+ONFO	insufficient data
+ONL	insufficient data
+ONON	insufficient data
+ONTF	insufficient data
+ONTO	insufficient data
+ONTX	insufficient data
+ONVO	insufficient data
+OP	no data / batch failed
+OPCH	insufficient data
+OPES	no data / batch failed
+OPGN	no data / batch failed
+OPHC	insufficient data
+OPK	insufficient data
+OPNT	insufficient data
+OPRX	insufficient data
+OPT	no data / batch failed
+OPTT	price too low: $0.39
+OPXS	insufficient data
+OR	insufficient data
+ORA	insufficient data
+ORAN	insufficient data
+ORC	no data / batch failed
+ORCC	no data / batch failed
+ORCL	no data / batch failed
+OREAF	insufficient data
+ORGO	insufficient data
+ORGS	insufficient data
+ORI	no data / batch failed
+ORIC	no data / batch failed
+ORINY	insufficient data
+ORKT	insufficient data
+ORLY	insufficient data
+ORMP	insufficient data
+ORSN	insufficient data
+OS	insufficient data
+OSAT	insufficient data
+OSCR	no data / batch failed
+OSK	insufficient data
+OSMT	insufficient data
+OSPN	insufficient data
+OSS	insufficient data
+OSTK	no data / batch failed
+OSTX	no data / batch failed
+OSUR	insufficient data
+OSW	insufficient data
+OTCM	insufficient data
+OTEX	insufficient data
+OTGLY	insufficient data
+OTIS	insufficient data
+OTLK	no data / batch failed
+OTLY	no data / batch failed
+OTRA	insufficient data
+OTSKY	insufficient data
+OUKPY	insufficient data
+OUT	no data / batch failed
+OVID	no data / batch failed
+OVV	insufficient data
+OXAC	insufficient data
+OXBR	insufficient data
+OXLC	insufficient data
+OXSQ	no data / batch failed
+OXY	insufficient data
+OZK	insufficient data
+OZON	insufficient data
+PAAS	insufficient data
+PAC	insufficient data
+PACB	insufficient data
+PACE	no data / batch failed
+PACS	insufficient data
+PAG	insufficient data
+PAGP	insufficient data
+PAGS	insufficient data
+PAIC	insufficient data
+PAL	insufficient data
+PALT	insufficient data
+PAM	insufficient data
+PANL	insufficient data
+PANW	insufficient data
+PASG	insufficient data
+PATH	insufficient data
+PAVM	insufficient data
+PAX	insufficient data
+PAY	insufficient data
+PAYC	no data / batch failed
+PAYS	no data / batch failed
+PAYX	insufficient data
+PBA	no data / batch failed
+PBAX	no data / batch failed
+PBF	insufficient data
+PBI	insufficient data
+PBR	insufficient data
+PBT	insufficient data
+PBTS	insufficient data
+PCAR	insufficient data
+PCG	insufficient data
+PCH	insufficient data
+PCLN	no data / batch failed
+PCOR	insufficient data
+PCPL	no data / batch failed
+PCRFY	insufficient data
+PCSA	insufficient data
+PCSC	insufficient data
+PCTY	insufficient data
+PCYG	insufficient data
+PCYO	insufficient data
+PD	insufficient data
+PDAC	no data / batch failed
+PDCO	insufficient data
+PDD	no data / batch failed
+PDM	insufficient data
+PDSB	insufficient data
+PEBO	insufficient data
+PECK	insufficient data
+PED	insufficient data
+PEGA	no data / batch failed
+PEIX	insufficient data
+PEN	no data / batch failed
+PENN	insufficient data
+PEP	insufficient data
+PEPG	insufficient data
+PERI	no data / batch failed
+PETS	insufficient data
+PETV	price too low: $0.72
+PETZ	no data / batch failed
+PEV	insufficient data
+PFDR	insufficient data
+PFE	insufficient data
+PFG	insufficient data
+PFGC	insufficient data
+PFHC	insufficient data
+PFLT	insufficient data
+PFMT	insufficient data
+PFSI	no data / batch failed
+PG	insufficient data
+PGHL	insufficient data
+PGNY	insufficient data
+PGR	insufficient data
+PGRE1	insufficient data
+PGTK	insufficient data
+PH	price too high: $872.23
+PHAS	no data / batch failed
+PHAT	no data / batch failed
+PHCF	insufficient data
+PHCG	insufficient data
+PHGE	insufficient data
+PHIN	no data / batch failed
+PHIO	insufficient data
+PHM	insufficient data
+PHUN	insufficient data
+PHVS	insufficient data
+PHYT	insufficient data
+PI	insufficient data
+PIC	no data / batch failed
+PIH	insufficient data
+PIK	insufficient data
+PINE	no data / batch failed
+PINS	insufficient data
+PIRS	insufficient data
+PIXY	insufficient data
+PKE	insufficient data
+PKI	insufficient data
+PKKFF	insufficient data
+PKST	no data / batch failed
+PKX	no data / batch failed
+PLAB	insufficient data
+PLAY	insufficient data
+PLCE	insufficient data
+PLD	insufficient data
+PLG	insufficient data
+PLIN	no data / batch failed
+PLL	no data / batch failed
+PLNHF	no data / batch failed
+PLNT	insufficient data
+PLRX	insufficient data
+PLSE	insufficient data
+PLTK	no data / batch failed
+PLTN	no data / batch failed
+PLTR	insufficient data
+PLUG	no data / batch failed
+PLX	insufficient data
+PLXP	insufficient data
+PLYA	insufficient data
+PLYM	no data / batch failed
+PM	no data / batch failed
+PMCB	insufficient data
+PMEC	no data / batch failed
+PMN	no data / batch failed
+PMT	insufficient data
+PMTS	insufficient data
+PNBK	insufficient data
+PNC	no data / batch failed
+PNFP	insufficient data
+PNGAY	insufficient data
+PNNT	insufficient data
+PNPNF	insufficient data
+PNR	insufficient data
+PNRLF	insufficient data
+PNW	insufficient data
+POAHY	insufficient data
+POAI	insufficient data
+PODC	insufficient data
+PODD	no data / batch failed
+POET	no data / batch failed
+POLA	insufficient data
+PONO	insufficient data
+POOL	insufficient data
+POWI	insufficient data
+POWL	insufficient data
+POWW	no data / batch failed
+PPG	insufficient data
+PPGH	no data / batch failed
+PPL	no data / batch failed
+PPSI	insufficient data
+PPTA	insufficient data
+PQG	insufficient data
+PRAX	insufficient data
+PRCT	insufficient data
+PRE	insufficient data
+PRFT	insufficient data
+PRFX	no data / batch failed
+PRGO	insufficient data
+PRGS	insufficient data
+PRI	no data / batch failed
+PRLB	insufficient data
+PRLD	no data / batch failed
+PRME	no data / batch failed
+PRMW	insufficient data
+PROF	insufficient data
+PROG	no data / batch failed
+PROP	insufficient data
+PRPB	insufficient data
+PRPH	insufficient data
+PRPL	no data / batch failed
+PRPO	no data / batch failed
+PRQR	insufficient data
+PRTA	insufficient data
+PRTK	insufficient data
+PRTS	insufficient data
+PRVA	insufficient data
+PRYMY	insufficient data
+PRZO	insufficient data
+PSA	insufficient data
+PSAC	no data / batch failed
+PSBD	insufficient data
+PSEC	insufficient data
+PSHG	insufficient data
+PSMT	no data / batch failed
+PSN	insufficient data
+PSNL	insufficient data
+PSO	no data / batch failed
+PSTG	insufficient data
+PSTH	insufficient data
+PSTI	insufficient data
+PSTL	insufficient data
+PSTV	insufficient data
+PSTX	insufficient data
+PSX	no data / batch failed
+PT	insufficient data
+PTAC	insufficient data
+PTALF	insufficient data
+PTC	insufficient data
+PTCT	insufficient data
+PTE	no data / batch failed
+PTGEF	no data / batch failed
+PTGX	insufficient data
+PTHR	no data / batch failed
+PTI	no data / batch failed
+PTIX	price too low: $0.53
+PTLO	no data / batch failed
+PTN	insufficient data
+PTON	insufficient data
+PTPI	price too low: $0.01
+PTSI	insufficient data
+PUBM	insufficient data
+PULM	no data / batch failed
+PURE	no data / batch failed
+PWFL	insufficient data
+PWM	insufficient data
+PWR	no data / batch failed
+PXDT	insufficient data
+PXMD	insufficient data
+PXS	insufficient data
+PXX	insufficient data
+PYPL	no data / batch failed
+PYR	no data / batch failed
+PYXS	insufficient data
+PZG	insufficient data
+PZZA	insufficient data
+QCOM	insufficient data
+QD	insufficient data
+QDEL	insufficient data
+QELL	no data / batch failed
+QETA	insufficient data
+QFIN	insufficient data
+QGEN	no data / batch failed
+QH	insufficient data
+QIWI	insufficient data
+QK	insufficient data
+QLYS	insufficient data
+QMCI	insufficient data
+QMCO	no data / batch failed
+QMMM	insufficient data
+QRVO	no data / batch failed
+QSG	no data / batch failed
+QSR	no data / batch failed
+QTRX	insufficient data
+QTT	no data / batch failed
+QUBT	insufficient data
+QURE	insufficient data
+QVCA	insufficient data
+R	insufficient data
+RAAS	insufficient data
+RACE	no data / batch failed
+RAD	no data / batch failed
+RAIL	insufficient data
+RAMP	insufficient data
+RANI	insufficient data
+RAPP	insufficient data
+RAPT	insufficient data
+RARE	insufficient data
+RAY	insufficient data
+RAYA	insufficient data
+RBBN	insufficient data
+RBC	insufficient data
+RBLX	insufficient data
+RBRK	insufficient data
+RC	insufficient data
+RCAR	price too low: $0.00
+RCAT	insufficient data
+RCII	insufficient data
+RCKT	insufficient data
+RCKTF	no data / batch failed
+RCL	insufficient data
+RCLF	no data / batch failed
+RCMT	no data / batch failed
+RCON	insufficient data
+RCRT	no data / batch failed
+RDDT	insufficient data
+RDFN	insufficient data
+RDHL	insufficient data
+RDIB	insufficient data
+RDNT	no data / batch failed
+REAL	no data / batch failed
+RECAF	insufficient data
+RECT	insufficient data
+REED	insufficient data
+REEMF	insufficient data
+REFI	no data / batch failed
+REGN	insufficient data
+REI	insufficient data
+REKR	no data / batch failed
+RELID	insufficient data
+RELL	no data / batch failed
+RENE	insufficient data
+RENN	no data / batch failed
+RENT	insufficient data
+REPL	no data / batch failed
+REPYY	insufficient data
+RERE	no data / batch failed
+RES	insufficient data
+RETO	insufficient data
+REVG	insufficient data
+REXN	insufficient data
+REXR	insufficient data
+REZI	insufficient data
+REZZF	no data / batch failed
+RF	insufficient data
+RFAI	insufficient data
+RFIL	insufficient data
+RFL	insufficient data
+RGC	no data / batch failed
+RGEN	insufficient data
+RGLD	insufficient data
+RGLS	insufficient data
+RGNX	insufficient data
+RGR	no data / batch failed
+RGS	insufficient data
+RH	no data / batch failed
+RHDGF	insufficient data
+RHHBY	insufficient data
+RIBT	insufficient data
+RICK	insufficient data
+RICO	insufficient data
+RIG	insufficient data
+RIGL	insufficient data
+RILY	no data / batch failed
+RIO	no data / batch failed
+RIOCF	no data / batch failed
+RIOT	insufficient data
+RIVN	insufficient data
+RJF	no data / batch failed
+RKDA	insufficient data
+RKT	insufficient data
+RL	insufficient data
+RLAY	insufficient data
+RLMD	insufficient data
+RLX	no data / batch failed
+RMBL	no data / batch failed
+RMBS	insufficient data
+RMD	insufficient data
+RMED	no data / batch failed
+RMGB	insufficient data
+RMNI	no data / batch failed
+RMR	insufficient data
+RMTI	insufficient data
+RNA	insufficient data
+RNAZ	insufficient data
+RNECY	insufficient data
+RNER	insufficient data
+RNLX	insufficient data
+RNVA	insufficient data
+RNXT	insufficient data
+ROAD	no data / batch failed
+ROC	insufficient data
+ROCG	insufficient data
+ROCH	insufficient data
+ROCK	insufficient data
+ROIC	insufficient data
+ROK	insufficient data
+ROKU	no data / batch failed
+ROLR	no data / batch failed
+ROMA	insufficient data
+ROOT	insufficient data
+ROP	insufficient data
+ROST	insufficient data
+ROT	insufficient data
+RPD	insufficient data
+RPHM	insufficient data
+RPID	no data / batch failed
+RPLA	no data / batch failed
+RPM	insufficient data
+RPRX	no data / batch failed
+RPTX	insufficient data
+RR	no data / batch failed
+RRC	insufficient data
+RRR	insufficient data
+RS	insufficient data
+RSG	no data / batch failed
+RSKD	insufficient data
+RSSV	insufficient data
+RSTN	no data / batch failed
+RSVA	insufficient data
+RTP	no data / batch failed
+RTPY	insufficient data
+RTPZ	insufficient data
+RTRX	no data / batch failed
+RTTR	insufficient data
+RUBI	insufficient data
+RUBY	insufficient data
+RUN	insufficient data
+RUSHA1	insufficient data
+RVLV	insufficient data
+RVNC	insufficient data
+RVP	insufficient data
+RVSN	no data / batch failed
+RWAY	no data / batch failed
+RWLK	insufficient data
+RWT	insufficient data
+RXN	insufficient data
+RXO	no data / batch failed
+RXRX	no data / batch failed
+RXT	insufficient data
+RY	insufficient data
+RYAAY	insufficient data
+RYCEY	insufficient data
+RYES	no data / batch failed
+RYI	insufficient data
+RYN	insufficient data
+RYTM	insufficient data
+RZLTD	insufficient data
+S	insufficient data
+SABR	insufficient data
+SACH	insufficient data
+SAFE	insufficient data
+SAGE	insufficient data
+SALM	no data / batch failed
+SAM	insufficient data
+SAMA	insufficient data
+SAN	insufficient data
+SAND	insufficient data
+SANM	no data / batch failed
+SAP	insufficient data
+SAQN	no data / batch failed
+SAR	insufficient data
+SATS	insufficient data
+SAVA	insufficient data
+SAVE	insufficient data
+SAXPY	no data / batch failed
+SB	insufficient data
+SBAC	no data / batch failed
+SBE	no data / batch failed
+SBEA	no data / batch failed
+SBEV	insufficient data
+SBFM	no data / batch failed
+SBG	insufficient data
+SBGL	insufficient data
+SBLK	insufficient data
+SBNY	insufficient data
+SBR	no data / batch failed
+SBRA	no data / batch failed
+SBSNY	no data / batch failed
+SBTX	insufficient data
+SBUX	insufficient data
+SCCO	insufficient data
+SCHN	insufficient data
+SCHW	insufficient data
+SCI	insufficient data
+SCKT	insufficient data
+SCL	insufficient data
+SCLX	insufficient data
+SCM	insufficient data
+SCON	insufficient data
+SCPH	insufficient data
+SCPS	insufficient data
+SCS	insufficient data
+SCSC	no data / batch failed
+SCVL	insufficient data
+SCWX	insufficient data
+SCYX	insufficient data
+SD	insufficient data
+SDC	insufficient data
+SDGR	insufficient data
+SDH	insufficient data
+SDIG	insufficient data
+SDVKY	no data / batch failed
+SDZNY	insufficient data
+SEAH	insufficient data
+SEAS	insufficient data
+SECO	insufficient data
+SEDG	insufficient data
+SEDRF	insufficient data
+SEE	no data / batch failed
+SEED	insufficient data
+SEEL	no data / batch failed
+SEER	insufficient data
+SEG	no data / batch failed
+SEIC	insufficient data
+SELB	no data / batch failed
+SELF	insufficient data
+SEMR	insufficient data
+SENR	insufficient data
+SENS	insufficient data
+SEOAY	insufficient data
+SEOVF	insufficient data
+SESN	insufficient data
+SEV	no data / batch failed
+SEVN	insufficient data
+SEZL	insufficient data
+SFBS	insufficient data
+SFET	insufficient data
+SFIX	insufficient data
+SFL	insufficient data
+SFM	no data / batch failed
+SFTBY	insufficient data
+SFTW	insufficient data
+SFWL	insufficient data
+SG1	no data / batch failed
+SGBX	insufficient data
+SGD	no data / batch failed
+SGE	insufficient data
+SGH	insufficient data
+SGIOY	no data / batch failed
+SGLB	insufficient data
+SGMA	no data / batch failed
+SGMLF	no data / batch failed
+SGMO	no data / batch failed
+SGMS	insufficient data
+SGMT	insufficient data
+SGOC	insufficient data
+SGRP	insufficient data
+SGRY	insufficient data
+SGSI	insufficient data
+SGU	insufficient data
+SHAK	no data / batch failed
+SHEL	insufficient data
+SHEN	insufficient data
+SHIM	insufficient data
+SHIP	no data / batch failed
+SHLL	insufficient data
+SHLS	no data / batch failed
+SHMD	insufficient data
+SHOO	insufficient data
+SHOP	insufficient data
+SHPH	insufficient data
+SHRG	no data / batch failed
+SHRMF	insufficient data
+SHW	insufficient data
+SI	insufficient data
+SID	no data / batch failed
+SIDU	no data / batch failed
+SIEB	insufficient data
+SIFY	insufficient data
+SIG	insufficient data
+SIGA	insufficient data
+SIGI	no data / batch failed
+SILA	insufficient data
+SILC	insufficient data
+SILV	insufficient data
+SIM	insufficient data
+SIMO	insufficient data
+SINO	insufficient data
+SINT	insufficient data
+SIRI	insufficient data
+SITC	no data / batch failed
+SITM	no data / batch failed
+SIVB	insufficient data
+SJ	no data / batch failed
+SJM	insufficient data
+SJT1	insufficient data
+SJW	insufficient data
+SKT	insufficient data
+SKWD	insufficient data
+SKX	no data / batch failed
+SKYE	insufficient data
+SKYT	insufficient data
+SKYW	no data / batch failed
+SKYX	insufficient data
+SLAB	insufficient data
+SLB	no data / batch failed
+SLCA	no data / batch failed
+SLCR	insufficient data
+SLDB	insufficient data
+SLF	no data / batch failed
+SLG	insufficient data
+SLGG	insufficient data
+SLGL	insufficient data
+SLHG	insufficient data
+SLI	no data / batch failed
+SLM	no data / batch failed
+SLN	insufficient data
+SLNG	insufficient data
+SLNO	insufficient data
+SLP	insufficient data
+SLQT	insufficient data
+SLRC	insufficient data
+SLRN	insufficient data
+SLRX	no data / batch failed
+SLSR	insufficient data
+SM	insufficient data
+SMAR	insufficient data
+SMDM	insufficient data
+SMFG	insufficient data
+SMG	insufficient data
+SMIH	no data / batch failed
+SMLR	insufficient data
+SMMNY	insufficient data
+SMNNY	no data / batch failed
+SMSI	insufficient data
+SMTC	insufficient data
+SMTK	insufficient data
+SMTS	insufficient data
+SMWB	insufficient data
+SMXT	insufficient data
+SN	insufficient data
+SNA	insufficient data
+SNAL	insufficient data
+SNAP	insufficient data
+SNBP	no data / batch failed
+SNBR	insufficient data
+SNCA	insufficient data
+SNCR	insufficient data
+SND	no data / batch failed
+SNDL	insufficient data
+SNE	insufficient data
+SNGX	insufficient data
+SNII	insufficient data
+SNOA	insufficient data
+SNOW	no data / batch failed
+SNPS	insufficient data
+SNPX	insufficient data
+SNSE	insufficient data
+SNSS	insufficient data
+SNTG	insufficient data
+SNWGF	insufficient data
+SNX	no data / batch failed
+SNY	insufficient data
+SO	insufficient data
+SOAC	insufficient data
+SOBR	price too low: $1.14
+SOHO	insufficient data
+SOHU	insufficient data
+SOI	insufficient data
+SOL	insufficient data
+SOLV	insufficient data
+SON	insufficient data
+SONM	insufficient data
+SONN	insufficient data
+SONO	insufficient data
+SONX	insufficient data
+SOPA	no data / batch failed
+SOS	insufficient data
+SOTK	insufficient data
+SOUN	insufficient data
+SPAQ	insufficient data
+SPAQ3	insufficient data
+SPAR	no data / batch failed
+SPCB	insufficient data
+SPCE	no data / batch failed
+SPFR	insufficient data
+SPG	insufficient data
+SPGC	insufficient data
+SPGI	no data / batch failed
+SPI	insufficient data
+SPKL	no data / batch failed
+SPNV	insufficient data
+SPOT	insufficient data
+SPPL	insufficient data
+SPR	insufficient data
+SPRB	insufficient data
+SPRC	insufficient data
+SPRO	insufficient data
+SPRS	insufficient data
+SPSC	insufficient data
+SPT	no data / batch failed
+SPTN	no data / batch failed
+SPWH	insufficient data
+SPWR	insufficient data
+SPXC	insufficient data
+SPXCY	no data / batch failed
+SQ	insufficient data
+SQBG	insufficient data
+SQFT	insufficient data
+SQL	insufficient data
+SQM	no data / batch failed
+SQSP	insufficient data
+SRAC	insufficient data
+SRADD	insufficient data
+SRAX	insufficient data
+SRBK	insufficient data
+SRCE	insufficient data
+SRCL	insufficient data
+SRE	insufficient data
+SRFM	insufficient data
+SRG	insufficient data
+SRGHY	no data / batch failed
+SRM	insufficient data
+SRNA	insufficient data
+SRNE	insufficient data
+SRNG	no data / batch failed
+SRRK	insufficient data
+SRTS	insufficient data
+SRUUF	insufficient data
+SSB	no data / batch failed
+SSD	insufficient data
+SSIC	no data / batch failed
+SSL	no data / batch failed
+SSNT	no data / batch failed
+SSPK	insufficient data
+SSSS	no data / batch failed
+SSTK	insufficient data
+SSY	insufficient data
+STAA	no data / batch failed
+STAF	insufficient data
+STAG	insufficient data
+STBX	insufficient data
+STCN	insufficient data
+STER	insufficient data
+STG	no data / batch failed
+STI1	insufficient data
+STIC	insufficient data
+STIM	insufficient data
+STKS	insufficient data
+STLD	insufficient data
+STM	no data / batch failed
+STMH	no data / batch failed
+STN	no data / batch failed
+STNE	insufficient data
+STNG	insufficient data
+STOK	insufficient data
+STPC	insufficient data
+STPK	insufficient data
+STRA	no data / batch failed
+STRL	no data / batch failed
+STRN	insufficient data
+STSS	insufficient data
+STT	insufficient data
+STWD	insufficient data
+STWO	insufficient data
+STX	no data / batch failed
+STZ	insufficient data
+SU	no data / batch failed
+SUHJY	no data / batch failed
+SUNS1	insufficient data
+SUNW	no data / batch failed
+SUPN	insufficient data
+SURG	insufficient data
+SUUN	insufficient data
+SUWN	insufficient data
+SUZ	no data / batch failed
+SV	no data / batch failed
+SVBL	insufficient data
+SVCO	insufficient data
+SVFC	insufficient data
+SVFD	insufficient data
+SVII	insufficient data
+SVM	no data / batch failed
+SVMH	insufficient data
+SVOK	insufficient data
+SVRA	no data / batch failed
+SVV	no data / batch failed
+SW	no data / batch failed
+SWAG	insufficient data
+SWBK	no data / batch failed
+SWI	no data / batch failed
+SWIM	insufficient data
+SWK	insufficient data
+SWKS	no data / batch failed
+SWM	insufficient data
+SWN	insufficient data
+SWRAY	insufficient data
+SWX	insufficient data
+SXC	no data / batch failed
+SXT	insufficient data
+SXTC	insufficient data
+SXTP	insufficient data
+SYBX	insufficient data
+SYF	no data / batch failed
+SYK	insufficient data
+SYMC	insufficient data
+SYN1	insufficient data
+SYNA	insufficient data
+SYPR	insufficient data
+SYRS	insufficient data
+SYSX	insufficient data
+SYT	insufficient data
+SYTA	insufficient data
+T	insufficient data
+TAIT	insufficient data
+TAK	no data / batch failed
+TAKOF	insufficient data
+TAL	insufficient data
+TALO	no data / batch failed
+TANH	insufficient data
+TAOP	insufficient data
+TAP	insufficient data
+TARA	insufficient data
+TARS	insufficient data
+TASK	insufficient data
+TATT	no data / batch failed
+TAUG	insufficient data
+TBBB	insufficient data
+TBI	no data / batch failed
+TBLT	insufficient data
+TBMC	insufficient data
+TBN	insufficient data
+TBPH	no data / batch failed
+TCAC	insufficient data
+TCBP	no data / batch failed
+TCEHY	insufficient data
+TCJH	insufficient data
+TCNNF	insufficient data
+TCOM	no data / batch failed
+TCON	insufficient data
+TCPC	insufficient data
+TCRX	insufficient data
+TCS	no data / batch failed
+TD	insufficient data
+TDAC	insufficient data
+TDC	no data / batch failed
+TDG	insufficient data
+TDOC	insufficient data
+TDS	insufficient data
+TDUP	insufficient data
+TDY	insufficient data
+TEAM	insufficient data
+TECH	no data / batch failed
+TECK	insufficient data
+TEDU	insufficient data
+TEF	insufficient data
+TEL	insufficient data
+TELL	insufficient data
+TELO	insufficient data
+TEM	insufficient data
+TENB	insufficient data
+TENK	no data / batch failed
+TENX	insufficient data
+TER	insufficient data
+TERN	insufficient data
+TEVA	no data / batch failed
+TEX	insufficient data
+TFC	insufficient data
+TFPM	insufficient data
+TFSL	insufficient data
+TGB	insufficient data
+TGC	insufficient data
+TGI	insufficient data
+TGLS	insufficient data
+TGODF	no data / batch failed
+TGS	no data / batch failed
+TGT	insufficient data
+TH	insufficient data
+THBR	insufficient data
+THCB	insufficient data
+THFF	insufficient data
+THMA	insufficient data
+THMO	price too low: $0.00
+THO	no data / batch failed
+THRD	insufficient data
+THRY	insufficient data
+TIGR	insufficient data
+TIL	insufficient data
+TINV	insufficient data
+TIPT	insufficient data
+TIRX	insufficient data
+TISI	insufficient data
+TITN	insufficient data
+TJX	insufficient data
+TK	insufficient data
+TKAT	insufficient data
+TKAYY	no data / batch failed
+TKC	no data / batch failed
+TKLF	insufficient data
+TLGT	no data / batch failed
+TLIS	insufficient data
+TLNE	no data / batch failed
+TLRY1	insufficient data
+TLS	insufficient data
+TLSA	no data / batch failed
+TLSS	no data / batch failed
+TM	no data / batch failed
+TMDI	insufficient data
+TMDX	no data / batch failed
+TME	insufficient data
+TMO	no data / batch failed
+TMRC	insufficient data
+TMST	insufficient data
+TMTS	no data / batch failed
+TMUS	no data / batch failed
+TNC	no data / batch failed
+TNDM	no data / batch failed
+TNK	insufficient data
+TNON	insufficient data
+TNP	insufficient data
+TNXP	insufficient data
+TOBAF	insufficient data
+TOELY	insufficient data
+TOITF	insufficient data
+TOL	insufficient data
+TOP	insufficient data
+TOPPY	no data / batch failed
+TOPS	insufficient data
+TORO	insufficient data
+TOST	insufficient data
+TOTA	insufficient data
+TPB	insufficient data
+TPCS	insufficient data
+TPET	insufficient data
+TPGS	no data / batch failed
+TPHS	no data / batch failed
+TPIC	no data / batch failed
+TPL	insufficient data
+TPVG	insufficient data
+TPX	insufficient data
+TRCH	insufficient data
+TREB	insufficient data
+TREE	insufficient data
+TREX	insufficient data
+TRI	insufficient data
+TRMB	insufficient data
+TRMD	insufficient data
+TRN	insufficient data
+TRNE	no data / batch failed
+TRNF	insufficient data
+TRNR	no data / batch failed
+TRNS	insufficient data
+TROV	insufficient data
+TROW	insufficient data
+TRP	no data / batch failed
+TRSG	no data / batch failed
+TRT	insufficient data
+TRTC	insufficient data
+TRTX	insufficient data
+TRU	insufficient data
+TRUE	insufficient data
+TRUP	no data / batch failed
+TRV	insufficient data
+TRVG	insufficient data
+TRVN	insufficient data
+TRWH	insufficient data
+TRX	insufficient data
+TRXC	insufficient data
+TSBX	insufficient data
+TSCO	insufficient data
+TSE	insufficient data
+TSHA	insufficient data
+TSIA	insufficient data
+TSLA	insufficient data
+TSLX	no data / batch failed
+TSM	insufficient data
+TSN	insufficient data
+TSP	insufficient data
+TSSI	insufficient data
+TSVT1	no data / batch failed
+TT	insufficient data
+TTC	insufficient data
+TTD	no data / batch failed
+TTEC	insufficient data
+TTEK	no data / batch failed
+TTGT	no data / batch failed
+TTI	insufficient data
+TTM	no data / batch failed
+TTNP	insufficient data
+TTOO	no data / batch failed
+TTWO	insufficient data
+TU	insufficient data
+TUESQ	insufficient data
+TUGC	insufficient data
+TUP	insufficient data
+TURB	insufficient data
+TUYA	insufficient data
+TV	insufficient data
+TVAC	insufficient data
+TWCT	insufficient data
+TWG	insufficient data
+TWKS	insufficient data
+TWLO	insufficient data
+TWNT	insufficient data
+TWO	no data / batch failed
+TWOU	insufficient data
+TWST	no data / batch failed
+TX	no data / batch failed
+TXG	insufficient data
+TXMD	insufficient data
+TXN	insufficient data
+TXRH	insufficient data
+TXT	insufficient data
+TYDEV	insufficient data
+TYHT	insufficient data
+TYIDY	insufficient data
+TYL	insufficient data
+TYRA	no data / batch failed
+TZAC	insufficient data
+TZOO	insufficient data
+U	insufficient data
+UA	insufficient data
+UA1	insufficient data
+UAL	insufficient data
+UAMY	no data / batch failed
+UAVS	insufficient data
+UBCP	insufficient data
+UBER	insufficient data
+UBNT	insufficient data
+UBS	insufficient data
+UBSFY	insufficient data
+UBSI	insufficient data
+UBX	insufficient data
+UBXG	insufficient data
+UCAR	insufficient data
+UCL	no data / batch failed
+UCTT	insufficient data
+UDMY	insufficient data
+UEC	insufficient data
+UFAB	insufficient data
+UFPI	no data / batch failed
+UGI	no data / batch failed
+UGP	insufficient data
+UGRO	insufficient data
+UHAL	insufficient data
+UHALB	insufficient data
+UHS	insufficient data
+UHT	no data / batch failed
+UIHC	insufficient data
+UIS	no data / batch failed
+ULBI	insufficient data
+ULS	no data / batch failed
+ULTA	insufficient data
+ULY	insufficient data
+UMC	insufficient data
+UMH	insufficient data
+UMRX	no data / batch failed
+UN	insufficient data
+UNAM	insufficient data
+UNCRY	insufficient data
+UNCY	insufficient data
+UNF	insufficient data
+UNFI	insufficient data
+UNIT	no data / batch failed
+UNM	insufficient data
+UNP	insufficient data
+UONE	insufficient data
+UONEK	insufficient data
+UPC	insufficient data
+UPLD	insufficient data
+UPMMY	insufficient data
+UPS	insufficient data
+UPST	no data / batch failed
+UPWK	insufficient data
+URBN	no data / batch failed
+URG	no data / batch failed
+URGN	insufficient data
+URI	no data / batch failed
+UROY	no data / batch failed
+USB	insufficient data
+USEA	no data / batch failed
+USEG	insufficient data
+USGO	insufficient data
+UTHR	insufficient data
+UTI	insufficient data
+UTMD	insufficient data
+UTME	insufficient data
+UTSI	insufficient data
+UTX	no data / batch failed
+UUU	no data / batch failed
+UUUU	no data / batch failed
+UVV	insufficient data
+UXIN	insufficient data
+V	insufficient data
+VACC	insufficient data
+VACQ	insufficient data
+VAL	no data / batch failed
+VAXX	no data / batch failed
+VBIV	no data / batch failed
+VBLT	insufficient data
+VC	no data / batch failed
+VCNX	insufficient data
+VCVC	no data / batch failed
+VCYT	no data / batch failed
+VEC	insufficient data
+VEDU	insufficient data
+VEEE	insufficient data
+VEEV	insufficient data
+VENA	no data / batch failed
+VEOEY	insufficient data
+VEON	insufficient data
+VERA	insufficient data
+VERB	insufficient data
+VERI	insufficient data
+VERO	insufficient data
+VERU	insufficient data
+VERV	no data / batch failed
+VERX	insufficient data
+VET	insufficient data
+VFC	insufficient data
+VFF	no data / batch failed
+VGAC	insufficient data
+VGFC	no data / batch failed
+VGII	insufficient data
+VGR	insufficient data
+VHC	insufficient data
+VHNA	insufficient data
+VIACA	insufficient data
+VIAV	insufficient data
+VICI	no data / batch failed
+VICR	insufficient data
+VIG	no data / batch failed
+VIH	insufficient data
+VIK	insufficient data
+VINO	no data / batch failed
+VIOT	insufficient data
+VIPS	insufficient data
+VIR	insufficient data
+VIRI	insufficient data
+VISL	insufficient data
+VIST	insufficient data
+VITL	insufficient data
+VIV	insufficient data
+VIVE	insufficient data
+VIVK	insufficient data
+VJET	insufficient data
+VKTX	no data / batch failed
+VLCN	insufficient data
+VLGEA	insufficient data
+VLN	insufficient data
+VLO	insufficient data
+VLON	no data / batch failed
+VLOWY	insufficient data
+VLTO	insufficient data
+VLVLY	insufficient data
+VMAC	insufficient data
+VMAR	no data / batch failed
+VMD	insufficient data
+VMEOV	insufficient data
+VNDA	no data / batch failed
+VNET	insufficient data
+VNO	insufficient data
+VNOM	insufficient data
+VNT	insufficient data
+VNTR	no data / batch failed
+VOC	insufficient data
+VOD	no data / batch failed
+VOSO	insufficient data
+VOXR	insufficient data
+VOXX	insufficient data
+VPCC	insufficient data
+VRAR	insufficient data
+VRAX	insufficient data
+VRAY	no data / batch failed
+VRCA	insufficient data
+VRM	insufficient data
+VRME	insufficient data
+VRNA	insufficient data
+VRNOF	no data / batch failed
+VRNS	insufficient data
+VRNT	insufficient data
+VRPX	insufficient data
+VRSK	insufficient data
+VRSN	insufficient data
+VRT	insufficient data
+VRTX	insufficient data
+VS	insufficient data
+VSAC	no data / batch failed
+VSAT	no data / batch failed
+VSCO	insufficient data
+VSH	insufficient data
+VSME	insufficient data
+VSPR	insufficient data
+VST	insufficient data
+VSTA	insufficient data
+VSTM	insufficient data
+VSTO	insufficient data
+VSTS	insufficient data
+VTGN	insufficient data
+VTIQ	insufficient data
+VTMX	no data / batch failed
+VTNR	no data / batch failed
+VTR	insufficient data
+VTS	insufficient data
+VTSI	no data / batch failed
+VTVT	insufficient data
+VTYX	insufficient data
+VUZI	insufficient data
+VVOS	no data / batch failed
+VVPR	insufficient data
+VWAGY	no data / batch failed
+VWAPY	insufficient data
+VWDRY	insufficient data
+VXRT	insufficient data
+VYGR	no data / batch failed
+VYNE	insufficient data
+VZ	insufficient data
+VZIO	no data / batch failed
+VZLA	insufficient data
+W	insufficient data
+WAB	insufficient data
+WAFU	insufficient data
+WAL	insufficient data
+WAT	insufficient data
+WATT	insufficient data
+WAY	insufficient data
+WB	insufficient data
+WBA	insufficient data
+WBAI	insufficient data
+WBD	insufficient data
+WBEV	insufficient data
+WBTN	no data / batch failed
+WBUY	insufficient data
+WCN	insufficient data
+WCRS	insufficient data
+WD	no data / batch failed
+WDAY	no data / batch failed
+WDC	insufficient data
+WDDMF	insufficient data
+WDFC	no data / batch failed
+WDH	insufficient data
+WEBS	insufficient data
+WEC	insufficient data
+WEI	insufficient data
+WEL	insufficient data
+WEN	no data / batch failed
+WETF	insufficient data
+WETG	no data / batch failed
+WFC	insufficient data
+WFTLF	insufficient data
+WGO	no data / batch failed
+WHD	insufficient data
+WHLM	no data / batch failed
+WHR	insufficient data
+WIMI	insufficient data
+WING	insufficient data
+WINT	no data / batch failed
+WISA	insufficient data
+WISH	insufficient data
+WIX	insufficient data
+WKEY	insufficient data
+WKSP	no data / batch failed
+WLDS	no data / batch failed
+WLGS	no data / batch failed
+WLTW	no data / batch failed
+WM	insufficient data
+WMB	no data / batch failed
+WMG	insufficient data
+WMS	no data / batch failed
+WMT	no data / batch failed
+WNDW	insufficient data
+WNNR	insufficient data
+WNW	insufficient data
+WOPEY	insufficient data
+WORX	insufficient data
+WPC	no data / batch failed
+WPF	insufficient data
+WPM	no data / batch failed
+WRB	no data / batch failed
+WRN	insufficient data
+WRNT	insufficient data
+WRTC	no data / batch failed
+WS	insufficient data
+WSM	insufficient data
+WSO	insufficient data
+WSR	insufficient data
+WST	no data / batch failed
+WTER	insufficient data
+WTI	insufficient data
+WTRG	no data / batch failed
+WTRH	no data / batch failed
+WTS	no data / batch failed
+WU	no data / batch failed
+WVE	insufficient data
+WW	insufficient data
+WWE	no data / batch failed
+WWR	price too low: $0.52
+WWW	insufficient data
+WY	insufficient data
+WYNN	no data / batch failed
+WYY	insufficient data
+X	insufficient data
+XAIR	price too low: $0.44
+XBIO	insufficient data
+XBIT	insufficient data
+XCUR	insufficient data
+XEL	insufficient data
+XELA	insufficient data
+XELB	no data / batch failed
+XENE	insufficient data
+XERS	insufficient data
+XFOR	no data / batch failed
+XGN	no data / batch failed
+XHR	insufficient data
+XIACY	insufficient data
+XIN	insufficient data
+XNET	insufficient data
+XOM	insufficient data
+XOMA	insufficient data
+XP	insufficient data
+XPDI	insufficient data
+XPEL	insufficient data
+XPER	insufficient data
+XPER1	no data / batch failed
+XPEV	no data / batch failed
+XPL	no data / batch failed
+XPO	insufficient data
+XPOA	insufficient data
+XPOF	insufficient data
+XPON	insufficient data
+XRX	no data / batch failed
+XSNX	no data / batch failed
+XSPA	insufficient data
+XTLB	no data / batch failed
+XTNT	no data / batch failed
+XXII	insufficient data
+XYF	insufficient data
+XYL	insufficient data
+YAC	insufficient data
+YALA	insufficient data
+YARIY	insufficient data
+YCBD	insufficient data
+YEWB	insufficient data
+YEXT	insufficient data
+YGF	no data / batch failed
+YGMZ	insufficient data
+YI	insufficient data
+YIBO	insufficient data
+YITYY	insufficient data
+YJ	insufficient data
+YMM	insufficient data
+YNDX	no data / batch failed
+YORW	insufficient data
+YOSH	insufficient data
+YOU	insufficient data
+YPF	insufficient data
+YQ	insufficient data
+YRCW	insufficient data
+YRD	insufficient data
+YSAC	insufficient data
+YSG	no data / batch failed
+YTEN	insufficient data
+YUM	insufficient data
+YVR	insufficient data
+YXT	insufficient data
+YY	insufficient data
+YYGH	insufficient data
+YZCAY	insufficient data
+ZBAO	insufficient data
+ZBH	no data / batch failed
+ZBRA	insufficient data
+ZCMD	no data / batch failed
+ZDGE	insufficient data
+ZEST	insufficient data
+ZETA	insufficient data
+ZG	insufficient data
+ZG1	no data / batch failed
+ZH	insufficient data
+ZI	insufficient data
+ZIM	insufficient data
+ZIMV	no data / batch failed
+ZION	no data / batch failed
+ZIOP	no data / batch failed
+ZIP	no data / batch failed
+ZIVO	insufficient data
+ZJYL	insufficient data
+ZK	insufficient data
+ZKIN	no data / batch failed
+ZLAB	insufficient data
+ZM	no data / batch failed
+ZMTP	no data / batch failed
+ZN	insufficient data
+ZNTE	insufficient data
+ZOM	insufficient data
+ZONE	no data / batch failed
+ZS	no data / batch failed
+ZSAN	insufficient data
+ZTO	insufficient data
+ZTS	insufficient data
+ZUO	insufficient data
+ZVIA	no data / batch failed
+ZVO	insufficient data
+ZYME	insufficient data
+ZYXI	no data / batch failed

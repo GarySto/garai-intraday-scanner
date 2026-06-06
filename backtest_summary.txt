@@ -1,0 +1,49 @@
+============================================================
+GarAI Intraday Scanner - Backtest Summary
+Run: 2026-06-05 08:53
+Tickers: 1500  |  Lookback: 50 days
+Total signals: 5376
+============================================================
+
+────────────────────────────────────────
+  MODE1_MOMENTUM  (1391 signals)
+────────────────────────────────────────
+  1hr: avg +0.19%  |  win 48%  |  best +62.13%  |  worst -57.05%
+  2hr: avg +0.25%  |  win 47%  |  best +147.23%  |  worst -68.44%
+  4hr: avg +0.48%  |  win 46%  |  best +178.57%  |  worst -63.92%
+  EOD: avg +0.57%  |  win 45%
+  Max gain session: avg +8.62%  |  >5% in 561 signals  |  >10% in 283 signals
+
+  Score band breakdown (1hr return):
+    Score 6-8: 201 signals  |  avg -0.20%  |  win 44%
+    Score 8-10: 520 signals  |  avg +0.01%  |  win 48%
+
+────────────────────────────────────────
+  SUPPORT_BOUNCE  (1905 signals)
+────────────────────────────────────────
+  1d: avg +1.85%  |  win 51%  |  stop hit 9%
+  3d: avg +5.10%  |  win 51%  |  stop hit 21%
+  5d: avg +5.73%  |  win 51%  |  stop hit 29%
+
+  Touch count breakdown (3d return):
+    Touches 3-4: 1905 signals  |  avg +5.10%  |  win 51%
+
+────────────────────────────────────────
+  RESISTANCE_WARNING  (2080 signals)
+────────────────────────────────────────
+  (Correct = price fell after signal)
+  1d: avg +1.59%  |  correct (fell) 50%
+  3d: avg +3.04%  |  correct (fell) 47%
+  5d: avg +4.70%  |  correct (fell) 48%
+
+============================================================
+Key questions answered:
+  1. Do higher Mode 1 scores produce better 1hr returns?
+     See score band breakdown above.
+  2. Does the acceleration signal add value?
+     See acceleration breakdown above.
+  3. Do more touches = better bounce rate?
+     See touch count breakdown above.
+  4. Is the ATR stop-loss calibrated sensibly?
+     See stop hit % in support bounce section.
+============================================================

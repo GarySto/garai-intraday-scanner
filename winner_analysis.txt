@@ -1,0 +1,213 @@
+============================================================
+GarAI Intraday Scanner — Winner Analysis
+Source: backtest_results.csv  (30139 total signals)
+============================================================
+
+Mode 1 win = max session gain >= 5.0%
+Mode 1 loss = 1hr return <= -2.0%
+Mode 2 win = 3d return >= 3.0%
+Mode 2 loss = 3d return <= -2.0%
+
+============================================================
+MODE 1 — MOMENTUM: WINNER vs LOSER ANALYSIS
+============================================================
+
+Total Mode 1 signals: 8238
+Winners (max session gain >= 5.0%): 1685 (20%)
+Losers  (1hr return <= -2.0%):      1291 (16%)
+Neutral (between):                      5440 (66%)
+
+────────────────────────────────────────
+SIGNAL CHARACTERISTICS
+────────────────────────────────────────
+
+  % from open at signal time:
+    Winners  — avg: +14.45  median: +8.32  p25: +5.08  p75: +15.43
+    Losers   — avg: +13.83  median: +8.17  p25: +5.02  p75: +14.23
+    Difference: +0.62  ** Meaningful gap
+    Distribution by band:
+      3-5%             winners:   24%  losers:   24%
+      5-8%             winners:   24%  losers:   24%
+      8-15%            winners:   26%  losers:   28%
+      15%+             winners:   25%  losers:   22%
+
+  RVOL at signal time:
+    Winners  — avg: +103.57  median: +5.26  p25: +3.24  p75: +13.43
+    Losers   — avg: +94.51  median: +5.01  p25: +3.01  p75: +12.73
+    Difference: +9.06  ** Meaningful gap
+    Distribution by band:
+      2-3x             winners:   20%  losers:   25%
+      3-5x             winners:   27%  losers:   25%
+      5-10x            winners:   22%  losers:   21%
+      10x+             winners:   22%  losers:   21%
+
+  Scanner score:
+    Winners  — avg: +8.11  median: +8.27  p25: +6.93  p75: +10.00
+    Losers   — avg: +7.98  median: +8.08  p25: +6.73  p75: +10.00
+    Difference: +0.13  (small gap)
+    Distribution by band:
+      0-4              winners:    2%  losers:    2%
+      4-6              winners:   11%  losers:   13%
+      6-8              winners:   33%  losers:   34%
+      8-10             winners:   25%  losers:   24%
+
+  Time of day (BST hour):
+    15:xx BST  winners:  446  losers:  239  win rate:   65%  << strong hour
+    16:xx BST  winners:  373  losers:  224  win rate:   62%  << strong hour
+    17:xx BST  winners:  311  losers:  230  win rate:   57%  << strong hour
+    18:xx BST  winners:  265  losers:  203  win rate:   57%  << strong hour
+    19:xx BST  winners:  178  losers:  198  win rate:   47%
+    20:xx BST  winners:  112  losers:  197  win rate:   36%  << weak hour
+
+  Stock price at entry:
+    Winners  — avg: +16.63  median: +3.60  p25: +1.20  p75: +8.73
+    Losers   — avg: +13.98  median: +3.18  p25: +1.27  p75: +7.00
+    Difference: +2.65  ** Meaningful gap
+    Distribution by band:
+      $1.50-5          winners:   31%  losers:   33%
+      $5-15            winners:   23%  losers:   22%
+      $15-30           winners:    8%  losers:    6%
+      $30-50           winners:    4%  losers:    2%
+      $50-75           winners:    1%  losers:    1%
+
+────────────────────────────────────────
+TOP WINNING TICKERS (most frequent)
+────────────────────────────────────────
+  CODX       43 winning signals  avg max gain: +13.5%
+  AMPG       35 winning signals  avg max gain: +12.2%
+  ATOM       35 winning signals  avg max gain: +13.3%
+  AIM        32 winning signals  avg max gain: +32.7%
+  AKAN       32 winning signals  avg max gain: +30.8%
+  ADTX       31 winning signals  avg max gain: +17.2%
+  ASTC       30 winning signals  avg max gain: +22.9%
+  ASTI       28 winning signals  avg max gain: +17.5%
+  ANY        26 winning signals  avg max gain: +15.2%
+  AGMH       25 winning signals  avg max gain: +8.5%
+  ARBK       24 winning signals  avg max gain: +8.9%
+  CMND       24 winning signals  avg max gain: +12.2%
+  BWEN       23 winning signals  avg max gain: +31.1%
+  CPOP       23 winning signals  avg max gain: +11.9%
+  BLDP       22 winning signals  avg max gain: +8.7%
+
+────────────────────────────────────────
+WORST LOSING TICKERS (most frequent)
+────────────────────────────────────────
+  ADTX       31 losing signals   avg 1hr return: -6.6%
+  CDTG       27 losing signals   avg 1hr return: -5.6%
+  ATPC       25 losing signals   avg 1hr return: -5.0%
+  ASTI       23 losing signals   avg 1hr return: -4.2%
+  CODX       21 losing signals   avg 1hr return: -6.0%
+  BTM        19 losing signals   avg 1hr return: -4.1%
+  CPOP       18 losing signals   avg 1hr return: -4.1%
+  AIM        17 losing signals   avg 1hr return: -11.2%
+  ASTC       17 losing signals   avg 1hr return: -7.6%
+  ANY        16 losing signals   avg 1hr return: -4.5%
+  AEVA       15 losing signals   avg 1hr return: -3.0%
+  AACG       14 losing signals   avg 1hr return: -4.3%
+  ATHE       14 losing signals   avg 1hr return: -2.8%
+  CCTG       14 losing signals   avg 1hr return: -4.3%
+  APPS       13 losing signals   avg 1hr return: -3.3%
+
+────────────────────────────────────────
+RVOL SWEET SPOT ANALYSIS
+────────────────────────────────────────
+Win rate by RVOL band (max session gain >= 5%):
+  RVOL 2-3x:   2889 signals  win rate   12%  avg max gain +2.48%
+  RVOL 3-5x:   2298 signals  win rate   20%  avg max gain +3.56%
+  RVOL 5-8x:   1202 signals  win rate   24%  avg max gain +4.38%
+  RVOL 8-15x:    819 signals  win rate   24%  avg max gain +4.10%
+  RVOL 15-100x:    766 signals  win rate   32%  avg max gain +6.52%  << best band
+
+────────────────────────────────────────
+MOVE SIZE SWEET SPOT ANALYSIS
+────────────────────────────────────────
+Win rate by % from open at signal time:
+  3-4% from open:   1502 signals  win rate   13%  avg max gain +2.54%
+  4-5% from open:   1234 signals  win rate   17%  avg max gain +3.15%
+  5-7% from open:   1656 signals  win rate   18%  avg max gain +3.20%
+  7-10% from open:   1482 signals  win rate   20%  avg max gain +3.46%
+  10-15% from open:   1215 signals  win rate   21%  avg max gain +4.25%
+  15-100% from open:   1101 signals  win rate   38%  avg max gain +8.58%  << best band
+
+
+============================================================
+MODE 2 — SUPPORT BOUNCE: WINNER vs LOSER ANALYSIS
+============================================================
+
+Total support bounce signals: 10355
+Winners (3d return >= 3.0%): 2706 (26%)
+Losers  (3d return <= -2.0%): 3357 (32%)
+
+────────────────────────────────────────
+SIGNAL CHARACTERISTICS
+────────────────────────────────────────
+
+  Touch count:
+    Winners  — avg: +15.28  median: +11.00  p25: +6.00  p75: +21.00
+    Losers   — avg: +17.40  median: +13.00  p25: +7.00  p75: +24.00
+    Difference: -2.12  ** Meaningful gap
+    Distribution by band:
+      3 touches        winners:    8%  losers:    7%
+      4 touches        winners:    8%  losers:    6%
+      5-7 touches      winners:   17%  losers:   15%
+      8+ touches       winners:   67%  losers:   72%
+
+  Distance from level (%):
+    Winners  — avg: +0.72  median: +0.62  p25: +0.32  p75: +0.95
+    Losers   — avg: +0.72  median: +0.61  p25: +0.33  p75: +0.96
+    Difference: -0.00  (small gap)
+    Distribution by band:
+      0-0.5%           winners:   41%  losers:   40%
+      0.5-1%           winners:   37%  losers:   37%
+      1-2%             winners:   18%  losers:   19%
+      2-3%             winners:    4%  losers:    4%
+
+  ATR at time of signal:
+    Winners  — avg: +2.98  median: +0.97  p25: +0.30  p75: +2.62
+    Losers   — avg: +2.67  median: +0.83  p25: +0.25  p75: +2.35
+    Difference: +0.32  ** Meaningful gap
+
+  Scanner score:
+    Winners  — avg: +7.72  median: +7.90  p25: +7.33  p75: +8.45
+    Losers   — avg: +7.73  median: +7.95  p25: +7.34  p75: +8.43
+    Difference: -0.00  (small gap)
+
+────────────────────────────────────────
+DISTANCE FROM LEVEL — KEY QUESTION
+Does entering closer to the level improve outcomes?
+────────────────────────────────────────
+  0.0-0.5% away:  4343 signals  avg 3d +0.84%  wins 1097  losses 1345
+  0.5-1.0% away:  3858 signals  avg 3d +0.50%  wins 1000  losses 1238
+  1.0-1.5% away:  1418 signals  avg 3d +2.06%  wins 391  losses 474  << enter here
+  1.5-2.0% away:   381 signals  avg 3d -0.05%  wins 103  losses 162
+  2.0-3.0% away:   353 signals  avg 3d +1.52%  wins 114  losses 138
+
+────────────────────────────────────────
+TOUCH COUNT DETAIL
+────────────────────────────────────────
+  3 touches:   603 signals  avg 3d +1.46%  wins 217  losses 238
+  4 touches:   623 signals  avg 3d +6.85%  wins 229  losses 204
+  5 touches:   522 signals  avg 3d +0.05%  wins 157  losses 196
+  6 touches:   491 signals  avg 3d +1.83%  wins 167  losses 170
+  7 touches:   429 signals  avg 3d +1.37%  wins 128  losses 142
+  8 touches:   432 signals  avg 3d +0.53%  wins 133  losses 158
+  9 touches:   394 signals  avg 3d +1.85%  wins 122  losses 130
+
+
+============================================================
+WHAT TO DO WITH THESE FINDINGS
+============================================================
+
+The numbers above answer one question: what did the winning
+signals have in common that the losers didn't?
+
+Look for:
+  - An RVOL band where win rate jumps meaningfully (>25%)
+  - A move size band where outcomes are clearly better
+  - A time of day where win rate is consistently above 55%
+  - A price range that produces better results
+  - Touch counts for Mode 2 where average return is highest
+
+Any finding where winners and losers differ by more than 10
+percentage points is worth acting on. Add it as a filter in
+scanner.py and re-run the backtest to measure the impact.
