@@ -35,7 +35,7 @@ import pytz
 # T212 API key — stored as environment variable or paste here for local use
 # For GitHub Actions: stored as T212_API_KEY secret
 # For local use: set environment variable or paste key here temporarily
-T212_API_KEY = os.environ.get(4538584ZPdOANfKCQjZIuKYnUSGZwELxFWXV)
+T212_API_KEY = os.environ.get("T212_API_KEY", "YOUR_T212_KEY_HERE")
 
 DATA_ROOT     = r"D:\GarAI\data"
 DAILY_DIR     = os.path.join(DATA_ROOT, "daily")

@@ -3,10 +3,9 @@ name: Intraday Scan
 on:
   schedule:
     # Every 30 mins, 13:30–20:30 UTC (= 14:30–21:30 BST)
-    # GitHub Actions can be up to 15 mins late, so we start
-    # 30 mins early and end 30 mins late as buffer
+    # GitHub Actions can run up to 15 mins late — buffer built in
     - cron: "0,30 13,14,15,16,17,18,19,20 * * 1-5"
-  workflow_dispatch:  # allows manual trigger from GitHub UI
+  workflow_dispatch:  # manual trigger from GitHub UI
 
 jobs:
   scan:
@@ -24,6 +23,49 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Refresh tickers from T212 API
+        env:
+          T212_API_KEY: ${{ secrets.T212_API_KEY }}
+        run: |
+          python - <<'EOF'
+          import os, requests
+
+          api_key = os.environ.get("4538584ZPdOANfKCQjZIuKYnUSGZwELxFWXV", "")
+          if not api_key:
+              print("T212_API_KEY not set — using existing tickers.txt")
+              exit(0)
+
+          headers = {"Authorization": api_key}
+          r = requests.get(
+              "https://live.trading212.com/api/v0/equity/metadata/instruments",
+              headers=headers, timeout=30
+          )
+
+          if r.status_code != 200:
+              print(f"T212 API returned {r.status_code} — using existing tickers.txt")
+              exit(0)
+
+          instruments = r.json()
+          tickers = []
+          for inst in instruments:
+              raw = inst.get("ticker", "")
+              if "_US_EQ" in raw:
+                  clean = raw.replace("_US_EQ", "")
+              elif inst.get("currencyCode") == "USD" and inst.get("exchange","") in [
+                  "NASDAQ","NYSE","NYSE ARCA","NYSE AMERICAN","BATS"
+              ]:
+                  clean = inst.get("shortName","")
+              else:
+                  continue
+              if clean and "/" not in clean and len(clean) <= 6:
+                  tickers.append(clean)
+
+          tickers = sorted(set(tickers))
+          with open("tickers.txt", "w") as f:
+              f.write("\n".join(tickers))
+          print(f"Tickers refreshed: {len(tickers)} instruments from T212")
+          EOF
+
       - name: Run scanner
         run: python scanner.py
 
@@ -31,6 +73,6 @@ jobs:
         run: |
           git config user.name "GarAI Scanner"
           git config user.email "scanner@garai"
-          git add output/intraday.csv
+          git add output/intraday.csv tickers.txt
           git diff --cached --quiet || git commit -m "Intraday scan update [$(date -u '+%H:%M UTC')]"
           git push
