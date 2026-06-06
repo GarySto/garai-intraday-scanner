@@ -1,0 +1,14 @@
+==================================================
+T212 Instrument List — Statistics
+Updated: 06 Jun 2026 14:12 BST
+==================================================
+
+Total instruments: 17141
+US stocks:         6870
+US ETFs:           22
+Other/excluded:    8817
+
+US stocks by exchange:
+  Unknown: 6870
+
+==================================================
