@@ -15,7 +15,7 @@ st.set_page_config(
     layout="wide",
 )
 
-# ── Header ────────────────────────────────────────────────────────────────────
+# ── Header ─────────────────────────────────────────────────────────────────────
 
 st.title("📡 GarAI Intraday Scanner")
 st.caption(
@@ -34,7 +34,7 @@ st.markdown(f"**{now_bst.strftime('%A %d %b %Y · %H:%M BST')}** &nbsp;·&nbsp; 
 
 st.divider()
 
-# ── Load data ─────────────────────────────────────────────────────────────────
+# ── Load data ──────────────────────────────────────────────────────────────────
 
 CSV_URL = "https://raw.githubusercontent.com/GarySto/garai-intraday-scanner/main/output/intraday.csv"
 
@@ -52,112 +52,134 @@ if df is None or df.empty:
     st.info("No candidates yet — scanner runs every 30 minutes during market hours (14:30–21:00 BST).")
     st.stop()
 
-# Last scan time
 last_scan = df["scan_time"].iloc[0] if "scan_time" in df.columns else "Unknown"
 st.markdown(f"**Last scan:** {last_scan} &nbsp;·&nbsp; **{len(df)} candidates found**")
 
 st.divider()
 
-# ── Split into modes ──────────────────────────────────────────────────────────
+# ── Tabs ───────────────────────────────────────────────────────────────────────
 
-df_m1 = df[df["mode"] == "MODE1_MOMENTUM"].copy()
+tab1, tab2, tab3, tab4, tab5 = st.tabs([
+    "🚀 Momentum",
+    "🟢 Support bounces",
+    "🔴 Resistance warnings",
+    "📊 Backtest Explorer",
+    "📒 Trade Tracker",
+])
+
+df_m1      = df[df["mode"] == "MODE1_MOMENTUM"].copy()
 df_support = df[df["mode"] == "SUPPORT_BOUNCE"].copy()
 df_resist  = df[df["mode"] == "RESISTANCE_WARNING"].copy()
 
-# ── Mode 1: Momentum ──────────────────────────────────────────────────────────
+# ── Score colour helper ────────────────────────────────────────────────────────
 
-st.subheader("🚀 Mode 1 — Momentum continuation")
-st.caption("Stocks accelerating intraday with above-average volume. Same-day exit before 21:00 BST.")
+def score_style_green(v):
+    if isinstance(v, (int, float)):
+        alpha = min(v, 10) / 10
+        return f"background-color: rgba(99,153,34,{alpha:.2f}); color: white"
+    return ""
 
-if df_m1.empty:
-    st.info("No momentum candidates this scan.")
-else:
-    cols_m1 = ["ticker", "price", "score", "pct_from_open", "rvol", "accelerating", "entry_note", "reason"]
-    cols_m1 = [c for c in cols_m1 if c in df_m1.columns]
+def score_style_red(v):
+    if isinstance(v, (int, float)):
+        alpha = min(v, 10) / 10
+        return f"background-color: rgba(216,90,48,{alpha:.2f}); color: white"
+    return ""
 
-    display_m1 = df_m1[cols_m1].rename(columns={
-        "ticker":        "Ticker",
-        "price":         "Price ($)",
-        "score":         "Score",
-        "pct_from_open": "% from open",
-        "rvol":          "RVOL",
-        "accelerating":  "Accelerating",
-        "entry_note":    "Entry note",
-        "reason":        "Signal detail",
-    })
+# ── Tab 1: Momentum ────────────────────────────────────────────────────────────
 
-    st.dataframe(
-        display_m1.style.map(lambda v: f"background-color: rgba(99,153,34,{min(v,10)/10:.2f}); color: white" if isinstance(v, (int, float)) else "", subset=["Score"]),
-        use_container_width=True,
-        hide_index=True,
-    )
+with tab1:
+    st.subheader("🚀 Mode 1 — Momentum continuation")
+    st.caption("Stocks accelerating intraday with above-average volume. Same-day exit before 21:00 BST.")
+
+    if df_m1.empty:
+        st.info("No momentum candidates this scan.")
+    else:
+        cols_m1 = ["ticker", "price", "score", "pct_from_open", "rvol",
+                   "accelerating", "entry_note", "reason"]
+        cols_m1 = [c for c in cols_m1 if c in df_m1.columns]
+        display_m1 = df_m1[cols_m1].rename(columns={
+            "ticker": "Ticker", "price": "Price ($)", "score": "Score",
+            "pct_from_open": "% from open", "rvol": "RVOL",
+            "accelerating": "Accelerating", "entry_note": "Entry note",
+            "reason": "Signal detail",
+        })
+        st.dataframe(
+            display_m1.style.map(score_style_green, subset=["Score"]),
+            use_container_width=True, hide_index=True,
+        )
+
+# ── Tab 2: Support bounces ─────────────────────────────────────────────────────
+
+with tab2:
+    st.subheader("🟢 Mode 2 — Support bounce candidates")
+    st.caption("Near a horizontal support level tested 2+ times over 6 months. ATR stop-loss calculated.")
+
+    if df_support.empty:
+        st.info("No support bounce candidates this scan.")
+    else:
+        cols_s = ["ticker", "price", "score", "level_price", "level_touches",
+                  "dist_pct", "atr", "stop_loss", "entry_note", "stop_reason"]
+        cols_s = [c for c in cols_s if c in df_support.columns]
+        display_s = df_support[cols_s].rename(columns={
+            "ticker": "Ticker", "price": "Price ($)", "score": "Score",
+            "level_price": "Support level ($)", "level_touches": "Touches",
+            "dist_pct": "Distance (%)", "atr": "ATR ($)",
+            "stop_loss": "Stop-loss ($)", "entry_note": "Entry note",
+            "stop_reason": "Stop logic",
+        })
+        st.dataframe(
+            display_s.style.map(score_style_green, subset=["Score"]),
+            use_container_width=True, hide_index=True,
+        )
+
+# ── Tab 3: Resistance warnings ─────────────────────────────────────────────────
+
+with tab3:
+    st.subheader("🔴 Mode 2 — Resistance warnings")
+    st.caption("Near a horizontal resistance level. Consider exiting existing positions or avoiding entry.")
+
+    if df_resist.empty:
+        st.info("No resistance warnings this scan.")
+    else:
+        cols_r = ["ticker", "price", "score", "level_price", "level_touches",
+                  "dist_pct", "entry_note", "reason"]
+        cols_r = [c for c in cols_r if c in df_resist.columns]
+        display_r = df_resist[cols_r].rename(columns={
+            "ticker": "Ticker", "price": "Price ($)", "score": "Score",
+            "level_price": "Resistance level ($)", "level_touches": "Touches",
+            "dist_pct": "Distance (%)", "entry_note": "Note",
+            "reason": "Signal detail",
+        })
+        st.dataframe(
+            display_r.style.map(score_style_red, subset=["Score"]),
+            use_container_width=True, hide_index=True,
+        )
+
+# ── Tab 4: Backtest Explorer ───────────────────────────────────────────────────
+
+with tab4:
+    try:
+        import backtest_explorer
+        backtest_explorer.render()
+    except ImportError:
+        st.warning("backtest_explorer.py not found in repo root.")
+    except Exception as e:
+        st.error(f"Backtest Explorer error: {e}")
+
+# ── Tab 5: Trade Tracker ───────────────────────────────────────────────────────
+
+with tab5:
+    try:
+        import trade_tracker
+        trade_tracker.render()
+    except ImportError:
+        st.warning("trade_tracker.py not found in repo root.")
+    except Exception as e:
+        st.error(f"Trade Tracker error: {e}")
+
+# ── Footer ─────────────────────────────────────────────────────────────────────
 
 st.divider()
-
-# ── Mode 2: Support bounces ───────────────────────────────────────────────────
-
-st.subheader("🟢 Mode 2 — Support bounce candidates")
-st.caption("Near a horizontal support level tested 2+ times over 6 months. ATR stop-loss calculated.")
-
-if df_support.empty:
-    st.info("No support bounce candidates this scan.")
-else:
-    cols_s = ["ticker", "price", "score", "level_price", "level_touches", "dist_pct", "atr", "stop_loss", "entry_note", "stop_reason"]
-    cols_s = [c for c in cols_s if c in df_support.columns]
-
-    display_s = df_support[cols_s].rename(columns={
-        "ticker":        "Ticker",
-        "price":         "Price ($)",
-        "score":         "Score",
-        "level_price":   "Support level ($)",
-        "level_touches": "Touches",
-        "dist_pct":      "Distance (%)",
-        "atr":           "ATR ($)",
-        "stop_loss":     "Stop-loss ($)",
-        "entry_note":    "Entry note",
-        "stop_reason":   "Stop logic",
-    })
-
-    st.dataframe(
-        display_s.style.map(lambda v: f"background-color: rgba(99,153,34,{min(v,10)/10:.2f}); color: white" if isinstance(v, (int, float)) else "", subset=["Score"]),
-        use_container_width=True,
-        hide_index=True,
-    )
-
-st.divider()
-
-# ── Mode 2: Resistance warnings ───────────────────────────────────────────────
-
-st.subheader("🔴 Mode 2 — Resistance warnings")
-st.caption("Near a horizontal resistance level. Consider exiting existing positions or avoiding entry.")
-
-if df_resist.empty:
-    st.info("No resistance warnings this scan.")
-else:
-    cols_r = ["ticker", "price", "score", "level_price", "level_touches", "dist_pct", "entry_note", "reason"]
-    cols_r = [c for c in cols_r if c in df_resist.columns]
-
-    display_r = df_resist[cols_r].rename(columns={
-        "ticker":        "Ticker",
-        "price":         "Price ($)",
-        "score":         "Score",
-        "level_price":   "Resistance level ($)",
-        "level_touches": "Touches",
-        "dist_pct":      "Distance (%)",
-        "entry_note":    "Note",
-        "reason":        "Signal detail",
-    })
-
-    st.dataframe(
-        display_r.style.map(lambda v: f"background-color: rgba(216,90,48,{min(v,10)/10:.2f}); color: white" if isinstance(v, (int, float)) else "", subset=["Score"]),
-        use_container_width=True,
-        hide_index=True,
-    )
-
-st.divider()
-
-# ── Footer ────────────────────────────────────────────────────────────────────
-
 st.caption(
     "GarAI Intraday Scanner · Built with Python, yfinance, GitHub Actions & Streamlit · "
     "Not financial advice · Real money, real rules, real data."
