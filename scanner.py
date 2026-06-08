@@ -50,12 +50,13 @@ BST = pytz.timezone("Europe/London")
 
 def load_tickers(path):
     """
-    Load tickers from file. With 6,892 tickers we can't scan all of them
-    via yfinance in one run (rate limits). Strategy:
-    - Load all tickers
-    - Rotate through them in blocks across the day using current time as seed
-    - Each 30-min run covers a different slice, ensuring full coverage across runs
-    - This way every ticker gets scanned at least once every 8-9 hours
+    Load tickers with smart rotation + sticky top performers.
+
+    Strategy:
+    - Always include the current top 10 from the last scan (sticky)
+    - Fill remaining 390 slots with a rotated slice of the full universe
+    - Different slice each 30-min run — full 6,892 covered every ~17 hours
+    - Top performers never rotate out mid-day
     """
     with open(path) as f:
         all_tickers = [line.strip() for line in f if line.strip()]
@@ -64,17 +65,36 @@ def load_tickers(path):
     if total <= MAX_TICKERS:
         return all_tickers
 
-    # Rotate based on current 30-min slot — different slice each run
+    # Load top 10 from last scan (sticky — keep these all day)
+    sticky = []
+    try:
+        if os.path.exists(OUTPUT_FILE):
+            last_scan = pd.read_csv(OUTPUT_FILE)
+            if not last_scan.empty and "ticker" in last_scan.columns and "score" in last_scan.columns:
+                top10 = (
+                    last_scan.sort_values("score", ascending=False)
+                    ["ticker"].unique()[:10].tolist()
+                )
+                sticky = [t for t in top10 if t in all_tickers]
+    except Exception:
+        pass
+
+    # Rotate remaining slots through the full universe
+    rotation_slots = MAX_TICKERS - len(sticky)
     now = datetime.now(BST)
     slot = (now.hour * 2 + now.minute // 30)  # 0-47 slots per day
-    start = (slot * MAX_TICKERS) % total
-    end = start + MAX_TICKERS
+    start = (slot * rotation_slots) % total
+    end = start + rotation_slots
 
     if end <= total:
-        return all_tickers[start:end]
+        rotated = all_tickers[start:end]
     else:
-        # Wrap around
-        return all_tickers[start:] + all_tickers[:end - total]
+        rotated = all_tickers[start:] + all_tickers[:end - total]
+
+    # Merge: sticky first, then rotation (deduped)
+    sticky_set = set(sticky)
+    final = sticky + [t for t in rotated if t not in sticky_set]
+    return final[:MAX_TICKERS]
 
 
 def market_is_open():
