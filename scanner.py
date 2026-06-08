@@ -37,19 +37,44 @@ ATR_STOP_MULT     = 1.0          # how many ATRs below support = stop-loss
 MOMENTUM_MIN_PCT  = 5.0          # min % move from open to flag Mode 1
 RVOL_MIN          = 5.0          # min relative volume for Mode 1
 NEAR_LEVEL_PCT    = 0.03         # within 3% of a level = "near" for Mode 2
-MODE1_START_BST   = 14             # earliest hour (BST) to flag Mode 1 entries
-MODE1_END_BST     = 19             # latest hour (BST) — after this momentum unreliable
-MODE2_TOUCH_EXACT = 4              # only flag support levels with exactly this many touches
+MODE1_START_BST   = 14           # earliest hour (BST) to flag Mode 1 entries
+MODE1_END_BST     = 19           # latest hour (BST) — after this momentum unreliable
+MODE2_TOUCH_EXACT = 4            # kept for reference — find_levels now uses >= MIN_TOUCHES
 MAX_TICKERS       = 400          # cap to stay within yfinance rate limits
+RSI_MIN_MODE1     = 70           # backtest: RSI 70+ = 54% WR vs 39% below 40
+RSI_AVOID_MODE1   = 40           # below this = skip Mode 1 signal entirely
 
 BST = pytz.timezone("Europe/London")
 
 # ── Helpers ──────────────────────────────────────────────────────────────────
 
 def load_tickers(path):
+    """
+    Load tickers from file. With 6,892 tickers we can't scan all of them
+    via yfinance in one run (rate limits). Strategy:
+    - Load all tickers
+    - Rotate through them in blocks across the day using current time as seed
+    - Each 30-min run covers a different slice, ensuring full coverage across runs
+    - This way every ticker gets scanned at least once every 8-9 hours
+    """
     with open(path) as f:
-        tickers = [line.strip() for line in f if line.strip()]
-    return tickers[:MAX_TICKERS]
+        all_tickers = [line.strip() for line in f if line.strip()]
+
+    total = len(all_tickers)
+    if total <= MAX_TICKERS:
+        return all_tickers
+
+    # Rotate based on current 30-min slot — different slice each run
+    now = datetime.now(BST)
+    slot = (now.hour * 2 + now.minute // 30)  # 0-47 slots per day
+    start = (slot * MAX_TICKERS) % total
+    end = start + MAX_TICKERS
+
+    if end <= total:
+        return all_tickers[start:end]
+    else:
+        # Wrap around
+        return all_tickers[start:] + all_tickers[:end - total]
 
 
 def market_is_open():
@@ -101,7 +126,7 @@ def find_levels(hist):
         band_hi = p * (1 + LEVEL_BAND_PCT)
         mask = (prices >= band_lo) & (prices <= band_hi)
         touches = mask.sum()
-        if touches >= MIN_TOUCHES and touches == MODE2_TOUCH_EXACT:
+        if touches >= MIN_TOUCHES:
             cluster_prices = prices[mask]
             level_price = float(np.median(cluster_prices))
             lowest_at   = float(cluster_prices.min())
@@ -163,6 +188,24 @@ def score_momentum(ticker, hist_daily, intraday):
         if rvol < RVOL_MIN:
             return None
 
+        # RSI filter — backtest: RSI 70+ = 54% WR, RSI <40 = 39% WR
+        # Calculate RSI(14) from daily close prices
+        rsi_val = None
+        rsi_badge = ""
+        try:
+            closes = hist_daily["Close"].tail(20)
+            delta = closes.diff()
+            gain = delta.clip(lower=0).rolling(14).mean()
+            loss = (-delta.clip(upper=0)).rolling(14).mean()
+            rs = gain / loss
+            rsi_series = 100 - (100 / (1 + rs))
+            rsi_val = round(float(rsi_series.iloc[-1]), 1)
+            if rsi_val < RSI_AVOID_MODE1:
+                return None   # Hard block — 39% WR, not worth trading
+            rsi_badge = f" · RSI {rsi_val}"
+        except Exception:
+            pass  # RSI unavailable — allow signal without filter
+
         # Score: momentum + volume only
         # Acceleration signal removed — backtest showed it actively hurts win rate
         momentum_score = min(pct_from_open / 10 * 5, 5)   # up to 5 pts
@@ -172,7 +215,7 @@ def score_momentum(ticker, hist_daily, intraday):
 
         reason = (
             f"Up {round(pct_from_open,2)}% from open · "
-            f"RVOL {round(rvol,1)}x"
+            f"RVOL {round(rvol,1)}x{rsi_badge}"
         )
 
         return {
@@ -180,6 +223,7 @@ def score_momentum(ticker, hist_daily, intraday):
             "score":        total,
             "pct_from_open": round(pct_from_open, 2),
             "rvol":         round(rvol, 2),
+            "rsi_at_signal": rsi_val,
             "entry_note":   "Enter on continuation · exit before 21:00 BST",
             "stop_loss":    None,
             "stop_reason":  None,
