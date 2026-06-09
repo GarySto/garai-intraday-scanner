@@ -170,48 +170,48 @@ def find_levels(hist):
 
 def score_momentum(ticker, hist_daily, intraday):
     """
-    Mode 1: Momentum continuation scoring.
+    Mode 1: Momentum continuation scoring (same-day).
 
-    Signals:
-      1. Price change from today's open (raw momentum %)
-      2. Intraday RVOL — volume so far vs average volume at this time of day
-      3. Slope — is price still accelerating? (last 3 candles trending up)
-
-    Returns a score 0–10 and a reason string. Returns None if below threshold.
+    Evidence-based rules from backtest_results.csv:
+      - Focus on intraday continuation, best at 4h/EOD
+      - Strongest when RSI >= 70
+      - Best window 14:00–18:00 BST
+      - Sweet spot: 10–20% move from open, RVOL >= 5x
+      - Use 1–2% trailing-style logic conceptually (we surface it as guidance)
     """
     try:
+        # Need enough intraday data
         if intraday is None or len(intraday) < 6:
             return None
 
-        today_open  = intraday["Open"].iloc[0]
-        current     = intraday["Close"].iloc[-1]
+        # --- Price & move from open ---
+        today_open = intraday["Open"].iloc[0]
+        current    = intraday["Close"].iloc[-1]
         pct_from_open = (current - today_open) / today_open * 100
 
-        if pct_from_open < MOMENTUM_MIN_PCT:
+        # Hard floor: ignore weak moves
+        if pct_from_open < 5.0:
             return None
 
-        # Time window filter — Mode 1 win rate collapses after 19:00 BST
+        # --- Time filter (BST) ---
         now_bst = datetime.now(BST)
-        if not (MODE1_START_BST <= now_bst.hour < MODE1_END_BST):
+        hour = now_bst.hour
+        if hour < 14 or hour > 18:
             return None
 
-        # RVOL: compare volume so far today vs average volume for same
-        # number of candles at this point in prior sessions
+        # --- RVOL (time-adjusted) ---
         avg_daily_vol = hist_daily["Volume"].tail(20).mean()
         candles_today = len(intraday)
-        # Approximate: full session = ~78 x 5-min candles
-        expected_frac = candles_today / 78
+        expected_frac = candles_today / 78.0  # ~78 x 5m candles per full session
         expected_vol_now = avg_daily_vol * expected_frac
         vol_today = intraday["Volume"].sum()
-        rvol = vol_today / expected_vol_now if expected_vol_now > 0 else 0
+        rvol = vol_today / expected_vol_now if expected_vol_now > 0 else 0.0
 
-        if rvol < RVOL_MIN:
+        if rvol < 5.0:
             return None
 
-        # RSI filter — backtest: RSI 70+ = 54% WR, RSI <40 = 39% WR
-        # Calculate RSI(14) from daily close prices
+        # --- Daily RSI(14) from closes ---
         rsi_val = None
-        rsi_badge = ""
         try:
             closes = hist_daily["Close"].tail(20)
             delta = closes.diff()
@@ -219,39 +219,88 @@ def score_momentum(ticker, hist_daily, intraday):
             loss = (-delta.clip(upper=0)).rolling(14).mean()
             rs = gain / loss
             rsi_series = 100 - (100 / (1 + rs))
-            rsi_val = round(float(rsi_series.iloc[-1]), 1)
-            if rsi_val < RSI_AVOID_MODE1:
-                return None   # Hard block — 39% WR, not worth trading
-            rsi_badge = f" · RSI {rsi_val}"
+            rsi_val = float(rsi_series.iloc[-1])
         except Exception:
-            pass  # RSI unavailable — allow signal without filter
+            rsi_val = None
 
-        # Score: momentum + volume only
-        # Acceleration signal removed — backtest showed it actively hurts win rate
-        momentum_score = min(pct_from_open / 10 * 5, 5)   # up to 5 pts
-        rvol_score     = min((rvol - 1) / 3 * 5, 5)        # up to 5 pts (increased from 3)
+        # If we have RSI, enforce evidence-based filters
+        if rsi_val is not None:
+            if rsi_val < 70:
+                return None  # below 70, edge collapses
 
-        total = round(momentum_score + rvol_score, 2)
+        # --- Scoring (0–10) ---
 
-        reason = (
-            f"Up {round(pct_from_open,2)}% from open · "
-            f"RVOL {round(rvol,1)}x{rsi_badge}"
+        score = 0.0
+        reasons = []
+
+        # RSI contribution
+        if rsi_val is not None:
+            if 70 <= rsi_val < 80:
+                score += 2.0
+                reasons.append(f"RSI {rsi_val:.1f} (70–80)")
+            elif 80 <= rsi_val < 90:
+                score += 3.0
+                reasons.append(f"RSI {rsi_val:.1f} (80–90)")
+            elif rsi_val >= 90:
+                score += 4.0
+                reasons.append(f"RSI {rsi_val:.1f} (90+)")
+        else:
+            reasons.append("RSI unavailable")
+
+        # Move-from-open contribution
+        if 10 <= pct_from_open < 20:
+            score += 2.0
+            reasons.append(f"Move {pct_from_open:.1f}% from open (10–20%)")
+        elif pct_from_open >= 20:
+            score += 3.0
+            reasons.append(f"Move {pct_from_open:.1f}% from open (20%+)")
+
+        # RVOL contribution
+        if 5 <= rvol < 10:
+            score += 2.0
+            reasons.append(f"RVOL {rvol:.1f}x (5–10x)")
+        elif rvol >= 10:
+            score += 3.0
+            reasons.append(f"RVOL {rvol:.1f}x (10x+)")
+
+        # Time-of-day contribution
+        if 14 <= hour < 16:
+            score += 1.0
+            reasons.append(f"Time {hour:02d}:00–{hour:02d}:59 BST (prime window)")
+        elif 16 <= hour <= 18:
+            score += 1.0
+            reasons.append(f"Time {hour:02d}:00–{hour:02d}:59 BST (good window)")
+
+        score = round(min(score, 10.0), 2)
+
+        if score <= 0:
+            return None
+
+        # --- Exit guidance (since T212 has no trailing stop orders) ---
+        # We surface a *plan*, not a broker-native trailing stop.
+        # You can implement this manually or via alerts.
+        exit_plan = (
+            "Conceptual 1–2% trailing stop from intraday high; "
+            "review around 4h/EOD for partial/total exit."
         )
 
+        reason_str = " · ".join(reasons) if reasons else "Momentum continuation candidate"
+
         return {
-            "mode":         "MODE1_MOMENTUM",
-            "score":        total,
-            "pct_from_open": round(pct_from_open, 2),
-            "rvol":         round(rvol, 2),
-            "rsi_at_signal": rsi_val,
-            "entry_note":   "Enter on continuation · exit before 21:00 BST",
-            "stop_loss":    None,
-            "stop_reason":  None,
-            "reason":       reason,
+            "mode":           "MODE1_MOMENTUM",
+            "score":          score,
+            "pct_from_open":  round(pct_from_open, 2),
+            "rvol":           round(rvol, 2),
+            "rsi_at_signal":  round(rsi_val, 1) if rsi_val is not None else None,
+            "entry_note":     "Same-day momentum continuation · exit before 21:00 BST",
+            "stop_loss":      None,          # MODE1 uses discretionary/plan-based exits
+            "stop_reason":    exit_plan,     # guidance text
+            "reason":         reason_str,
         }
 
     except Exception:
         return None
+
 
 
 def score_levels(ticker, hist_daily, intraday):
