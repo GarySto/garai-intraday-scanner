@@ -170,14 +170,30 @@ def find_levels(hist):
 
 def score_momentum(ticker, hist_daily, intraday):
     """
-    Mode 1: Momentum continuation scoring (same-day).
+    MODE 1 — Momentum continuation (same-day)
+    Evidence-based scoring from 41,480-signal backtest.
 
-    Evidence-based rules from backtest_results.csv:
-      - Focus on intraday continuation, best at 4h/EOD
-      - Strongest when RSI >= 70
-      - Best window 14:00–18:00 BST
-      - Sweet spot: 10–20% move from open, RVOL >= 5x
-      - Use 1–2% trailing-style logic conceptually (we surface it as guidance)
+    Entry requirements:
+      - RSI >= 70 (below this = no edge)
+      - Move from open >= 5%
+      - RVOL >= 5x
+      - Time window 14:00–18:00 BST
+      - Enough intraday candles to judge trend
+
+    Scoring (0–10):
+      +2  RSI 70–80
+      +3  RSI 80–90
+      +4  RSI >= 90
+      +2  Move 10–20%
+      +3  Move >= 20%
+      +2  RVOL 5–10x
+      +3  RVOL >= 10x
+      +1  Time 14–16
+      +1  Time 16–18
+
+    Exit guidance:
+      Trading212 does NOT support trailing stops.
+      We output a *plan* instead of a broker-native order.
     """
     try:
         # Need enough intraday data
@@ -189,7 +205,6 @@ def score_momentum(ticker, hist_daily, intraday):
         current    = intraday["Close"].iloc[-1]
         pct_from_open = (current - today_open) / today_open * 100
 
-        # Hard floor: ignore weak moves
         if pct_from_open < 5.0:
             return None
 
@@ -199,10 +214,10 @@ def score_momentum(ticker, hist_daily, intraday):
         if hour < 14 or hour > 18:
             return None
 
-        # --- RVOL (time-adjusted) ---
+        # --- RVOL calculation ---
         avg_daily_vol = hist_daily["Volume"].tail(20).mean()
         candles_today = len(intraday)
-        expected_frac = candles_today / 78.0  # ~78 x 5m candles per full session
+        expected_frac = candles_today / 78.0
         expected_vol_now = avg_daily_vol * expected_frac
         vol_today = intraday["Volume"].sum()
         rvol = vol_today / expected_vol_now if expected_vol_now > 0 else 0.0
@@ -210,7 +225,7 @@ def score_momentum(ticker, hist_daily, intraday):
         if rvol < 5.0:
             return None
 
-        # --- Daily RSI(14) from closes ---
+        # --- RSI(14) from daily closes ---
         rsi_val = None
         try:
             closes = hist_daily["Close"].tail(20)
@@ -223,68 +238,52 @@ def score_momentum(ticker, hist_daily, intraday):
         except Exception:
             rsi_val = None
 
-        # If we have RSI, enforce evidence-based filters
-        if rsi_val is not None:
-            if rsi_val < 70:
-                return None  # below 70, edge collapses
+        if rsi_val is not None and rsi_val < 70:
+            return None
 
-        # --- Scoring (0–10) ---
-
+        # --- Scoring ---
         score = 0.0
         reasons = []
 
-        # RSI contribution
+        # RSI
         if rsi_val is not None:
             if 70 <= rsi_val < 80:
-                score += 2.0
-                reasons.append(f"RSI {rsi_val:.1f} (70–80)")
+                score += 2; reasons.append(f"RSI {rsi_val:.1f} (70–80)")
             elif 80 <= rsi_val < 90:
-                score += 3.0
-                reasons.append(f"RSI {rsi_val:.1f} (80–90)")
+                score += 3; reasons.append(f"RSI {rsi_val:.1f} (80–90)")
             elif rsi_val >= 90:
-                score += 4.0
-                reasons.append(f"RSI {rsi_val:.1f} (90+)")
-        else:
-            reasons.append("RSI unavailable")
+                score += 4; reasons.append(f"RSI {rsi_val:.1f} (90+)")
 
-        # Move-from-open contribution
+        # Move from open
         if 10 <= pct_from_open < 20:
-            score += 2.0
-            reasons.append(f"Move {pct_from_open:.1f}% from open (10–20%)")
+            score += 2; reasons.append(f"Move {pct_from_open:.1f}% (10–20%)")
         elif pct_from_open >= 20:
-            score += 3.0
-            reasons.append(f"Move {pct_from_open:.1f}% from open (20%+)")
+            score += 3; reasons.append(f"Move {pct_from_open:.1f}% (20%+)")
 
-        # RVOL contribution
+        # RVOL
         if 5 <= rvol < 10:
-            score += 2.0
-            reasons.append(f"RVOL {rvol:.1f}x (5–10x)")
+            score += 2; reasons.append(f"RVOL {rvol:.1f}x (5–10x)")
         elif rvol >= 10:
-            score += 3.0
-            reasons.append(f"RVOL {rvol:.1f}x (10x+)")
+            score += 3; reasons.append(f"RVOL {rvol:.1f}x (10x+)")
 
-        # Time-of-day contribution
+        # Time-of-day
         if 14 <= hour < 16:
-            score += 1.0
-            reasons.append(f"Time {hour:02d}:00–{hour:02d}:59 BST (prime window)")
+            score += 1; reasons.append("Prime window 14–16 BST")
         elif 16 <= hour <= 18:
-            score += 1.0
-            reasons.append(f"Time {hour:02d}:00–{hour:02d}:59 BST (good window)")
+            score += 1; reasons.append("Good window 16–18 BST")
 
         score = round(min(score, 10.0), 2)
 
         if score <= 0:
             return None
 
-        # --- Exit guidance (since T212 has no trailing stop orders) ---
-        # We surface a *plan*, not a broker-native trailing stop.
-        # You can implement this manually or via alerts.
+        # --- Exit guidance (T212-safe) ---
         exit_plan = (
-            "Conceptual 1–2% trailing stop from intraday high; "
-            "review around 4h/EOD for partial/total exit."
+            "No trailing stops on T212. Use manual trailing logic: "
+            "raise stop as price makes new highs; review at 4h/EOD."
         )
 
-        reason_str = " · ".join(reasons) if reasons else "Momentum continuation candidate"
+        reason_str = " · ".join(reasons)
 
         return {
             "mode":           "MODE1_MOMENTUM",
@@ -293,15 +292,13 @@ def score_momentum(ticker, hist_daily, intraday):
             "rvol":           round(rvol, 2),
             "rsi_at_signal":  round(rsi_val, 1) if rsi_val is not None else None,
             "entry_note":     "Same-day momentum continuation · exit before 21:00 BST",
-            "stop_loss":      None,          # MODE1 uses discretionary/plan-based exits
-            "stop_reason":    exit_plan,     # guidance text
+            "stop_loss":      None,
+            "stop_reason":    exit_plan,
             "reason":         reason_str,
         }
 
     except Exception:
         return None
-
-
 
 def score_levels(ticker, hist_daily, intraday):
     """
