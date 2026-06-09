@@ -229,6 +229,9 @@ def render_mode2(df, max_cards=10):
 # MODE 1 — Momentum cards
 # ══════════════════════════════════════════════════════════════════════════════
 
+import yfinance as yf
+import altair as alt
+
 def render_mode1(df, max_cards=10):
     if df is None or df.empty:
         st.info("No momentum candidates this scan.")
@@ -257,7 +260,9 @@ def render_mode1(df, max_cards=10):
         entry_note = str(row.get("entry_note", ""))
         exit_plan  = str(row.get("stop_reason", ""))
 
-        # Badges
+        # ───────────────────────────────────────────────
+        # BADGES
+        # ───────────────────────────────────────────────
         rsi_label, rsi_colour = _rsi_badge(rsi)
         rvol_colour = "green" if rvol >= 5 else "amber"
         rvol_badge = _badge_html(f"RVOL {rvol:.1f}×", rvol_colour)
@@ -266,6 +271,67 @@ def render_mode1(df, max_cards=10):
         badges = _badge_html(rsi_label, rsi_colour)
         badges += " " + rvol_badge
         badges += " " + pct_badge
+
+        # ───────────────────────────────────────────────
+        # CONFIDENCE METER
+        # ───────────────────────────────────────────────
+        if score >= 7:
+            bar_color = "#0F6E56"  # green
+            risk_band = "Low risk"
+            risk_colour = "green"
+        elif score >= 4:
+            bar_color = "#C49A00"  # amber
+            risk_band = "Medium risk"
+            risk_colour = "amber"
+        else:
+            bar_color = "#993C1D"  # red
+            risk_band = "High risk"
+            risk_colour = "red"
+
+        confidence_html = f"""
+        <div style="margin-top:10px;margin-bottom:15px;">
+            <div style="font-size:12px;color:var(--color-text-secondary);margin-bottom:4px;">
+                Confidence score: {score:.1f} / 10
+            </div>
+            <div style="background:#E5E5E5;border-radius:6px;height:10px;overflow:hidden;">
+                <div style="
+                    width:{score*10}%;
+                    height:100%;
+                    background:{bar_color};
+                    transition:width 0.4s ease;">
+                </div>
+            </div>
+        </div>
+        """
+
+        # ───────────────────────────────────────────────
+        # SPARKLINE (intraday 5m chart)
+        # ───────────────────────────────────────────────
+        try:
+            tk = yf.Ticker(ticker)
+            intraday = tk.history(period="1d", interval="5m", auto_adjust=True)
+            if not intraday.empty:
+                intraday = intraday.reset_index()
+                spark = alt.Chart(intraday).mark_line(color=bar_color).encode(
+                    x=alt.X("Datetime:T", axis=None),
+                    y=alt.Y("Close:Q", axis=None)
+                ).properties(height=40)
+                spark_html = spark.to_html()
+            else:
+                spark_html = "<div style='height:40px'></div>"
+        except Exception:
+            spark_html = "<div style='height:40px'></div>"
+
+        # ───────────────────────────────────────────────
+        # EXPECTED BEHAVIOUR (based on your backtest)
+        # ───────────────────────────────────────────────
+        expected = """
+        - Strong continuation most likely within 4 hours  
+        - Best behaviour when RSI ≥ 70 and RVOL ≥ 5×  
+        - Pullbacks of 1–2% are normal before continuation  
+        - Momentum weakens sharply after 18:00 BST  
+        - Do not hold overnight — edge collapses  
+        """
 
         with st.container():
             # Header
@@ -284,11 +350,17 @@ def render_mode1(df, max_cards=10):
                 unsafe_allow_html=True,
             )
 
+            # Confidence meter
+            st.markdown(confidence_html, unsafe_allow_html=True)
+
+            # Sparkline
+            st.markdown(spark_html, unsafe_allow_html=True)
+
             # Metrics row
             m1 = _metric_html("RSI", f"{rsi}", "green" if rsi and rsi >= 70 else "amber")
             m2 = _metric_html("Move from open", f"{pct_open:.1f}%", "green")
             m3 = _metric_html("RVOL", f"{rvol:.1f}×", "green" if rvol >= 5 else "amber")
-            m4 = _metric_html("Score", f"{score:.2f}", "green")
+            m4 = _metric_html("Risk band", risk_band, risk_colour)
             st.markdown(
                 f'<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px">'
                 f'{m1}{m2}{m3}{m4}</div>',
@@ -299,6 +371,10 @@ def render_mode1(df, max_cards=10):
             st.markdown("**Why this triggered:**")
             st.markdown(f"{reason}")
 
+            # Expected behaviour
+            st.markdown("**Expected behaviour:**")
+            st.markdown(expected)
+
             # Entry guidance
             st.markdown("**Entry guidance:**")
             st.markdown(f"{entry_note}")
@@ -308,6 +384,7 @@ def render_mode1(df, max_cards=10):
             st.markdown(f"{exit_plan}")
 
             st.divider()
+
 
 # ══════════════════════════════════════════════════════════════════════════════
 # MODE 2 — Resistance warning cards (compact)
