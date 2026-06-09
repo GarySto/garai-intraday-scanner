@@ -253,19 +253,12 @@ def render_mode1(df, max_cards=10):
         rvol      = _safe_float(row.get("rvol"))
         rsi       = row.get("rsi_at_signal")
         scan_time = str(row.get("scan_time", ""))
-        macd      = str(row.get("macd_signal", "")) if "macd_signal" in row.index else None
-        atr       = _safe_float(row.get("atr", 0))
+        reason    = str(row.get("reason", ""))
+        entry_note = str(row.get("entry_note", ""))
+        exit_plan  = str(row.get("stop_reason", ""))
 
-        rsi_val = _safe_float(rsi) if rsi is not None else None
-        rsi_strong = rsi_val is not None and rsi_val >= 70
-
-        stop_atr = round(price - (atr * 1.5), 4) if price and atr else round(price * 0.97, 4)
-        t3 = round(price * 1.03, 4) if price else 0
-        t5 = round(price * 1.05, 4) if price else 0
-
+        # Badges
         rsi_label, rsi_colour = _rsi_badge(rsi)
-        macd_label, macd_colour = _macd_badge(macd)
-
         rvol_colour = "green" if rvol >= 5 else "amber"
         rvol_badge = _badge_html(f"RVOL {rvol:.1f}×", rvol_colour)
         pct_badge  = _badge_html(f"+{pct_open:.1f}% from open", "green")
@@ -273,10 +266,9 @@ def render_mode1(df, max_cards=10):
         badges = _badge_html(rsi_label, rsi_colour)
         badges += " " + rvol_badge
         badges += " " + pct_badge
-        if macd:
-            badges += " " + _badge_html(macd_label, macd_colour)
 
         with st.container():
+            # Header
             st.markdown(
                 f'<div style="display:flex;align-items:flex-start;'
                 f'justify-content:space-between;margin-bottom:8px">'
@@ -292,44 +284,30 @@ def render_mode1(df, max_cards=10):
                 unsafe_allow_html=True,
             )
 
-            m1 = _metric_html("Current price", f"${price:.4f}")
-            m2 = _metric_html("ATR stop", f"${stop_atr:.4f}", "red")
-            m3 = _metric_html("+3% target", f"${t3:.4f}", "green")
-            m4 = _metric_html("+5% target", f"${t5:.4f}", "green")
+            # Metrics row
+            m1 = _metric_html("RSI", f"{rsi}", "green" if rsi and rsi >= 70 else "amber")
+            m2 = _metric_html("Move from open", f"{pct_open:.1f}%", "green")
+            m3 = _metric_html("RVOL", f"{rvol:.1f}×", "green" if rvol >= 5 else "amber")
+            m4 = _metric_html("Score", f"{score:.2f}", "green")
             st.markdown(
                 f'<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px">'
                 f'{m1}{m2}{m3}{m4}</div>',
                 unsafe_allow_html=True,
             )
 
-            if rsi_strong:
-                st.success(
-                    f"RSI {rsi_val:.0f} — strong signal. "
-                    f"Backtest: {M1_RSI_HIGH_WR}% WR, avg +{M1_RSI_HIGH_AVG}% at 1h. "
-                    f"Best performing Mode 1 filter."
-                )
-            else:
-                st.warning(
-                    f"RSI below 70 — weaker signal. Backtest WR drops to 43-48% below RSI 70. "
-                    f"Consider skipping or waiting for RSI to strengthen."
-                )
+            # Reason block
+            st.markdown("**Why this triggered:**")
+            st.markdown(f"{reason}")
 
-            col_buy, col_sell = st.columns(2)
+            # Entry guidance
+            st.markdown("**Entry guidance:**")
+            st.markdown(f"{entry_note}")
 
-            with col_buy:
-                st.markdown("**Entry**")
-                st.markdown(f"- **Market order now at ~${price:.4f}** — momentum trade, speed matters")
-                st.markdown(f"- Set stop loss immediately on entry: **${stop_atr:.4f}**")
-                st.caption("Do not use limit orders for Mode 1 — you'll miss the move")
-
-            with col_sell:
-                st.markdown("**Exit — must close before 21:00 BST**")
-                st.markdown(f"- **Limit sell at ${t3:.4f} (+3%)** or trailing stop 2% from peak")
-                st.markdown(f"- **Hard close by 20:45 BST** regardless of P&L")
-                st.caption("Mode 1 is same-day only — never hold overnight")
+            # Exit plan (T212-safe)
+            st.markdown("**Exit plan (T212‑safe):**")
+            st.markdown(f"{exit_plan}")
 
             st.divider()
-
 
 # ══════════════════════════════════════════════════════════════════════════════
 # MODE 2 — Resistance warning cards (compact)
