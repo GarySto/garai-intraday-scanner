@@ -2,18 +2,13 @@
 GarAI — Daily Update Script
 =============================
 Runs every weekday at 21:30 BST via Windows Task Scheduler.
-Five jobs in one script:
+Three jobs in one script:
 
   1. T212 API  — refresh tickers.txt with current tradeable instruments
   2. yfinance  — append yesterday's daily candle to all D drive files
   3. yfinance  — append yesterday's 5-min intraday candles
   4. yfinance  — append yesterday's premarket (extended hours) candles
   5. T212 API  — pull order history, match to scanner output, log to trades.csv
-
-Auth: T212 uses HTTP Basic Auth — base64(API_KEY:API_SECRET).
-  Keys are stored as environment variables ONLY. Never hardcoded here.
-  For GitHub Actions: stored as T212_API_KEY and T212_API_SECRET secrets.
-  For local use: set via Windows environment variables or a .env file.
 
 No bulk downloads. No rate limiting. Each ticker gets one tiny request.
 Safe to run manually anytime — gaps are auto-detected and backfilled.
@@ -23,25 +18,24 @@ Usage:
   py daily_update.py --tickers    — refresh tickers only
   py daily_update.py --prices     — update price data only
   py daily_update.py --trades     — sync trade log only
-  py daily_update.py --install    — run all jobs AND install Task Scheduler entry
 """
 
 import os
 import sys
 import time
-import base64
+import json
 import requests
 import yfinance as yf
 import pandas as pd
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 import pytz
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
-# T212 API keys — from environment variables ONLY.
-# Set via: Windows System Properties → Environment Variables
-# Or for a single session: set T212_API_KEY=your_key in Command Prompt
-T212_API_KEY    = os.environ.get("T212_API_KEY", "")
+# T212 API key — stored as environment variable or paste here for local use
+# For GitHub Actions: stored as T212_API_KEY secret
+# For local use: set environment variable or paste key here temporarily
+T212_API_KEY = os.environ.get("T212_API_KEY", "")
 T212_API_SECRET = os.environ.get("T212_API_SECRET", "")
 
 DATA_ROOT     = r"D:\GarAI\data"
@@ -53,51 +47,19 @@ TRADES_FILE   = "trades.csv"
 LOG_FILE      = os.path.join(DATA_ROOT, "daily_update_log.txt")
 
 # Scanner output files to match trades against
-INTRADAY_CSV = os.path.join("output", "intraday.csv")
-UNIVERSE_CSV = os.path.join("..", "market-universe-generator", "output", "universe.csv")
+INTRADAY_CSV  = os.path.join("output", "intraday.csv")
+UNIVERSE_CSV  = os.path.join("..", "market-universe-generator", "output", "universe.csv")
 
-T212_BASE  = "https://live.trading212.com/api/v0"
-SLEEP      = 0.15   # between yfinance calls — small batches, no rate limits
-BATCH_SIZE = 50     # tickers per yfinance batch
+T212_BASE     = "https://live.trading212.com/api/v0"
+SLEEP         = 0.15   # between yfinance calls — small batches, no rate limits
+BATCH_SIZE    = 50     # tickers per yfinance batch
 
 BST = pytz.timezone("Europe/London")
-
-
-# ── T212 auth ─────────────────────────────────────────────────────────────────
-
-def _t212_auth_header():
-    """
-    Build T212 Basic Auth header — used consistently in every T212 API call.
-
-    T212 requires: Authorization: Basic base64(API_KEY:API_SECRET)
-    Both keys must be set as environment variables. If either is missing,
-    T212 jobs are skipped gracefully with a clear message.
-    """
-    if T212_API_KEY and T212_API_SECRET:
-        credentials = base64.b64encode(
-            f"{T212_API_KEY}:{T212_API_SECRET}".encode()
-        ).decode()
-        return {"Authorization": f"Basic {credentials}"}
-    elif T212_API_KEY:
-        # Legacy fallback — key alone (pre-secret T212 accounts)
-        log("  WARNING: T212_API_SECRET not set — trying key-only auth")
-        return {"Authorization": T212_API_KEY}
-    return {}
-
-
-def _t212_keys_available():
-    """Return True if at least the API key is set."""
-    if not T212_API_KEY:
-        log("  T212_API_KEY not set — skipping T212 job")
-        log("  Set it via: Windows Environment Variables → T212_API_KEY")
-        return False
-    return True
-
 
 # ── Logging ───────────────────────────────────────────────────────────────────
 
 def log(msg):
-    ts   = datetime.now(BST).strftime("%Y-%m-%d %H:%M BST")
+    ts = datetime.now(BST).strftime("%Y-%m-%d %H:%M BST")
     line = f"[{ts}] {msg}"
     print(line)
     os.makedirs(DATA_ROOT, exist_ok=True)
@@ -108,49 +70,41 @@ def log(msg):
 # ── Job 1: Refresh tickers from T212 API ─────────────────────────────────────
 
 def refresh_tickers():
-    """
-    Pull current ISA-tradeable instruments from T212 and update tickers.txt.
-
-    WHY: tickers.txt is the source of truth for the scanner universe.
-    T212 occasionally adds/removes instruments — keeping this fresh means
-    the scanner never tries to price a delisted or non-ISA stock.
-    """
-    print("\n" + "=" * 50)
+    """Pull current tradeable instruments from T212 and update tickers.txt."""
+    print("\n" + "="*50)
     print("Job 1: Refresh tickers from T212 API")
-    print("=" * 50)
+    print("="*50)
 
-    if not _t212_keys_available():
+    if T212_API_KEY == "YOUR_T212_KEY_HERE":
+        log("  T212 API key not set — skipping ticker refresh")
         return False
 
-    headers = _t212_auth_header()
+    headers = {"Authorization": T212_API_KEY}
     url     = f"{T212_BASE}/equity/metadata/instruments"
 
     try:
         r = requests.get(url, headers=headers, timeout=30)
         if r.status_code == 429:
-            log("  T212 rate limit hit — try again in 60 seconds")
-            return False
-        if r.status_code == 401:
-            log("  T212 auth failed (401) — check T212_API_KEY and T212_API_SECRET")
+            log("  T212 rate limit hit — try again in 50 seconds")
             return False
         if r.status_code != 200:
-            log(f"  T212 API error: {r.status_code} — {r.text[:200]}")
+            log(f"  T212 API error: {r.status_code}")
             return False
 
         instruments = r.json()
         if not instruments:
-            log("  No instruments returned from T212")
+            log("  No instruments returned")
             return False
 
-        # Extract US stocks only
-        # T212 format: "AAPL_US_EQ" → clean to "AAPL"
+        # Extract US stocks only (ticker format: AAPL, MSFT etc.)
         tickers = []
         for inst in instruments:
-            raw = inst.get("ticker", "")
-            if "_US_EQ" in raw:
-                clean = raw.replace("_US_EQ", "")
-            elif "_" not in raw and raw.isupper() and len(raw) <= 6:
-                clean = raw
+            ticker = inst.get("ticker", "")
+            # T212 US stocks have format AAPL or AAPL_US_EQ
+            if "_US_EQ" in ticker:
+                clean = ticker.replace("_US_EQ", "")
+            elif "_" not in ticker and ticker.isupper() and len(ticker) <= 6:
+                clean = ticker
             else:
                 continue
             if clean and clean.isalpha():
@@ -158,6 +112,7 @@ def refresh_tickers():
 
         tickers = sorted(set(tickers))
 
+        # Save
         with open(TICKERS_FILE, "w") as f:
             f.write("\n".join(tickers))
 
@@ -183,11 +138,7 @@ def get_last_date_in_file(path):
 
 
 def append_new_rows(path, new_df):
-    """
-    Append only genuinely new rows to an existing CSV.
-    Skips rows already present — safe to run multiple times.
-    Returns True if new rows were written, False if already up to date.
-    """
+    """Append only genuinely new rows to an existing CSV."""
     try:
         if not os.path.exists(path):
             new_df.to_csv(path)
@@ -198,6 +149,7 @@ def append_new_rows(path, new_df):
             new_df.to_csv(path)
             return True
 
+        # Only keep rows newer than what we already have
         last_date = existing.index[-1]
         new_rows  = new_df[new_df.index > last_date]
 
@@ -214,23 +166,19 @@ def append_new_rows(path, new_df):
 
 
 def update_daily_prices(tickers):
-    """
-    Fetch last 5 days of daily OHLCV and append new candles to D drive files.
-    Only updates tickers that already have a CSV — does not create new ones.
-    """
-    print("\n" + "=" * 50)
+    """Fetch last 5 days of daily data and append new candles."""
+    print("\n" + "="*50)
     print("Job 2: Update daily prices")
-    print("=" * 50)
+    print("="*50)
 
     updated = 0
-    batches = [tickers[i:i + BATCH_SIZE] for i in range(0, len(tickers), BATCH_SIZE)]
+    batches = [tickers[i:i+BATCH_SIZE] for i in range(0, len(tickers), BATCH_SIZE)]
 
     for i, batch in enumerate(batches):
         try:
-            batch_with_files = [
-                t for t in batch
-                if os.path.exists(os.path.join(DAILY_DIR, f"{t}.csv"))
-            ]
+            # Only download for tickers that have existing files
+            batch_with_files = [t for t in batch
+                               if os.path.exists(os.path.join(DAILY_DIR, f"{t}.csv"))]
             if not batch_with_files:
                 continue
 
@@ -241,11 +189,15 @@ def update_daily_prices(tickers):
             if data.empty:
                 continue
 
+            close = data["Close"] if "Close" in data.columns else pd.DataFrame()
+
             for t in batch_with_files:
                 path = os.path.join(DAILY_DIR, f"{t}.csv")
                 if len(batch_with_files) == 1:
                     new_df = data.copy()
                 else:
+                    if hasattr(close, "columns") and t not in close.columns:
+                        continue
                     new_df = pd.DataFrame({
                         "Open":   data["Open"][t]   if "Open"   in data.columns else None,
                         "High":   data["High"][t]   if "High"   in data.columns else None,
@@ -271,19 +223,17 @@ def update_daily_prices(tickers):
 
 def update_intraday_prices(tickers):
     """Fetch yesterday's 5-min candles and append to intraday files."""
-    print("\n" + "=" * 50)
+    print("\n" + "="*50)
     print("Job 3: Update intraday 5-min candles")
-    print("=" * 50)
+    print("="*50)
 
     updated = 0
-    batches = [tickers[i:i + BATCH_SIZE] for i in range(0, len(tickers), BATCH_SIZE)]
+    batches = [tickers[i:i+BATCH_SIZE] for i in range(0, len(tickers), BATCH_SIZE)]
 
     for i, batch in enumerate(batches):
         try:
-            batch_with_files = [
-                t for t in batch
-                if os.path.exists(os.path.join(INTRADAY_DIR, f"{t}_5m.csv"))
-            ]
+            batch_with_files = [t for t in batch
+                               if os.path.exists(os.path.join(INTRADAY_DIR, f"{t}_5m.csv"))]
             if not batch_with_files:
                 continue
 
@@ -294,11 +244,15 @@ def update_intraday_prices(tickers):
             if data.empty:
                 continue
 
+            close = data["Close"] if "Close" in data.columns else pd.DataFrame()
+
             for t in batch_with_files:
                 path = os.path.join(INTRADAY_DIR, f"{t}_5m.csv")
                 if len(batch_with_files) == 1:
                     new_df = data.copy()
                 else:
+                    if hasattr(close, "columns") and t not in close.columns:
+                        continue
                     new_df = pd.DataFrame({
                         "Open":   data["Open"][t]   if "Open"   in data.columns else None,
                         "High":   data["High"][t]   if "High"   in data.columns else None,
@@ -323,18 +277,14 @@ def update_intraday_prices(tickers):
 
 
 def update_premarket(tickers):
-    """
-    Fetch yesterday's premarket (extended hours) candles and append.
-    Uses prepost=True to include pre/post market data.
-    Stores in D:/GarAI/data/premarket/ as {TICKER}_pre.csv.
-    """
-    print("\n" + "=" * 50)
+    """Fetch yesterday's premarket session (extended hours) and append."""
+    print("\n" + "="*50)
     print("Job 4: Update premarket candles")
-    print("=" * 50)
+    print("="*50)
 
     os.makedirs(PREMARKET_DIR, exist_ok=True)
     updated = 0
-    batches = [tickers[i:i + BATCH_SIZE] for i in range(0, len(tickers), BATCH_SIZE)]
+    batches = [tickers[i:i+BATCH_SIZE] for i in range(0, len(tickers), BATCH_SIZE)]
 
     for i, batch in enumerate(batches):
         try:
@@ -346,11 +296,15 @@ def update_premarket(tickers):
             if data.empty:
                 continue
 
+            close = data["Close"] if "Close" in data.columns else pd.DataFrame()
+
             for t in batch:
                 path = os.path.join(PREMARKET_DIR, f"{t}_pre.csv")
                 if len(batch) == 1:
                     new_df = data.copy()
                 else:
+                    if hasattr(close, "columns") and t not in close.columns:
+                        continue
                     new_df = pd.DataFrame({
                         "Open":   data["Open"][t]   if "Open"   in data.columns else None,
                         "High":   data["High"][t]   if "High"   in data.columns else None,
@@ -380,18 +334,20 @@ def sync_trade_log():
     """
     Pull order history from T212 API.
     Match each fill against scanner output to determine if it was scanner-driven.
-    Calculate outcome (entry vs current price).
-    Append new trades to trades.csv — skips any order IDs already recorded.
+    Calculate outcome (entry vs exit or current price).
+    Append new trades to trades.csv.
     """
-    print("\n" + "=" * 50)
+    print("\n" + "="*50)
     print("Job 5: Sync trade log from T212")
-    print("=" * 50)
+    print("="*50)
 
-    if not _t212_keys_available():
+    if T212_API_KEY == "YOUR_T212_KEY_HERE":
+        log("  T212 API key not set — skipping trade sync")
         return
 
-    headers = _t212_auth_header()
+    headers = {"Authorization": T212_API_KEY}
 
+    # Fetch order history
     try:
         r = requests.get(
             f"{T212_BASE}/equity/history/orders",
@@ -400,10 +356,7 @@ def sync_trade_log():
             timeout=30
         )
         if r.status_code == 429:
-            log("  T212 rate limit — try again in 60 seconds")
-            return
-        if r.status_code == 401:
-            log("  T212 auth failed (401) — check T212_API_KEY and T212_API_SECRET")
+            log("  T212 rate limit — try again in 50 seconds")
             return
         if r.status_code != 200:
             log(f"  T212 orders error: {r.status_code}")
@@ -433,7 +386,7 @@ def sync_trade_log():
     existing_ids = set()
     if os.path.exists(TRADES_FILE):
         try:
-            existing    = pd.read_csv(TRADES_FILE)
+            existing = pd.read_csv(TRADES_FILE)
             if "order_id" in existing.columns:
                 existing_ids = set(existing["order_id"].astype(str).tolist())
         except Exception:
@@ -442,7 +395,7 @@ def sync_trade_log():
     # Process each order
     new_trades = []
     for order in orders:
-        order_id = str(order.get("id", ""))
+        order_id   = str(order.get("id", ""))
         if order_id in existing_ids:
             continue
 
@@ -456,18 +409,20 @@ def sync_trade_log():
         filled_at  = order.get("fillPrice", None)
         date_str   = order.get("dateCreated", "")[:10]
 
+        # Check if this ticker was a scanner candidate on that date
         scanner_driven = ticker in scanner_candidates
 
-        # Get current price for unrealised P&L
+        # Get current price for outcome calculation
         current_price = None
         try:
-            tk   = yf.Ticker(ticker)
+            tk = yf.Ticker(ticker)
             hist = tk.history(period="1d")
             if not hist.empty:
                 current_price = round(hist["Close"].iloc[-1], 4)
         except Exception:
             pass
 
+        # Calculate unrealised outcome if we have both prices
         outcome_pct = None
         if filled_at and current_price:
             outcome_pct = round((current_price - filled_at) / filled_at * 100, 2)
@@ -489,6 +444,7 @@ def sync_trade_log():
         log("  Trade log already up to date — no new fills")
         return
 
+    # Append to trades.csv
     new_df = pd.DataFrame(new_trades)
     if os.path.exists(TRADES_FILE):
         existing = pd.read_csv(TRADES_FILE)
@@ -499,9 +455,10 @@ def sync_trade_log():
     combined.to_csv(TRADES_FILE, index=False)
     log(f"  Trade log updated: {len(new_trades)} new fills added to {TRADES_FILE}")
 
+    # Print summary
     for t in new_trades:
-        outcome_str  = f" → {t['outcome_pct']:+.2f}%" if t["outcome_pct"] else ""
-        scanner_str  = " [scanner]" if t["scanner_driven"] else " [manual]"
+        outcome_str = f" → {t['outcome_pct']:+.2f}%" if t["outcome_pct"] else ""
+        scanner_str = " [scanner]" if t["scanner_driven"] else " [manual]"
         print(f"  {t['date']} {t['ticker']} {t['direction']} "
               f"@ ${t['entry_price']}{outcome_str}{scanner_str}")
 
@@ -509,11 +466,7 @@ def sync_trade_log():
 # ── Task Scheduler install ────────────────────────────────────────────────────
 
 def install_task():
-    """
-    Install this script as a daily Task Scheduler job at 21:30 BST.
-    Run with: py daily_update.py --install
-    Requires Administrator privileges.
-    """
+    """Install this script as a daily Task Scheduler job at 21:30 BST."""
     import subprocess
     script = os.path.abspath(__file__)
     python = sys.executable
@@ -532,8 +485,7 @@ def install_task():
         if result.returncode == 0:
             print("\nTask installed — daily_update.py will run every day at 21:30.")
             print("PC must be on at 21:30 BST for it to run.")
-            print("If you miss a day, run manually: py daily_update.py")
-            print("Gaps are auto-detected and backfilled on next run.")
+            print("If you miss a day, run manually to catch up — gaps are backfilled.")
         else:
             print(f"\nTask install failed: {result.stderr}")
             print("Try running Command Prompt as Administrator.")
@@ -557,21 +509,13 @@ def run():
     print(f"Run: {datetime.now(BST).strftime('%A %d %b %Y %H:%M BST')}")
     print("=" * 60)
 
-    # Quick key check at startup — warn early rather than fail silently per job
-    if not T212_API_KEY:
-        print("\nWARNING: T212_API_KEY environment variable not set.")
-        print("T212 jobs (tickers refresh + trade sync) will be skipped.")
-        print("Set via: Windows System Properties → Advanced → Environment Variables")
-    elif not T212_API_SECRET:
-        print("\nWARNING: T212_API_SECRET not set — will try key-only auth.")
-
     args = sys.argv[1:]
 
-    run_tickers = "--tickers" in args or not args
-    run_prices  = "--prices"  in args or not args
-    run_trades  = "--trades"  in args or not args
+    run_tickers  = "--tickers" in args or not args
+    run_prices   = "--prices"  in args or not args
+    run_trades   = "--trades"  in args or not args
 
-    log("=== Daily update started ===")
+    log(f"=== Daily update started ===")
 
     if run_tickers:
         refresh_tickers()
@@ -594,7 +538,7 @@ def run():
     if run_trades:
         sync_trade_log()
 
-    print(f"\n{'=' * 60}")
+    print(f"\n{'='*60}")
     print("Daily update complete.")
     log("=== Daily update complete ===")
 
